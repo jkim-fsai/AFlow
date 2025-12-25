@@ -1,7 +1,8 @@
 import datetime
 import json
-import os
 import random
+from pathlib import Path
+from typing import Any, Dict, List, Optional
 
 import numpy as np
 import pandas as pd
@@ -11,41 +12,54 @@ from scripts.utils.common import read_json_file, write_json_file
 
 
 class DataUtils:
+    
+    DEFAULT_ALPHA = 0.2
+    DEFAULT_LAMBDA = 0.3
+    DEFAULT_LOG_SAMPLES = 3
+    
     def __init__(self, root_path: str):
-        self.root_path = root_path
-        self.top_scores = []
+        self.root_path = Path(root_path)
+        self.top_scores: List[Dict[str, Any]] = []
 
     def load_results(self, path: str) -> list:
-        result_path = os.path.join(path, "results.json")
-        if os.path.exists(result_path):
-            with open(result_path, "r") as json_file:
-                try:
-                    return json.load(json_file)
-                except json.JSONDecodeError:
-                    return []
-        return []
+        result_path = Path(path) / "results.json"
+        
+        if not result_path.exists():
+            return []
+        
+        try:
+            with open(result_path, "r", encoding="utf-8") as json_file:
+                return json.load(json_file)
+        except json.JSONDecodeError:
+            logger.warning(f"Failed to decode JSON from {result_path}")
+            return []
+        except Exception as e:
+            logger.error(f"Error loading results from {result_path}: {e}")
+            return []
 
-    def get_top_rounds(self, sample: int, path=None, mode="Graph"):
+    def get_top_rounds(self, sample: int, path: Optional[str] = None, mode: str = "Graph") -> List[Dict]:
+
         self._load_scores(path, mode)
-        unique_rounds = set()
-        unique_top_scores = []
-
-        first_round = next((item for item in self.top_scores if item["round"] == 1), None)
-        if first_round:
-            unique_top_scores.append(first_round)
-            unique_rounds.add(1)
-
+        unique_rounds: Dict[int, Dict] = {}
+        
         for item in self.top_scores:
-            if item["round"] not in unique_rounds:
-                unique_top_scores.append(item)
-                unique_rounds.add(item["round"])
-
-                if len(unique_top_scores) >= sample:
+            round_num = item["round"]
+            if round_num not in unique_rounds:
+                unique_rounds[round_num] = item
+                if len(unique_rounds) >= sample:
                     break
+        
+        result = []
+        if 1 in unique_rounds:
+            result.append(unique_rounds[1])
+            del unique_rounds[1]
+        
+        result.extend(unique_rounds.values())
+        
+        return result[:sample]
 
-        return unique_top_scores
+    def select_round(self, items: List[Dict]) -> Dict:
 
-    def select_round(self, items):
         if not items:
             raise ValueError("Item list is empty.")
 
@@ -61,7 +75,13 @@ class DataUtils:
 
         return sorted_items[selected_index]
 
-    def _compute_probabilities(self, scores, alpha=0.2, lambda_=0.3):
+    def _compute_probabilities(
+        self, 
+        scores: List[float], 
+        alpha: float = DEFAULT_ALPHA, 
+        lambda_: float = DEFAULT_LAMBDA
+    ) -> np.ndarray:
+
         scores = np.array(scores, dtype=np.float64)
         n = len(scores)
 
@@ -88,17 +108,23 @@ class DataUtils:
 
         return mixed_prob
 
-    def load_log(self, cur_round, path=None, mode: str = "Graph"):
+    def load_log(self, cur_round: int, path: Optional[str] = None, mode: str = "Graph") -> str:
         if mode == "Graph":
-            log_dir = os.path.join(self.root_path, "workflows", f"round_{cur_round}", "log.json")
+            log_dir = self.root_path / "workflows" / f"round_{cur_round}" / "log.json"
         else:
-            log_dir = path
+            log_dir = Path(path)
 
-        # 检查文件是否存在
-        if not os.path.exists(log_dir):
-            return ""  # 如果文件不存在，返回空字符串
-        logger.info(log_dir)
-        data = read_json_file(log_dir, encoding="utf-8")
+        if not log_dir.exists():
+            logger.warning(f"Log file not found: {log_dir}")
+            return ""
+        
+        logger.info(f"Loading log from: {log_dir}")
+        
+        try:
+            data = read_json_file(log_dir, encoding="utf-8")
+        except Exception as e:
+            logger.error(f"Error reading log file {log_dir}: {e}")
+            return ""
 
         if isinstance(data, dict):
             data = [data]
@@ -108,42 +134,64 @@ class DataUtils:
         if not data:
             return ""
 
-        sample_size = min(3, len(data))
+        sample_size = min(self.DEFAULT_LOG_SAMPLES, len(data))
         random_samples = random.sample(data, sample_size)
 
-        log = ""
-        for sample in random_samples:
-            log += json.dumps(sample, indent=4, ensure_ascii=False) + "\n\n"
-
-        return log
+        log_entries = [
+            json.dumps(sample, indent=4, ensure_ascii=False) 
+            for sample in random_samples
+        ]
+        
+        return "\n\n".join(log_entries)
 
     def get_results_file_path(self, graph_path: str) -> str:
-        return os.path.join(graph_path, "results.json")
+        
+        return str(Path(graph_path) / "results.json")
 
-    def create_result_data(self, round: int, score: float, avg_cost: float, total_cost: float) -> dict:
+    def create_result_data(
+        self, 
+        round: int, 
+        score: float, 
+        avg_cost: float, 
+        total_cost: float
+    ) -> dict:
+
         now = datetime.datetime.now()
-        return {"round": round, "score": score, "avg_cost": avg_cost, "total_cost": total_cost, "time": now}
+        return {
+            "round": round,
+            "score": score,
+            "avg_cost": avg_cost,
+            "total_cost": total_cost,
+            "time": now
+        }
 
-    def save_results(self, json_file_path: str, data: list):
+    def save_results(self, json_file_path: str, data: list) -> None:
         write_json_file(json_file_path, data, encoding="utf-8", indent=4)
 
-    def _load_scores(self, path=None, mode="Graph"):
+    def _load_scores(self, path: Optional[str] = None, mode: str = "Graph") -> List[Dict]:
         if mode == "Graph":
-            rounds_dir = os.path.join(self.root_path, "workflows")
+            rounds_dir = self.root_path / "workflows"
         else:
-            rounds_dir = path
+            rounds_dir = Path(path)
 
-        result_file = os.path.join(rounds_dir, "results.json")
+        result_file = rounds_dir / "results.json"
         self.top_scores = []
 
-        data = read_json_file(result_file, encoding="utf-8")
-        df = pd.DataFrame(data)
+        try:
+            data = read_json_file(result_file, encoding="utf-8")
+            df = pd.DataFrame(data)
 
-        scores_per_round = df.groupby("round")["score"].mean().to_dict()
+            scores_per_round = df.groupby("round")["score"].mean().to_dict()
 
-        for round_number, average_score in scores_per_round.items():
-            self.top_scores.append({"round": round_number, "score": average_score})
+            self.top_scores = [
+                {"round": round_number, "score": average_score}
+                for round_number, average_score in scores_per_round.items()
+            ]
 
-        self.top_scores.sort(key=lambda x: x["score"], reverse=True)
+            self.top_scores.sort(key=lambda x: x["score"], reverse=True)
+            
+        except Exception as e:
+            logger.error(f"Error loading scores from {result_file}: {e}")
+            self.top_scores = []
 
         return self.top_scores
