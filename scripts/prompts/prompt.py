@@ -43,7 +43,7 @@ Please ensure your code is efficient, well-commented, and follows Python best pr
 
 
 REFLECTION_ON_PUBLIC_TEST_PROMPT = """
-Given a code problem and a python code solution which failed to pass test or execute, you need to analyze the reason for the failure and propose a better code solution.: 
+Given a code problem and a python code solution which failed to pass test or execute, you need to analyze the reason for the failure and propose a better code solution.:
 ### problem
 {problem}
 

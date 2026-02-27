@@ -10,7 +10,9 @@ class CodeDataset(Enum):
     LIVE_CODE_BENCH = "LiveCodeBench"
 
 
-def extract_test_cases_from_jsonl(entry_point: str, dataset: Union[CodeDataset, str] = CodeDataset.HUMAN_EVAL):
+def extract_test_cases_from_jsonl(
+    entry_point: str, dataset: Union[CodeDataset, str] = CodeDataset.HUMAN_EVAL
+):
     # 统一获取 dataset 的字符串值
     dataset_value = dataset.value if isinstance(dataset, CodeDataset) else dataset
 
@@ -53,7 +55,11 @@ def extract_test_cases_from_jsonl(entry_point: str, dataset: Union[CodeDataset, 
         return hardcoded_cases[entry_point]
 
     # 统一文件读取逻辑
-    key = "question_id" if dataset_value == CodeDataset.LIVE_CODE_BENCH.value else "entry_point"
+    key = (
+        "question_id"
+        if dataset_value == CodeDataset.LIVE_CODE_BENCH.value
+        else "entry_point"
+    )
     with open(file_path, "r") as file:
         for line in file:
             data = json.loads(line)

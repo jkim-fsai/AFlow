@@ -5,6 +5,7 @@ from collections import defaultdict
 from scripts.logs import logger
 from scripts.utils.common import read_json_file, write_json_file
 
+
 class ExperienceUtils:
     def __init__(self, root_path: str):
         self.root_path = root_path
@@ -15,10 +16,14 @@ class ExperienceUtils:
         else:
             rounds_dir = path
 
-        experience_data = defaultdict(lambda: {"score": None, "success": {}, "failure": {}})
+        experience_data = defaultdict(
+            lambda: {"score": None, "success": {}, "failure": {}}
+        )
 
         for round_dir in os.listdir(rounds_dir):
-            if os.path.isdir(os.path.join(rounds_dir, round_dir)) and round_dir.startswith("round_"):
+            if os.path.isdir(
+                os.path.join(rounds_dir, round_dir)
+            ) and round_dir.startswith("round_"):
                 round_path = os.path.join(rounds_dir, round_dir)
                 try:
                     round_number = int(round_dir.split("_")[1])
@@ -92,4 +97,9 @@ class ExperienceUtils:
         experience["after"] = avg_score
         experience["succeed"] = bool(avg_score > experience["before"])
 
-        write_json_file(os.path.join(directory, "experience.json"), experience, encoding="utf-8", indent=4)
+        write_json_file(
+            os.path.join(directory, "experience.json"),
+            experience,
+            encoding="utf-8",
+            indent=4,
+        )

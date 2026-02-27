@@ -7,6 +7,7 @@
 from scripts.evaluator import DatasetType
 from scripts.async_llm import create_llm_instance
 
+
 class Workflow:
     def __init__(
         self,

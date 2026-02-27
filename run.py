@@ -10,6 +10,7 @@ from data.download_data import download
 from scripts.optimizer import Optimizer
 from scripts.async_llm import LLMsConfig
 
+
 class ExperimentConfig:
     def __init__(self, dataset: str, question_type: str, operators: List[str]):
         self.dataset = dataset
@@ -73,9 +74,18 @@ def parse_args():
         help="Optimized result save path",
     )
     parser.add_argument("--initial_round", type=int, default=1, help="Initial round")
-    parser.add_argument("--max_rounds", type=int, default=20, help="Max iteration rounds")
-    parser.add_argument("--check_convergence", type=bool, default=True, help="Whether to enable early stop")
-    parser.add_argument("--validation_rounds", type=int, default=1, help="Validation rounds")
+    parser.add_argument(
+        "--max_rounds", type=int, default=20, help="Max iteration rounds"
+    )
+    parser.add_argument(
+        "--check_convergence",
+        type=bool,
+        default=True,
+        help="Whether to enable early stop",
+    )
+    parser.add_argument(
+        "--validation_rounds", type=int, default=1, help="Validation rounds"
+    )
     parser.add_argument(
         "--if_force_download",
         type=lambda x: x.lower() == "true",
@@ -117,7 +127,9 @@ if __name__ == "__main__":
             "Please add it to the configuration file or specify a valid model using the --exec_model_name flag. "
         )
 
-    download(["datasets"], force_download=args.if_force_download) # remove download initial_rounds in new version.
+    download(
+        ["datasets"], force_download=args.if_force_download
+    )  # remove download initial_rounds in new version.
 
     optimizer = Optimizer(
         dataset=config.dataset,

@@ -60,23 +60,27 @@ class AMCBenchmark(BaseBenchmark):
         # Normalize expressions before comparison
         try:
             # Remove spaces around operators
-            pred_normalized = re.sub(r'\s*([\+\-\*\/\^])\s*', r'\1', prediction)
-            ref_normalized = re.sub(r'\s*([\+\-\*\/\^])\s*', r'\1', reference)
+            pred_normalized = re.sub(r"\s*([\+\-\*\/\^])\s*", r"\1", prediction)
+            ref_normalized = re.sub(r"\s*([\+\-\*\/\^])\s*", r"\1", reference)
 
             if pred_normalized == ref_normalized:
                 return True
 
             # Normalize fractions with pi
-            pred_normalized = re.sub(r'\\frac{(.+)}{(.+)}\\pi', r'\\frac{\1\\pi}{\2}', prediction)
-            ref_normalized = re.sub(r'\\frac{(.+)}{(.+)}\\pi', r'\\frac{\1\\pi}{\2}', reference)
+            pred_normalized = re.sub(
+                r"\\frac{(.+)}{(.+)}\\pi", r"\\frac{\1\\pi}{\2}", prediction
+            )
+            ref_normalized = re.sub(
+                r"\\frac{(.+)}{(.+)}\\pi", r"\\frac{\1\\pi}{\2}", reference
+            )
 
             if pred_normalized == ref_normalized:
                 return True
 
             # Sort terms in additions (e.g., "3 + 2\sqrt{3}" vs "2\sqrt{3} + 3")
             def sort_terms(expr):
-                terms = expr.split('+')
-                return '+'.join(sorted(term.strip() for term in terms))
+                terms = expr.split("+")
+                return "+".join(sorted(term.strip() for term in terms))
 
             pred_sorted = sort_terms(prediction)
             ref_sorted = sort_terms(reference)
@@ -102,8 +106,8 @@ class AMCBenchmark(BaseBenchmark):
 
         def _parse(s):
             # Clean up the expression before parsing
-            s = s.replace('\\', '')  # Remove LaTeX backslashes
-            s = re.sub(r'\s+', '', s)  # Remove all whitespace
+            s = s.replace("\\", "")  # Remove LaTeX backslashes
+            s = re.sub(r"\s+", "", s)  # Remove all whitespace
 
             for f in [parse_latex, parse_expr]:
                 try:
@@ -130,6 +134,7 @@ class AMCBenchmark(BaseBenchmark):
 
             # Try expanding before comparison
             from sympy import expand
+
             if simplify(expand(a_expr) - expand(b_expr)) == 0:
                 return True
 
@@ -143,7 +148,7 @@ class AMCBenchmark(BaseBenchmark):
         num = str(num).strip()
 
         # Try to parse LaTeX fraction
-        frac_pattern = r'\\frac{(-?\d+)}{(-?\d+)}'
+        frac_pattern = r"\\frac{(-?\d+)}{(-?\d+)}"
         frac_match = re.match(frac_pattern, num)
         if frac_match:
             try:
@@ -172,8 +177,8 @@ class AMCBenchmark(BaseBenchmark):
     def is_digit(self, num):
         """Check if string can be parsed as a number."""
         # First check for LaTeX fraction
-        if isinstance(num, str) and '\\frac{' in num:
-            frac_pattern = r'\\frac{(-?\d+)}{(-?\d+)}'
+        if isinstance(num, str) and "\\frac{" in num:
+            frac_pattern = r"\\frac{(-?\d+)}{(-?\d+)}"
             if re.match(frac_pattern, num.strip()):
                 return True
 
@@ -187,11 +192,18 @@ class AMCBenchmark(BaseBenchmark):
         except OSError:
             return "no code"
 
-    @retry(stop=stop_after_attempt(5), wait=wait_fixed(1), retry=retry_if_exception_type(Exception), reraise=True)
+    @retry(
+        stop=stop_after_attempt(5),
+        wait=wait_fixed(1),
+        retry=retry_if_exception_type(Exception),
+        reraise=True,
+    )
     async def _generate_output(self, graph, input_text):
         return await graph(input_text)
 
-    async def evaluate_problem(self, problem: dict, graph: Callable) -> Tuple[str, str, str, int, float]:
+    async def evaluate_problem(
+        self, problem: dict, graph: Callable
+    ) -> Tuple[str, str, str, int, float]:
         input_text = problem["question"]
         expected_output = problem["answer"]
 
@@ -200,7 +212,15 @@ class AMCBenchmark(BaseBenchmark):
             uni_score, extracted_output = self.calculate_score(expected_output, output)
 
             if uni_score == 0:
-                self.log_mismatch(input_text, expected_output, output, extracted_output, extract_answer_code=self.get_function_code(self.extract_model_answer))
+                self.log_mismatch(
+                    input_text,
+                    expected_output,
+                    output,
+                    extracted_output,
+                    extract_answer_code=self.get_function_code(
+                        self.extract_model_answer
+                    ),
+                )
 
             return input_text, output, expected_output, uni_score, cost
 

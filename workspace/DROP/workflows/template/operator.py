@@ -7,7 +7,13 @@ from typing import Dict, List, Tuple, Optional
 
 from tenacity import retry, stop_after_attempt, wait_fixed
 
-from scripts.formatter import BaseFormatter, FormatError, XmlFormatter, CodeFormatter, TextFormatter
+from scripts.formatter import (
+    BaseFormatter,
+    FormatError,
+    XmlFormatter,
+    CodeFormatter,
+    TextFormatter,
+)
 from workspace.DROP.workflows.template.operator_an import *
 from workspace.DROP.workflows.template.op_prompt import *
 from scripts.async_llm import AsyncLLM
@@ -26,7 +32,8 @@ class Custom(Operator):
         prompt = instruction + input
         response = await self._fill_node(GenerateOp, prompt, mode="single_fill")
         return response
-    
+
+
 class AnswerGenerate(Operator):
     def __init__(self, llm: AsyncLLM, name: str = "AnswerGenerate"):
         super().__init__(llm, name)
@@ -35,6 +42,7 @@ class AnswerGenerate(Operator):
         prompt = ANSWER_GENERATION_PROMPT.format(input=input)
         response = await self._fill_node(AnswerGenerateOp, prompt, mode="xml_fill")
         return response
+
 
 class ScEnsemble(Operator):
     """

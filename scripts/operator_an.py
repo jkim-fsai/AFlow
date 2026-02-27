@@ -11,7 +11,9 @@ class GenerateOp(BaseModel):
 
 
 class CodeGenerateOp(BaseModel):
-    code: str = Field(default="", description="Your complete code solution for this problem")
+    code: str = Field(
+        default="", description="Your complete code solution for this problem"
+    )
 
 
 class AnswerGenerateOp(BaseModel):
@@ -20,23 +22,36 @@ class AnswerGenerateOp(BaseModel):
 
 
 class FormatOp(BaseModel):
-    solution: str = Field(default="", description="Your formatted answer for this problem")
+    solution: str = Field(
+        default="", description="Your formatted answer for this problem"
+    )
 
 
 class ScEnsembleOp(BaseModel):
-    thought: str = Field(default="", description="The thought of the most consistent solution.")
-    solution_letter: str = Field(default="", description="The letter of most consistent solution.")
+    thought: str = Field(
+        default="", description="The thought of the most consistent solution."
+    )
+    solution_letter: str = Field(
+        default="", description="The letter of most consistent solution."
+    )
 
 
 class ReflectionTestOp(BaseModel):
     reflection_and_solution: str = Field(
-        default="", description="Corrective solution for code execution errors or test case failures"
+        default="",
+        description="Corrective solution for code execution errors or test case failures",
     )
 
 
 class MdEnsembleOp(BaseModel):
-    thought: str = Field(default="", description="Step-by-step analysis of the solutions to determine the best one.")
-    solution_letter: str = Field(default="", description="The letter of the chosen best solution (only one letter).")
+    thought: str = Field(
+        default="",
+        description="Step-by-step analysis of the solutions to determine the best one.",
+    )
+    solution_letter: str = Field(
+        default="",
+        description="The letter of the chosen best solution (only one letter).",
+    )
 
 
 class ReviewOp(BaseModel):
@@ -51,4 +66,7 @@ class ReviewOp(BaseModel):
 
 
 class ReviseOp(BaseModel):
-    solution: str = Field(default="", description="Based on the feedback, revised solution for this problem")
+    solution: str = Field(
+        default="",
+        description="Based on the feedback, revised solution for this problem",
+    )

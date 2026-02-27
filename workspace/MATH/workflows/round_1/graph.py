@@ -5,6 +5,7 @@ from scripts.async_llm import create_llm_instance
 
 from scripts.evaluator import DatasetType
 
+
 class Workflow:
     def __init__(
         self,
@@ -22,4 +23,4 @@ class Workflow:
         Implementation of the workflow
         """
         solution = await self.custom(input=problem, instruction="")
-        return solution['response'], self.llm.get_usage_summary()["total_cost"]
+        return solution["response"], self.llm.get_usage_summary()["total_cost"]

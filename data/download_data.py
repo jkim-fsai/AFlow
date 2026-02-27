@@ -34,14 +34,18 @@ def extract_tar_gz(filename: str, extract_path: str) -> None:
         tar.extractall(path=extract_path)
 
 
-def process_dataset(url: str, filename: str, extract_path: str, force: bool = False) -> None:
+def process_dataset(
+    url: str, filename: str, extract_path: str, force: bool = False
+) -> None:
     """Download, extract, and clean up a dataset if needed."""
     if os.path.exists(extract_path):
         if force:
             logger.info(f"Force mode: Removing existing {extract_path}...")
             shutil.rmtree(extract_path)
         else:
-            logger.info(f"{extract_path} already exists. Skipping download and extraction.")
+            logger.info(
+                f"{extract_path} already exists. Skipping download and extraction."
+            )
             return
 
     download_needed = not os.path.exists(filename)
@@ -113,7 +117,9 @@ def test_download():
     download(test_datasets, force_download=False)
     for name in test_datasets:
         dataset = datasets_to_download[name]
-        assert os.path.exists(dataset["extract_path"]), f"{dataset['extract_path']} not created."
+        assert os.path.exists(
+            dataset["extract_path"]
+        ), f"{dataset['extract_path']} not created."
 
     # Test skipping existing
     download(test_datasets, force_download=False)
@@ -122,7 +128,9 @@ def test_download():
     download(test_datasets, force_download=True)
     for name in test_datasets:
         dataset = datasets_to_download[name]
-        assert os.path.exists(dataset["extract_path"]), f"{dataset['extract_path']} not recreated."
+        assert os.path.exists(
+            dataset["extract_path"]
+        ), f"{dataset['extract_path']} not recreated."
 
     # Cleanup after test
     for name in test_datasets:

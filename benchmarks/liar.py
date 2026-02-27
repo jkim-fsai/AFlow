@@ -5,6 +5,7 @@ from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_fi
 from benchmarks.benchmark import BaseBenchmark
 from scripts.logs import logger
 
+
 class LairBenchmark(BaseBenchmark):
     def __init__(self, name: str, file_path: str, log_path: str):
         super().__init__(name, file_path, log_path)
@@ -17,11 +18,11 @@ class LairBenchmark(BaseBenchmark):
         3. Removing whitespace
         """
         # Remove various forms of option markers: (A), [A], A), A.
-        s = re.sub(r'[\(\[\{]([A-Za-z])[\)\]\}]|([A-Za-z])[\.:\)]', r'\1\2', s)
+        s = re.sub(r"[\(\[\{]([A-Za-z])[\)\]\}]|([A-Za-z])[\.:\)]", r"\1\2", s)
         s = s.lower().strip()
         if s == "yes":
             return 0
-        elif s == 'no':
+        elif s == "no":
             return 1
         else:
             return s
@@ -31,13 +32,23 @@ class LairBenchmark(BaseBenchmark):
         Compute exact match score between prediction and ground truth answers.
         Score is 1.0 if strings match exactly after normalization, 0.0 otherwise.
         """
-        return (1.0 if self.normalize_answer(prediction) == ground_truth else 0.0, prediction)
+        return (
+            1.0 if self.normalize_answer(prediction) == ground_truth else 0.0,
+            prediction,
+        )
 
-    @retry(stop=stop_after_attempt(5), wait=wait_fixed(1), retry=retry_if_exception_type(Exception), reraise=True)
+    @retry(
+        stop=stop_after_attempt(5),
+        wait=wait_fixed(1),
+        retry=retry_if_exception_type(Exception),
+        reraise=True,
+    )
     async def _generate_output(self, graph, input_text):
         return await graph(input_text)
 
-    async def evaluate_problem(self, problem: dict, graph: Callable) -> Tuple[str, str, str, float, float]:
+    async def evaluate_problem(
+        self, problem: dict, graph: Callable
+    ) -> Tuple[str, str, str, float, float]:
         input_text = problem["text"]
         expected_output = problem["label"]
         inputs = input_text
