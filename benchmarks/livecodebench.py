@@ -316,7 +316,7 @@ class LiveCodeBench(BaseBenchmark):
             )
 
     def calculate_score(
-        self, expected_output: str, prediction: str
+        self, _expected_output: str, _prediction: str
     ) -> Tuple[float, str]:
         return 0.0, ""
 

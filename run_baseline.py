@@ -54,7 +54,7 @@ class ModelWorkflow(Workflow):
         self.llm = create_llm_instance(llm_config)
         self.custom_code_generate = CustomCodeGenerate(self.llm)
 
-    async def __call__(self, problem: str, entry_point: str, question_id: str = ""):
+    async def __call__(self, problem: str, entry_point: str, _question_id: str = ""):
         solution = await self.custom_code_generate(
             problem=problem, entry_point=entry_point, instruction=""
         )  # But When you want to get standard code ,you should use customcodegenerator.
@@ -65,20 +65,20 @@ async def main():
     mini_llm_config = LLMsConfig.default().get("o3-mini")
 
     # Use the new MBPP Workflow instead of PoWorkflow
-    mbpp_test_workflow = mbpp_workflow.Workflow(
+    _mbpp_test_workflow = mbpp_workflow.Workflow(
         name="mbpp_test", llm_config=mini_llm_config, dataset="MBPP"
     )
     livecodebench_test_workflow = livecodebench_workflow.Workflow(
         name="livecodebench_test", llm_config=mini_llm_config, dataset="LiveCodeBench"
     )
-    model_test_workflow = ModelWorkflow(
+    _model_test_workflow = ModelWorkflow(
         name="mbpp_model_test", llm_config=mini_llm_config, dataset="MBPP"
     )
 
     # file path refer to the dataset you want to use.
     # log_path refer to the folder of output csv.
     # test_hotpotqa_benchmark = HotpotQABenchmark(name="HotpotQA", file_path="data/hotpotqa_validate.jsonl", log_path="")
-    test_mbpp_benchmark = MBPPBenchmark(
+    _test_mbpp_benchmark = MBPPBenchmark(
         name="MBPP", file_path="data/datasets/mbpp_test.jsonl", log_path=""
     )
     test_livecodebench = LiveCodeBench(
@@ -91,9 +91,9 @@ async def main():
     # results = await test_mbpp_benchmark.run_baseline(mbpp_test_workflow)
     # results = await test_mbpp_benchmark.run_baseline(model_test_workflow)
     # results = await test_livecodebench.run_baseline(model_test_workflow)
-    results = await test_livecodebench.run_baseline(livecodebench_test_workflow)
+    _results = await test_livecodebench.run_baseline(livecodebench_test_workflow)
 
-    print(results)
+    print(_results)
 
 
 if __name__ == "__main__":

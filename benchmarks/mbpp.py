@@ -127,7 +127,7 @@ class MBPPBenchmark(BaseBenchmark):
             return input_text, str(e), expected_output, 0.0, 0.0
 
     def calculate_score(
-        self, expected_output: str, prediction: str
+        self, _expected_output: str, prediction: str
     ) -> Tuple[float, str]:
         # The scoring logic for MBPP is already implemented in evaluate_problem, this is just to conform to the interface
         return 0.0, prediction
