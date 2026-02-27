@@ -221,7 +221,7 @@ def test_in_app_scenario():
     # Simulate an error condition
     try:
         # Simulate a division by zero error
-        result = 100 / 0
+        _ = 100 / 0
     except Exception as e:
         logger.error(f"Error during calculation: {str(e)}")
 

@@ -49,7 +49,7 @@ class TimeoutException(Exception):
     pass
 
 
-def timeout_handler(signum, frame):
+def timeout_handler(_signum, _frame):
     print("timeout occured: alarm went off")
     raise TimeoutException
 
@@ -62,7 +62,7 @@ class Capturing(list):
         self._stdout = sys.stdout
         sys.stdout = self._stringio = StringIO()
         # Make closing the StringIO a no-op
-        self._stringio.close = lambda x: 1
+        self._stringio.close = lambda _: 1
         return self
 
     def __exit__(self, *args):
@@ -78,13 +78,13 @@ class MockStdinWithBuffer:
         self._stringio = StringIO(inputs)
         self.buffer = MockBuffer(inputs)
 
-    def read(self, *args):
+    def read(self, *_args):
         return self.inputs
 
     def readline(self, *args):
         return self._stringio.readline(*args)
 
-    def readlines(self, *args):
+    def readlines(self, *_args):
         return self.inputs.split("\n")
 
     def __getattr__(self, name):
@@ -96,11 +96,11 @@ class MockBuffer:
     def __init__(self, inputs: str):
         self.inputs = inputs.encode("utf-8")  # Convert to bytes
 
-    def read(self, *args):
+    def read(self, *_args):
         # Return as byte strings that can be split
         return self.inputs
 
-    def readline(self, *args):
+    def readline(self, *_args):
         return self.inputs.split(b"\n")[0] + b"\n"
 
 
@@ -167,9 +167,9 @@ def call_method(method, inputs):
     # @patch('builtins.input', side_effect=inputs.split("\n"))
     @patch("builtins.open", mock_open(read_data=inputs))
     @patch("sys.stdin", mock_stdin)  # Use our custom mock instead of StringIO
-    @patch("sys.stdin.readline", lambda *args: next(inputs_line_iterator))
-    @patch("sys.stdin.readlines", lambda *args: inputs.split("\n"))
-    @patch("sys.stdin.read", lambda *args: inputs)
+    @patch("sys.stdin.readline", lambda *_args: next(inputs_line_iterator))
+    @patch("sys.stdin.readlines", lambda *_args: inputs.split("\n"))
+    @patch("sys.stdin.read", lambda *_args: inputs)
     # @patch('sys.stdout.write', print)
     def _inner_call_method(_method):
         try:
@@ -549,7 +549,6 @@ def run_test(sample, test=None, debug=False, timeout=6):
         return in_outs, {"error": "no test code provided"}
     elif test is not None:
         results = []
-        sol = import_string
         if debug:
             print(f"loading test code = {datetime.now().time()}")
 

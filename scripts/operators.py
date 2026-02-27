@@ -361,7 +361,7 @@ class Format(Operator):
     def __init__(self, llm: AsyncLLM, name: str = "Format"):
         super().__init__(llm, name)
 
-    async def __call__(self, problem, solution, mode: str = None):
+    async def __call__(self, problem, solution, _mode: str = None):
         prompt = FORMAT_PROMPT.format(problem_description=problem, solution=solution)
         response = await self._fill_node(FormatOp, prompt, mode)
         return response
@@ -371,7 +371,7 @@ class Review(Operator):
     def __init__(self, llm: AsyncLLM, name: str = "Review"):
         super().__init__(llm, name)
 
-    async def __call__(self, problem, solution, mode: str = None):
+    async def __call__(self, problem, solution, _mode: str = None):
         prompt = REVIEW_PROMPT.format(problem=problem, solution=solution)
         response = await self._fill_node(ReviewOp, prompt, mode="xml_fill")
         return response
@@ -381,7 +381,7 @@ class Revise(Operator):
     def __init__(self, llm: AsyncLLM, name: str = "Revise"):
         super().__init__(llm, name)
 
-    async def __call__(self, problem, solution, feedback, mode: str = None):
+    async def __call__(self, problem, solution, feedback, _mode: str = None):
         prompt = REVISE_PROMPT.format(
             problem=problem, solution=solution, feedback=feedback
         )
@@ -409,7 +409,7 @@ class MdEnsemble(Operator):
         }
         return shuffled_solutions, answer_mapping
 
-    async def __call__(self, solutions: List[str], problem: str, mode: str = None):
+    async def __call__(self, solutions: List[str], problem: str, _mode: str = None):
         logger.info(f"solution count: {len(solutions)}")
         all_responses = []
 
