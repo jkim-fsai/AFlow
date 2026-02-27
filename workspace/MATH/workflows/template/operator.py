@@ -5,7 +5,13 @@ from typing import List, Optional
 
 from tenacity import retry, stop_after_attempt, wait_fixed
 
-from scripts.formatter import BaseFormatter, FormatError, XmlFormatter, CodeFormatter, TextFormatter
+from scripts.formatter import (
+    BaseFormatter,
+    FormatError,
+    XmlFormatter,
+    CodeFormatter,
+    TextFormatter,
+)
 from workspace.MATH.workflows.template.operator_an import *
 from workspace.MATH.workflows.template.op_prompt import *
 from scripts.async_llm import AsyncLLM
@@ -25,15 +31,27 @@ class Custom(Operator):
         response = await self._fill_node(GenerateOp, prompt, mode="single_fill")
         return response
 
+
 def run_code(code):
     try:
         # Create a new global namespace
         global_namespace = {}
 
         disallowed_imports = [
-            "os", "sys", "subprocess", "multiprocessing",
-            "matplotlib", "seaborn", "plotly", "bokeh", "ggplot",
-            "pylab", "tkinter", "PyQt5", "wx", "pyglet"
+            "os",
+            "sys",
+            "subprocess",
+            "multiprocessing",
+            "matplotlib",
+            "seaborn",
+            "plotly",
+            "bokeh",
+            "ggplot",
+            "pylab",
+            "tkinter",
+            "PyQt5",
+            "wx",
+            "pyglet",
         ]
 
         # Check for prohibited imports
@@ -45,8 +63,8 @@ def run_code(code):
         # Use exec to execute the code
         exec(code, global_namespace)
         # Assume the code defines a function named 'solve'
-        if 'solve' in global_namespace and callable(global_namespace['solve']):
-            result = global_namespace['solve']()
+        if "solve" in global_namespace and callable(global_namespace["solve"]):
+            result = global_namespace["solve"]()
             return "Success", str(result)
         else:
             return "Error", "Function 'solve' not found"
@@ -54,7 +72,7 @@ def run_code(code):
         exc_type, exc_value, exc_traceback = sys.exc_info()
         tb_str = traceback.format_exception(exc_type, exc_value, exc_traceback)
         return "Error", f"Execution error: {str(e)}\n{''.join(tb_str)}"
-    
+
 
 class Programmer(Operator):
     def __init__(self, llm: AsyncLLM, name: str = "Programmer"):
@@ -84,11 +102,11 @@ class Programmer(Operator):
         Asynchronous method to generate code.
         """
         prompt = PYTHON_CODE_VERIFIER_PROMPT.format(
-            problem=problem,
-            analysis=analysis,
-            feedback=feedback
+            problem=problem, analysis=analysis, feedback=feedback
         )
-        response = await self._fill_node(CodeGenerateOp, prompt, mode, function_name="solve")
+        response = await self._fill_node(
+            CodeGenerateOp, prompt, mode, function_name="solve"
+        )
         return response
 
     @retry(stop=stop_after_attempt(3), wait=wait_fixed(2))
@@ -100,7 +118,9 @@ class Programmer(Operator):
         output = None
         feedback = ""
         for i in range(3):
-            code_response = await self.code_generate(problem, analysis, feedback, mode="code_fill")
+            code_response = await self.code_generate(
+                problem, analysis, feedback, mode="code_fill"
+            )
             code = code_response.get("code")
             if not code:
                 return {"code": code, "output": "No code generated"}

@@ -90,7 +90,9 @@ class Optimizer:
                     break
                 except Exception as e:
                     retry_count += 1
-                    logger.info(f"Error occurred: {e}. Retrying... (Attempt {retry_count}/{max_retries})")
+                    logger.info(
+                        f"Error occurred: {e}. Retrying... (Attempt {retry_count}/{max_retries})"
+                    )
                     if retry_count == max_retries:
                         logger.info("Max retries reached. Moving to next round.")
                         score = None
@@ -105,7 +107,9 @@ class Optimizer:
             self.round += 1
             logger.info(f"Score for round {self.round}: {score}")
 
-            converged, convergence_round, final_round = self.convergence_utils.check_convergence(top_k=3)
+            converged, convergence_round, final_round = (
+                self.convergence_utils.check_convergence(top_k=3)
+            )
 
             if converged and self.check_convergence:
                 logger.info(
@@ -126,72 +130,118 @@ class Optimizer:
             directory = self.graph_utils.create_round_directory(graph_path, self.round)
             # Load graph using graph_utils
             self.graph = self.graph_utils.load_graph(self.round, graph_path)
-            avg_score = await self.evaluation_utils.evaluate_graph(self, directory, validation_n, data, initial=True)
+            avg_score = await self.evaluation_utils.evaluate_graph(
+                self, directory, validation_n, data, initial=True
+            )
 
         # Create a loop until the generated graph meets the check conditions
-        while True:
-            directory = self.graph_utils.create_round_directory(graph_path, self.round + 1)
+        max_generation_retries = 10
+        for _retry in range(max_generation_retries):
+            directory = self.graph_utils.create_round_directory(
+                graph_path, self.round + 1
+            )
 
             top_rounds = self.data_utils.get_top_rounds(self.sample)
             sample = self.data_utils.select_round(top_rounds)
 
-            prompt, graph_load = self.graph_utils.read_graph_files(sample["round"], graph_path)
+            prompt, graph_load = self.graph_utils.read_graph_files(
+                sample["round"], graph_path
+            )
             graph = self.graph_utils.extract_solve_graph(graph_load)
 
             processed_experience = self.experience_utils.load_experience()
-            experience = self.experience_utils.format_experience(processed_experience, sample["round"])
+            experience = self.experience_utils.format_experience(
+                processed_experience, sample["round"]
+            )
 
-            operator_description = self.graph_utils.load_operators_description(self.operators)
+            operator_description = self.graph_utils.load_operators_description(
+                self.operators
+            )
             log_data = self.data_utils.load_log(sample["round"])
 
             graph_optimize_prompt = self.graph_utils.create_graph_optimize_prompt(
-                experience, sample["score"], graph[0], prompt, operator_description, self.type, log_data
+                experience,
+                sample["score"],
+                graph[0],
+                prompt,
+                operator_description,
+                self.type,
+                log_data,
             )
 
             # Replace ActionNode with AsyncLLM and XmlFormatter
             try:
                 # Create XmlFormatter based on GraphOptimize model
                 graph_formatter = XmlFormatter.from_model(GraphOptimize)
-                
+
                 # Call the LLM with formatter
                 response = await self.optimize_llm.call_with_format(
-                    graph_optimize_prompt, 
-                    graph_formatter
+                    graph_optimize_prompt,
+                    graph_formatter,
                 )
-                
+
                 # If we reach here, response is properly formatted and validated
-                logger.info(f"Graph optimization response received successfully")
+                logger.info("Graph optimization response received successfully")
             except FormatError as e:
                 # Handle format validation errors
                 logger.error(f"Format error in graph optimization: {str(e)}")
                 # Try again with a fallback approach - direct call with post-processing
                 raw_response = await self.optimize_llm(graph_optimize_prompt)
-                
+
                 # Try to extract fields using basic parsing
                 response = self._extract_fields_from_response(raw_response)
                 if not response:
-                    logger.error("Failed to extract fields from raw response, retrying...")
+                    logger.error(
+                        "Failed to extract fields from raw response, retrying..."
+                    )
                     continue
 
             # Check if the modification meets the conditions
             check = self.experience_utils.check_modification(
                 processed_experience, response["modification"], sample["round"]
             )
+            if not check:
+                logger.info("Duplicate modification detected, retrying...")
+                continue
 
-            # If `check` is True, break the loop; otherwise, regenerate the graph
-            if check:
-                break
+            # Validate that all prompt_custom references in graph have definitions in prompt
+            sanitized_prompt = self.graph_utils._sanitize_prompt_content(
+                response["prompt"]
+            )
+            valid, refs, defs = GraphUtils.validate_prompt_references(
+                response["graph"], sanitized_prompt
+            )
+            if not valid:
+                missing = refs - defs
+                logger.warning(
+                    f"Prompt reference validation failed. "
+                    f"Graph references {missing} but prompt only defines {defs}. Retrying..."
+                )
+                continue
+
+            break
+        else:
+            logger.error(
+                f"Exhausted {max_generation_retries} generation retries. "
+                f"Proceeding with last response (may contain prompt mismatches)."
+            )
 
         # Save the graph and evaluate
-        self.graph_utils.write_graph_files(directory, response, self.round + 1, self.dataset)
+        self.graph_utils.write_graph_files(
+            directory, response, self.round + 1, self.dataset
+        )
 
-        experience = self.experience_utils.create_experience_data(sample, response["modification"])
+        experience = self.experience_utils.create_experience_data(
+            sample, response["modification"]
+        )
 
         self.graph = self.graph_utils.load_graph(self.round + 1, graph_path)
 
         logger.info(directory)
 
-        avg_score = await self.evaluation_utils.evaluate_graph(self, directory, validation_n, data, initial=False)
+        avg_score = await self.evaluation_utils.evaluate_graph(
+            self, directory, validation_n, data, initial=False
+        )
 
         self.experience_utils.update_experience(directory, experience, avg_score)
 
@@ -200,36 +250,32 @@ class Optimizer:
     def _extract_fields_from_response(self, response: str) -> Dict[str, str]:
         """
         Fallback method to extract fields from raw response text using basic parsing
-        
+
         Args:
             response: Raw response text from LLM
-            
+
         Returns:
             Dictionary with extracted fields or None if extraction fails
         """
         try:
             # Try to extract XML tags with regex
             import re
-            
+
             # Initialize result dictionary with default values
-            result = {
-                "modification": "",
-                "graph": "",
-                "prompt": ""
-            }
-            
+            result = {"modification": "", "graph": "", "prompt": ""}
+
             # Extract each field with regex
             for field in result.keys():
                 pattern = rf"<{field}>(.*?)</{field}>"
                 match = re.search(pattern, response, re.DOTALL)
                 if match:
                     result[field] = match.group(1).strip()
-            
+
             # Verify we have at least some content
             if not any(result.values()):
                 logger.error("No fields could be extracted from response")
                 return None
-            
+
             return result
         except Exception as e:
             logger.error(f"Error extracting fields from response: {str(e)}")
@@ -248,9 +294,15 @@ class Optimizer:
             directory = self.graph_utils.create_round_directory(graph_path, round)
             self.graph = self.graph_utils.load_graph(round, graph_path)
 
-            score, avg_cost, total_cost = await self.evaluation_utils.evaluate_graph_test(self, directory, is_test=True)
+            score, avg_cost, total_cost = (
+                await self.evaluation_utils.evaluate_graph_test(
+                    self, directory, is_test=True
+                )
+            )
 
-            new_data = self.data_utils.create_result_data(round, score, avg_cost, total_cost)
+            new_data = self.data_utils.create_result_data(
+                round, score, avg_cost, total_cost
+            )
             data.append(new_data)
 
             self.data_utils.save_results(json_file_path, data)

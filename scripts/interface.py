@@ -15,7 +15,9 @@ from scripts.logs import logger
 from scripts.async_llm import LLMsConfig
 
 
-def load_best_round(dataset: str, optimized_path: str = "metagpt/ext/aflow/scripts/optimized") -> int:
+def load_best_round(
+    dataset: str, optimized_path: str = "metagpt/ext/aflow/scripts/optimized"
+) -> int:
     """加载最佳表现的轮次"""
     data_utils = DataUtils(f"{optimized_path}/{dataset}")
 
@@ -63,7 +65,9 @@ async def aflow_inference(
     logger.info(f"Using round {round} for inference")
 
     # 构建工作流路径并加载
-    graph_path = Path(optimized_path) / dataset / "workflows" / f"round_{round}" / "graph.py"
+    graph_path = (
+        Path(optimized_path) / dataset / "workflows" / f"round_{round}" / "graph.py"
+    )
     if not graph_path.exists():
         raise FileNotFoundError(f"Workflow file not found: {graph_path}")
 

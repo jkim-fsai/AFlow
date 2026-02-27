@@ -106,11 +106,18 @@ class MATHBenchmark(BaseBenchmark):
         except OSError:
             return "no code"
 
-    @retry(stop=stop_after_attempt(5), wait=wait_fixed(1), retry=retry_if_exception_type(Exception), reraise=True)
+    @retry(
+        stop=stop_after_attempt(5),
+        wait=wait_fixed(1),
+        retry=retry_if_exception_type(Exception),
+        reraise=True,
+    )
     async def _generate_output(self, graph, input_text):
         return await graph(input_text)
 
-    async def evaluate_problem(self, problem: dict, graph: Callable) -> Tuple[str, str, str, int, float]:
+    async def evaluate_problem(
+        self, problem: dict, graph: Callable
+    ) -> Tuple[str, str, str, int, float]:
         input_text = problem["problem"]
         expected_output = problem["solution"]
 
@@ -124,7 +131,9 @@ class MATHBenchmark(BaseBenchmark):
                     expected_output,
                     output,
                     extracted_output,
-                    extract_answer_code=self.get_function_code(self.extract_model_answer),
+                    extract_answer_code=self.get_function_code(
+                        self.extract_model_answer
+                    ),
                 )
 
             return input_text, output, expected_output, uni_score, cost

@@ -83,7 +83,9 @@ class ConvergenceUtils:
             top_k_indices = np.argsort(self.avg_scores[: i + 1])[::-1][
                 :top_k
             ]  # Select top k indices by descending average score
-            top_k_scores = [self.avg_scores[j] for j in top_k_indices]  # Get list of top k scores
+            top_k_scores = [
+                self.avg_scores[j] for j in top_k_indices
+            ]  # Get list of top k scores
             top_k_stds = [
                 self.stds[j] for j in top_k_indices
             ]  # Get list of standard deviations corresponding to top k scores
@@ -118,7 +120,9 @@ class ConvergenceUtils:
         """
         self.avg_scores, self.stds = self.calculate_avg_and_std()
         for i, (avg_score, std) in enumerate(zip(self.avg_scores, self.stds), 1):
-            logger.info(f"Round {i}: Average Score = {avg_score:.4f}, Standard Deviation = {std:.4f}")
+            logger.info(
+                f"Round {i}: Average Score = {avg_score:.4f}, Standard Deviation = {std:.4f}"
+            )
 
 
 if __name__ == "__main__":
@@ -127,7 +131,9 @@ if __name__ == "__main__":
     converged, convergence_round, final_round = checker.check_convergence()
 
     if converged:
-        logger.info(f"Convergence detected, occurred at round {convergence_round}, final round is {final_round}")
+        logger.info(
+            f"Convergence detected, occurred at round {convergence_round}, final round is {final_round}"
+        )
     else:
         logger.info("No convergence detected within all rounds")
 

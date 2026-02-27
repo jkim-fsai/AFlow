@@ -15,7 +15,13 @@ from tenacity import retry, stop_after_attempt, wait_fixed
 
 from scripts.async_llm import AsyncLLM
 from scripts.logs import logger
-from scripts.formatter import BaseFormatter, FormatError, XmlFormatter, TextFormatter, CodeFormatter
+from scripts.formatter import (
+    BaseFormatter,
+    FormatError,
+    XmlFormatter,
+    TextFormatter,
+    CodeFormatter,
+)
 from scripts.operator_an import (
     AnswerGenerateOp,
     CodeGenerateOp,
@@ -26,7 +32,7 @@ from scripts.operator_an import (
     ReviewOp,
     ReviseOp,
     ScEnsembleOp,
-) # All BaseModel
+)  # All BaseModel
 
 from scripts.prompts.prompt import (
     ANSWER_GENERATION_PROMPT,
@@ -43,6 +49,7 @@ from scripts.utils.code import (
     test_case_2_test_function,
 )
 
+
 class Operator:
     def __init__(self, llm: AsyncLLM, name: str):
         self.name = name
@@ -54,7 +61,7 @@ class Operator:
     async def _fill_node(self, op_class, prompt, mode=None, **extra_kwargs):
         # Create appropriate formatter based on mode
         formatter = self._create_formatter(op_class, mode, **extra_kwargs)
-        
+
         try:
             # Use the formatter with AsyncLLM
             if formatter:
@@ -62,7 +69,7 @@ class Operator:
             else:
                 # Fallback to direct call if no formatter is needed
                 response = await self.llm(prompt)
-                
+
             # Convert to expected format based on the original implementation
             if isinstance(response, dict):
                 return response
@@ -71,8 +78,10 @@ class Operator:
         except FormatError as e:
             print(f"Format error in {self.name}: {str(e)}")
             return {"error": str(e)}
-    
-    def _create_formatter(self, op_class, mode=None, **extra_kwargs) -> Optional[BaseFormatter]:
+
+    def _create_formatter(
+        self, op_class, mode=None, **extra_kwargs
+    ) -> Optional[BaseFormatter]:
         """Create appropriate formatter based on operation class and mode"""
         if mode == "xml_fill":
             return XmlFormatter.from_model(op_class)
@@ -112,7 +121,9 @@ class CustomCodeGenerate(Operator):
 
     async def __call__(self, problem, entry_point, instruction):
         prompt = instruction + problem
-        response = await self._fill_node(GenerateOp, prompt, mode="code_fill", function_name=entry_point)
+        response = await self._fill_node(
+            GenerateOp, prompt, mode="code_fill", function_name=entry_point
+        )
         return response
 
 
@@ -193,7 +204,7 @@ class Programmer(Operator):
 
     def __del__(self):
         """Ensure the process pool is closed when the object is destroyed"""
-        if hasattr(self, 'process_pool'):
+        if hasattr(self, "process_pool"):
             self.process_pool.shutdown(wait=True)
 
     async def exec_code(self, code, timeout=30):
@@ -213,6 +224,7 @@ class Programmer(Operator):
             future.cancel()
             # Force garbage collection
             import gc
+
             gc.collect()
             return "Error", "Code execution timed out"
         except concurrent.futures.process.BrokenProcessPool:
@@ -228,11 +240,11 @@ class Programmer(Operator):
         Asynchronous method to generate code.
         """
         prompt = PYTHON_CODE_VERIFIER_PROMPT.format(
-            problem=problem,
-            analysis=analysis,
-            feedback=feedback
+            problem=problem, analysis=analysis, feedback=feedback
         )
-        response = await self._fill_node(CodeGenerateOp, prompt, mode, function_name="solve")
+        response = await self._fill_node(
+            CodeGenerateOp, prompt, mode, function_name="solve"
+        )
         return response
 
     @retry(stop=stop_after_attempt(3), wait=wait_fixed(2))
@@ -244,7 +256,9 @@ class Programmer(Operator):
         output = None
         feedback = ""
         for i in range(3):
-            code_response = await self.code_generate(problem, analysis, feedback, mode="code_fill")
+            code_response = await self.code_generate(
+                problem, analysis, feedback, mode="code_fill"
+            )
             code = code_response.get("code")
             if not code:
                 return {"code": code, "output": "No code generated"}
@@ -260,9 +274,11 @@ class Programmer(Operator):
 
             # Force garbage collection after each iteration
             import gc
+
             gc.collect()
 
         return {"code": code, "output": output}
+
 
 class Test(Operator):
     def __init__(self, llm: AsyncLLM, name: str = "Test"):
@@ -318,7 +334,9 @@ class Test(Operator):
                     exec_pass=f"executed unsuccessfully, error: \n {result}",
                     test_fail="executed unsucessfully",
                 )
-                response = await self._fill_node(ReflectionTestOp, prompt, mode="code_fill")
+                response = await self._fill_node(
+                    ReflectionTestOp, prompt, mode="code_fill"
+                )
                 solution = response["response"]
             else:
                 prompt = REFLECTION_ON_PUBLIC_TEST_PROMPT.format(
@@ -327,7 +345,9 @@ class Test(Operator):
                     exec_pass="executed successfully",
                     test_fail=result,
                 )
-                response = await self._fill_node(ReflectionTestOp, prompt, mode="code_fill")
+                response = await self._fill_node(
+                    ReflectionTestOp, prompt, mode="code_fill"
+                )
                 solution = response["response"]
 
         result = self.exec_code(solution, entry_point)
@@ -362,7 +382,9 @@ class Revise(Operator):
         super().__init__(llm, name)
 
     async def __call__(self, problem, solution, feedback, mode: str = None):
-        prompt = REVISE_PROMPT.format(problem=problem, solution=solution, feedback=feedback)
+        prompt = REVISE_PROMPT.format(
+            problem=problem, solution=solution, feedback=feedback
+        )
         response = await self._fill_node(ReviseOp, prompt, mode="xml_fill")
         return response
 
@@ -381,7 +403,10 @@ class MdEnsemble(Operator):
     def shuffle_answers(solutions: List[str]) -> Tuple[List[str], Dict[str, str]]:
         shuffled_solutions = solutions.copy()
         random.shuffle(shuffled_solutions)
-        answer_mapping = {chr(65 + i): solutions.index(solution) for i, solution in enumerate(shuffled_solutions)}
+        answer_mapping = {
+            chr(65 + i): solutions.index(solution)
+            for i, solution in enumerate(shuffled_solutions)
+        }
         return shuffled_solutions, answer_mapping
 
     async def __call__(self, solutions: List[str], problem: str, mode: str = None):
@@ -395,7 +420,9 @@ class MdEnsemble(Operator):
             for index, solution in enumerate(shuffled_solutions):
                 solution_text += f"{chr(65 + index)}: \n{str(solution)}\n\n\n"
 
-            prompt = MD_ENSEMBLE_PROMPT.format(solutions=solution_text, question=problem)
+            prompt = MD_ENSEMBLE_PROMPT.format(
+                solutions=solution_text, question=problem
+            )
             response = await self._fill_node(MdEnsembleOp, prompt, mode="xml_fill")
 
             answer = response.get("solution_letter", "A")

@@ -1,15 +1,16 @@
-WORKFLOW_OPTIMIZE_PROMPT = """You are building a Graph and corresponding Prompt to jointly solve {type} problems. 
-Referring to the given graph and prompt, which forms a basic example of a {type} solution approach, 
-please reconstruct and optimize them. You can add, modify, or delete nodes, parameters, or prompts. Include your 
-single modification in XML tags in your reply. Ensure they are complete and correct to avoid runtime failures. When 
-optimizing, you can incorporate critical thinking methods like review, revise, ensemble (generating multiple answers through different/similar prompts, then voting/integrating/checking the majority to obtain a final answer), selfAsk, etc. Consider 
-Python's loops (for, while, list comprehensions), conditional statements (if-elif-else, ternary operators), 
-or machine learning techniques (e.g., linear regression, decision trees, neural networks, clustering). The graph 
-complexity should not exceed 10. Use logical and control flow (IF-ELSE, loops) for a more enhanced graphical 
+WORKFLOW_OPTIMIZE_PROMPT = """You are building a Graph and corresponding Prompt to jointly solve {type} problems.
+Referring to the given graph and prompt, which forms a basic example of a {type} solution approach,
+please reconstruct and optimize them. You can add, modify, or delete nodes, parameters, or prompts. Include your
+single modification in XML tags in your reply. Ensure they are complete and correct to avoid runtime failures. When
+optimizing, you can incorporate critical thinking methods like review, revise, ensemble (generating multiple answers through different/similar prompts, then voting/integrating/checking the majority to obtain a final answer), selfAsk, etc. Consider
+Python's loops (for, while, list comprehensions), conditional statements (if-elif-else, ternary operators),
+or machine learning techniques (e.g., linear regression, decision trees, neural networks, clustering). The graph
+complexity should not exceed 10. Use logical and control flow (IF-ELSE, loops) for a more enhanced graphical
 representation.Ensure that all the prompts required by the current graph from prompt_custom are included.Exclude any other prompts.
 Output the modified graph and all the necessary Prompts in prompt_custom (if needed).
 The prompt you need to generate is only the one used in `prompt_custom.XXX` within Custom. Other methods already have built-in prompts and are prohibited from being generated. Only generate those needed for use in `prompt_custom`; please remove any unused prompts in prompt_custom.
 the generated prompt must not contain any placeholders.
+CRITICAL CONSISTENCY RULE: Every `prompt_custom.ATTRIBUTE_NAME` referenced in your <graph> output MUST have a corresponding `ATTRIBUTE_NAME = \"""...\"""` definition in your <prompt> output. For example, if the graph uses `prompt_custom.XXX_PROMPT` and `prompt_custom.ALT_PROMPT`, the prompt section MUST define BOTH `XXX_PROMPT` and `ALT_PROMPT`. Missing definitions cause runtime errors.
 Considering information loss, complex graphs may yield better results, but insufficient information transmission can omit the solution. It's crucial to include necessary context during the process."""
 
 
@@ -44,6 +45,7 @@ response = await self.custom(input=problem, instruction=prompt_custom.XXX_PROMPT
 solution = await self.generate(problem=f"question:{problem}, xxx:{response['response']}")
 ```
 Note: In custom, the input and instruction are directly concatenated(instruction+input), and placeholders are not supported. Please ensure to add comments and handle the concatenation externally.\n
+IMPORTANT: If you reference `prompt_custom.XXX_PROMPT` or any other attribute in the graph, you MUST define those exact variable names in your <prompt> output. Verify that every `prompt_custom.NAME` used in <graph> has a matching `NAME = \"""...\"""` in <prompt>.
 
 **Introducing multiple operators at appropriate points can enhance performance. If you find that some provided operators are not yet used in the graph, try incorporating them.**
 """

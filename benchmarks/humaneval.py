@@ -77,7 +77,9 @@ class HumanEvalBenchmark(BaseBenchmark):
             exec(solution, global_dict)
 
             if entry_point not in global_dict:
-                raise ValueError(f"Function {entry_point} is not defined in the solution.")
+                raise ValueError(
+                    f"Function {entry_point} is not defined in the solution."
+                )
 
             exec(test, global_dict)
 
@@ -98,16 +100,25 @@ class HumanEvalBenchmark(BaseBenchmark):
             result = (self.FAIL, error_message)
 
             with open("error.log", "a", encoding="utf-8") as log_file:
-                log_file.write(f"{time.strftime('%Y-%m-%d %H:%M:%S')} - {error_message}\n")
+                log_file.write(
+                    f"{time.strftime('%Y-%m-%d %H:%M:%S')} - {error_message}\n"
+                )
 
         return result
 
-    @retry(stop=stop_after_attempt(5), wait=wait_fixed(1), retry=retry_if_exception_type(Exception), reraise=True)
+    @retry(
+        stop=stop_after_attempt(5),
+        wait=wait_fixed(1),
+        retry=retry_if_exception_type(Exception),
+        reraise=True,
+    )
     async def _generate_output(self, graph, prompt, entry_point):
         # Generate output with a timeout of 60 seconds
         return await asyncio.wait_for(graph(prompt, entry_point), timeout=60)
 
-    async def evaluate_problem(self, data: dict, graph: Callable) -> Tuple[str, str, str, float, float]:
+    async def evaluate_problem(
+        self, data: dict, graph: Callable
+    ) -> Tuple[str, str, str, float, float]:
         input_text = data["prompt"]
         expected_output = (
             "\nCorrect Solution:\ndef "
@@ -119,7 +130,9 @@ class HumanEvalBenchmark(BaseBenchmark):
 
         try:
             # Generate prediction using the graph function
-            prediction, cost = await self._generate_output(graph, input_text, data["entry_point"])
+            prediction, cost = await self._generate_output(
+                graph, input_text, data["entry_point"]
+            )
 
             # Check the solution
             ret = self.check_solution(prediction, data["test"], data["entry_point"])
@@ -143,7 +156,9 @@ class HumanEvalBenchmark(BaseBenchmark):
             logger.info(f"Maximum retries reached. Skipping this sample. Error: {e}")
             return input_text, str(e), expected_output, 0.0, 0.0
 
-    def calculate_score(self, expected_output: str, prediction: str) -> Tuple[float, str]:
+    def calculate_score(
+        self, expected_output: str, prediction: str
+    ) -> Tuple[float, str]:
         # The scoring logic for HumanEval is already implemented in evaluate_problem, this is just to conform to the interface
         return 0.0, prediction
 

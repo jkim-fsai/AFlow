@@ -24,6 +24,6 @@ To create a benchmark for a new dataset, follow these steps:
 
 ## Example
 
-Refer to the `DROPBenchmark` class in the `drop.py` file for an example of how to implement a benchmark for a specific dataset. 
+Refer to the `DROPBenchmark` class in the `drop.py` file for an example of how to implement a benchmark for a specific dataset.
 
 By following these guidelines, you can easily create custom benchmark evaluations for new datasets.

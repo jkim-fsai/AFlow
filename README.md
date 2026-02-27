@@ -6,7 +6,7 @@
 > If you encounter any difficulties in using or reproducing the code, please contact me directly (Email: didi4goooogle@gmail.com, Wechat: 18831933368). Some Operators may have bugs during the migration from MetaGPT to this repository.
 
 
-AFlow is a framework for automatically generating and optimizing Agentic Workflows. It uses Monte Carlo tree search in a code-represented workflow space to find effective workflows, replacing manual development with machine effort. Our approach shows potential to outperform handcrafted workflows on various tasks. 
+AFlow is a framework for automatically generating and optimizing Agentic Workflows. It uses Monte Carlo tree search in a code-represented workflow space to find effective workflows, replacing manual development with machine effort. Our approach shows potential to outperform handcrafted workflows on various tasks.
 
 We're building it to support more benchmarks and open-ended tasks! If you have any questions, please open an issue or email us!
 
@@ -76,13 +76,13 @@ For custom tasks, you can reference the code in the `benchmark` folder. Inherit 
    ```bash
    # Using default parameters
    python run.py --dataset MATH
-   
+
    # Or with custom parameters
    python run.py --dataset MATH --sample n --optimized_path xxx ...
    ```
 
 ## Reproduce the Results in the Paper
-1. We provide the raw data obtained from our experiments in this [link](https://drive.google.com/uc?export=download&id=1Sr5wjgKf3bN8OC7G6cO3ynzJqD4w6_Dv), including the workflows and prompts generated in each iteration, as well as their trajectories on the validation dataset. We also provide the optimal workflow for each dataset and the corresponding data on the test dataset. You can download these data using `data/download_data.py`. 
+1. We provide the raw data obtained from our experiments in this [link](https://drive.google.com/uc?export=download&id=1Sr5wjgKf3bN8OC7G6cO3ynzJqD4w6_Dv), including the workflows and prompts generated in each iteration, as well as their trajectories on the validation dataset. We also provide the optimal workflow for each dataset and the corresponding data on the test dataset. You can download these data using `data/download_data.py`.
 2. You can directly reproduce our experimental results by use different `ExperimentConfig` of `run.py`.
 
 ## Roadmap

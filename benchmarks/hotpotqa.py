@@ -41,14 +41,23 @@ class HotpotQABenchmark(BaseBenchmark):
         f1 = (2 * precision * recall) / (precision + recall)
         return f1, prediction
 
-    @retry(stop=stop_after_attempt(5), wait=wait_fixed(1), retry=retry_if_exception_type(Exception), reraise=True)
+    @retry(
+        stop=stop_after_attempt(5),
+        wait=wait_fixed(1),
+        retry=retry_if_exception_type(Exception),
+        reraise=True,
+    )
     async def _generate_output(self, graph, input_text):
         return await graph(input_text)
 
-    async def evaluate_problem(self, problem: dict, graph: Callable) -> Tuple[str, str, str, str, float, float]:
+    async def evaluate_problem(
+        self, problem: dict, graph: Callable
+    ) -> Tuple[str, str, str, str, float, float]:
         input_text = problem["question"]
         expected_output = problem["answer"]
-        paragraphs = [item[1] for item in problem["context"] if isinstance(item[1], list)]
+        paragraphs = [
+            item[1] for item in problem["context"] if isinstance(item[1], list)
+        ]
         context_str = "\n".join(" ".join(paragraph) for paragraph in paragraphs)
         inputs = f"Context: {context_str}\n\nQuestion: {input_text}\n\nAnswer:"
 

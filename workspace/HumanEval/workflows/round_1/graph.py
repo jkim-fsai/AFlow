@@ -25,6 +25,8 @@ class Workflow:
         Custom operator to generate anything you want.
         But when you want to get standard code, you should use custom_code_generate operator.
         """
-        # await self.custom(input=, instruction="") 
-        solution = await self.custom_code_generate(problem=problem, entry_point=entry_point, instruction="") # But When you want to get standard code ,you should use customcodegenerator.
-        return solution['response'], self.llm.get_usage_summary()["total_cost"]
+        # await self.custom(input=, instruction="")
+        solution = await self.custom_code_generate(
+            problem=problem, entry_point=entry_point, instruction=""
+        )  # But When you want to get standard code ,you should use customcodegenerator.
+        return solution["response"], self.llm.get_usage_summary()["total_cost"]

@@ -9,7 +9,13 @@ import traceback
 from collections import Counter
 from typing import Dict, List, Tuple, Optional
 
-from scripts.formatter import BaseFormatter, FormatError, XmlFormatter, CodeFormatter, TextFormatter
+from scripts.formatter import (
+    BaseFormatter,
+    FormatError,
+    XmlFormatter,
+    CodeFormatter,
+    TextFormatter,
+)
 from workspace.MBPP.workflows.template.operator_an import *
 from workspace.MBPP.workflows.template.op_prompt import *
 from scripts.async_llm import AsyncLLM
@@ -22,7 +28,6 @@ from scripts.utils.code import extract_test_cases_from_jsonl, test_case_2_test_f
 from scripts.operators import Operator
 
 
-
 class Custom(Operator):
     def __init__(self, llm: AsyncLLM, name: str = "Custom"):
         super().__init__(llm, name)
@@ -31,14 +36,17 @@ class Custom(Operator):
         prompt = instruction + input
         response = await self._fill_node(GenerateOp, prompt, mode="single_fill")
         return response
-    
+
+
 class CustomCodeGenerate(Operator):
     def __init__(self, llm: AsyncLLM, name: str = "CustomCodeGenerate"):
         super().__init__(llm, name)
 
     async def __call__(self, problem, entry_point, instruction):
         prompt = instruction + problem
-        response = await self._fill_node(GenerateOp, prompt, mode="code_fill", function_name=entry_point)
+        response = await self._fill_node(
+            GenerateOp, prompt, mode="code_fill", function_name=entry_point
+        )
         return response
 
 
@@ -68,6 +76,7 @@ class ScEnsemble(Operator):
 
         return {"response": solutions[answer_mapping[answer]]}
 
+
 class Test(Operator):
     def __init__(self, llm: AsyncLLM, name: str = "Test"):
         super().__init__(llm, name)
@@ -75,7 +84,7 @@ class Test(Operator):
     def exec_code(self, solution, entry_point):
 
         test_cases = extract_test_cases_from_jsonl(entry_point, dataset="MBPP")
-                
+
         fail_cases = []
         for test_case in test_cases:
             test_code = test_case_2_test_function(solution, test_case, entry_point)
@@ -104,9 +113,7 @@ class Test(Operator):
         else:
             return "no error"
 
-    async def __call__(
-        self, problem, solution, entry_point, test_loop: int = 3
-    ):
+    async def __call__(self, problem, solution, entry_point, test_loop: int = 3):
         """
         "Test": {
         "description": "Test the solution with test cases, if the solution is correct, return 'no error', if the solution is incorrect, return reflect on the soluion and the error information",
@@ -125,7 +132,9 @@ class Test(Operator):
                     exec_pass=f"executed unsuccessfully, error: \n {result}",
                     test_fail="executed unsucessfully",
                 )
-                response = await self._fill_node(ReflectionTestOp, prompt, mode="code_fill")
+                response = await self._fill_node(
+                    ReflectionTestOp, prompt, mode="code_fill"
+                )
                 solution = response["response"]
             else:
                 prompt = REFLECTION_ON_PUBLIC_TEST_PROMPT.format(
@@ -134,9 +143,11 @@ class Test(Operator):
                     exec_pass="executed successfully",
                     test_fail=result,
                 )
-                response = await self._fill_node(ReflectionTestOp, prompt, mode="code_fill")
+                response = await self._fill_node(
+                    ReflectionTestOp, prompt, mode="code_fill"
+                )
                 solution = response["response"]
-        
+
         result = self.exec_code(solution, entry_point)
         if result == "no error":
             return {"result": True, "solution": solution}

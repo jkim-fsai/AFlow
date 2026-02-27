@@ -148,7 +148,7 @@ def make_function(code: str) -> str:
             + ast.unparse(function_ast)  # type: ignore
         )
         return main_code
-    except Exception as e:
+    except Exception:
         return code
 
 
@@ -174,7 +174,7 @@ def call_method(method, inputs):
     def _inner_call_method(_method):
         try:
             return _method()
-        except SystemExit as e:
+        except SystemExit:
             pass
         finally:
             pass
@@ -186,7 +186,7 @@ def get_function(compiled_sol, fn_name: str):  # type: ignore
     try:
         assert hasattr(compiled_sol, fn_name)
         return getattr(compiled_sol, fn_name)
-    except Exception as e:
+    except Exception:
         return
 
 
@@ -597,19 +597,17 @@ def run_test(sample, test=None, debug=False, timeout=6):
 if __name__ == "__main__":
     # Example sample data
     sample = {
-        "input_output": json.dumps({
-            "fn_name": "add",
-            "inputs": ["1\n2", "3\n4"],
-            "outputs": ["3", "7"]
-        })
+        "input_output": json.dumps(
+            {"fn_name": "add", "inputs": ["1\n2", "3\n4"], "outputs": ["3", "7"]}
+        )
     }
-    
+
     # Example test code
     test_code = """
 def add(a, b):
     return a + b
 """
-    
+
     # Run the test
     results, metadata = run_test(sample, test_code, debug=True, timeout=10)
     print("Results:", results)

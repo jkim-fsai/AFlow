@@ -26,23 +26,34 @@ class GSM8KBenchmark(BaseBenchmark):
         else:
             return None
 
-    def calculate_score(self, expected_output: float, prediction: float) -> Tuple[float, float]:
+    def calculate_score(
+        self, expected_output: float, prediction: float
+    ) -> Tuple[float, float]:
         if prediction is None:
             return 0.0, prediction
         return 1.0 if abs(expected_output - prediction) <= 1e-6 else 0.0, prediction
 
-    @retry(stop=stop_after_attempt(5), wait=wait_fixed(1), retry=retry_if_exception_type(Exception), reraise=True)
+    @retry(
+        stop=stop_after_attempt(5),
+        wait=wait_fixed(1),
+        retry=retry_if_exception_type(Exception),
+        reraise=True,
+    )
     async def _generate_output(self, graph, input_text):
         return await graph(input_text)
 
-    async def evaluate_problem(self, problem: dict, graph: Callable) -> Tuple[str, str, float, float, float]:
+    async def evaluate_problem(
+        self, problem: dict, graph: Callable
+    ) -> Tuple[str, str, float, float, float]:
         input_text = problem["question"]
         expected_output = self.extract_number(problem["answer"])
 
         try:
             output, cost = await self._generate_output(graph, input_text)
             predicted_number = self.extract_number(output)
-            score, extracted_output = self.calculate_score(expected_output, predicted_number)
+            score, extracted_output = self.calculate_score(
+                expected_output, predicted_number
+            )
 
             if score == 0:
                 self.log_mismatch(input_text, expected_output, output, extracted_output)
