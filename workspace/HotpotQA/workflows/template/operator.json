@@ -1,14 +1,17 @@
 {
     "Custom": {
         "description": "Generates anything based on customized input and instruction.",
-        "interface": "custom(input: str, instruction: str) -> dict with key 'response' of type str"
+        "interface": "custom(input: str, instruction: str) -> dict with key 'response' of type str",
+        "constructor": "Custom(llm)"
     },
     "ScEnsemble": {
         "description": "Uses self-consistency to select the solution that appears most frequently in the solution list, improve the selection to enhance the choice of the best solution.",
-        "interface": "sc_ensemble(solutions: List[str]) -> dict with key 'response' of type str"
+        "interface": "sc_ensemble(solutions: List[str]) -> dict with key 'response' of type str",
+        "constructor": "ScEnsemble(llm)"
     },
     "AnswerGenerate": {
         "description": "Generate step by step based on the input. The step by step thought process is in the field of 'thought', and the final answer is in the field of 'answer'.",
-        "interface": "answer_generate(input: str) -> dict with key 'thought' of type str, 'answer' of type str"
+        "interface": "answer_generate(input: str) -> dict with key 'thought' of type str, 'answer' of type str",
+        "constructor": "AnswerGenerate(llm)"
     }
 }

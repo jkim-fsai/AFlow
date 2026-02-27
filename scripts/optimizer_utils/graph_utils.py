@@ -70,7 +70,8 @@ class GraphUtils:
             matched_data = operator_data[operator_name]
             desc = matched_data["description"]
             interface = matched_data["interface"]
-            return f"{id}. {operator_name}: {desc}, with interface {interface})."
+            constructor = matched_data.get("constructor", f"{operator_name}(llm)")
+            return f"{id}. {operator_name}: {desc}, with interface {interface}). Constructor: operator.{constructor} (requires self.llm)."
 
     def create_graph_optimize_prompt(
         self,
@@ -112,14 +113,43 @@ class GraphUtils:
                 time.sleep(5)
         return None
 
+
+    def _sanitize_prompt_content(self, content: str) -> str:
+        """Convert optimizer's raw prompt output to valid Python assignments.
+
+        The optimizer often generates prompts in a commented format like:
+            # XXX_PROMPT = \"\"\"
+            # prompt content here
+            # \"\"\"
+        which is invalid Python. This strips leading '# ' from each line
+        to produce valid Python variable assignments.
+        """
+        lines = content.split('\n')
+        cleaned_lines = []
+        for line in lines:
+            if line.startswith('# '):
+                cleaned_lines.append(line[2:])
+            elif line == '#':
+                cleaned_lines.append('')
+            else:
+                cleaned_lines.append(line)
+        cleaned = '\n'.join(cleaned_lines)
+
+        # If result doesn't contain a variable assignment, wrap in a default
+        if not re.search(r'\w+\s*=\s*"""', cleaned):
+            cleaned = f'XXX_PROMPT = """\n{cleaned.strip()}\n"""'
+
+        return cleaned
+
     def write_graph_files(self, directory: str, response: dict, round_number: int, dataset: str):
         graph = WORKFLOW_TEMPLATE.format(graph=response["graph"], round=round_number, dataset=dataset)
 
         with open(os.path.join(directory, "graph.py"), "w", encoding="utf-8") as file:
             file.write(graph)
 
+        prompt_content = self._sanitize_prompt_content(response["prompt"])
         with open(os.path.join(directory, "prompt.py"), "w", encoding="utf-8") as file:
-            file.write(response["prompt"])
+            file.write(prompt_content)
 
         with open(os.path.join(directory, "__init__.py"), "w", encoding="utf-8") as file:
             file.write("")
