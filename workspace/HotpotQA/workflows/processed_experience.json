@@ -1,0 +1,36 @@
+{
+    "3": {
+        "score": 0.6900533276048648,
+        "success": {},
+        "failure": {
+            "4": {
+                "modification": "(add) Incorporate a self-review step after reasoning to verify the answer before final solution generation.",
+                "score": 0.6489336629859076
+            }
+        }
+    },
+    "1": {
+        "score": 0.17773805074747706,
+        "success": {
+            "3": {
+                "modification": "add a step to generate detailed reasoning before final answer, and then use ScEnsemble to select the best response",
+                "score": 0.6900533276048648
+            },
+            "2": {
+                "modification": "(add) Incorporate an AnswerGenerate operator after the custom response to generate a detailed step-by-step reasoning and final answer, then use ScEnsemble to select the best response.",
+                "score": 0.6458280321706904
+            }
+        },
+        "failure": {}
+    },
+    "2": {
+        "score": 0.6458280321706904,
+        "success": {
+            "5": {
+                "modification": "(add) Introduce a self-review step after the custom response to verify answer consistency before final ensemble.",
+                "score": 0.6479356378786332
+            }
+        },
+        "failure": {}
+    }
+}
