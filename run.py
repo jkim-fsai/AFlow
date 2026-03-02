@@ -104,6 +104,19 @@ def parse_args():
         default="gpt-4o-mini",
         help="Specifies the name of the model used for execution tasks.",
     )
+    parser.add_argument(
+        "--mode",
+        type=str,
+        choices=["Graph", "Test"],
+        default="Graph",
+        help="Optimizer mode: 'Graph' for optimization, 'Test' for held-out test evaluation.",
+    )
+    parser.add_argument(
+        "--test_rounds",
+        type=str,
+        default=None,
+        help="Comma-separated round numbers to evaluate in Test mode (e.g., '1,3'). Defaults to [1].",
+    )
     return parser.parse_args()
 
 
@@ -113,12 +126,15 @@ if __name__ == "__main__":
     config = EXPERIMENT_CONFIGS[args.dataset]
 
     models_config = LLMsConfig.default()
-    opt_llm_config = models_config.get(args.opt_model_name)
-    if opt_llm_config is None:
-        raise ValueError(
-            f"The optimization model '{args.opt_model_name}' was not found in the 'models' section of the configuration file. "
-            "Please add it to the configuration file or specify a valid model using the --opt_model_name flag. "
-        )
+
+    opt_llm_config = None
+    if args.mode != "Test":
+        opt_llm_config = models_config.get(args.opt_model_name)
+        if opt_llm_config is None:
+            raise ValueError(
+                f"The optimization model '{args.opt_model_name}' was not found in the 'models' section of the configuration file. "
+                "Please add it to the configuration file or specify a valid model using the --opt_model_name flag. "
+            )
 
     exec_llm_config = models_config.get(args.exec_model_name)
     if exec_llm_config is None:
@@ -145,8 +161,8 @@ if __name__ == "__main__":
         validation_rounds=args.validation_rounds,
     )
 
-    # Optimize workflow via setting the optimizer's mode to 'Graph'
-    optimizer.optimize("Graph")
+    test_rounds = None
+    if args.test_rounds:
+        test_rounds = [int(r.strip()) for r in args.test_rounds.split(",")]
 
-    # Test workflow via setting the optimizer's mode to 'Test'
-    # optimizer.optimize("Test")
+    optimizer.optimize(args.mode, test_rounds=test_rounds)

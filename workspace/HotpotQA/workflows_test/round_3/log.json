@@ -1,0 +1,1591 @@
+[
+    {
+        "question": "High School Confidential, an eight part documentary followed twelve high school teenagers from a high school in Overland Park, Kansas that ranked what in the 2009 Newsweek ranking of the top 1,500 high schools in the United States?",
+        "right_answer": "#364",
+        "model_output": "364th",
+        "extracted_output": "364th",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What is another name, in Swedish, for a seductive forest creature found in Scandinavian folklore?",
+        "right_answer": "Rå",
+        "model_output": "skogsrå",
+        "extracted_output": "skogsrå",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Do both Lee Tamahori and Robert Redford work as a director?",
+        "right_answer": "yes",
+        "model_output": "Yes, both Lee Tamahori and Robert Redford work as directors.",
+        "extracted_output": "Yes, both Lee Tamahori and Robert Redford work as directors.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What was the name of the first biography of Brontë written by the author of Mary Barton?",
+        "right_answer": "Elizabeth Gaskell",
+        "model_output": "The Life of Charlotte Brontë",
+        "extracted_output": "The Life of Charlotte Brontë",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is there fruit juice in both a Fizz and a Painkiller cocktail?",
+        "right_answer": "yes",
+        "model_output": "Yes, both a Fizz and a Painkiller cocktail contain fruit juice.",
+        "extracted_output": "Yes, both a Fizz and a Painkiller cocktail contain fruit juice.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "When was Aimee Carrero's depiction of Angie first aired?",
+        "right_answer": "Tuesday, January 24, 2012, at 8 p.m. ET/PT",
+        "model_output": "June 25, 2014",
+        "extracted_output": "June 25, 2014",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Louis, Count of Armagnac has a descendant that includes which final king of Italy?",
+        "right_answer": "Umberto II",
+        "model_output": "Louis, Count of Armagnac, is an ancestor of Umberto II of Italy, the final king of Italy.",
+        "extracted_output": "Louis, Count of Armagnac, is an ancestor of Umberto II of Italy, the final king of Italy.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "when was Quiet in Heaven/Song of Liberty recorded?",
+        "right_answer": "Before settling on their current name in 1982",
+        "model_output": "1982",
+        "extracted_output": "1982",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which magazine is focused more on the adult demographic, Jack and Jill or Paper?",
+        "right_answer": "Paper",
+        "model_output": "Paper is focused more on the adult demographic than Jack and Jill.",
+        "extracted_output": "Paper is focused more on the adult demographic than Jack and Jill.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "When did the character on Grey's Anatomy, played by the same actor who portrayed Rev James Lawson in \"Lee Daniel's The Butler\", debut?",
+        "right_answer": "season six, episode 5, \"Invasion\"",
+        "model_output": "October 22, 2009",
+        "extracted_output": "October 22, 2009",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Matthew Wright was selected with pick #33 in the AFL draft that took place during what date in 2009?",
+        "right_answer": "26 November",
+        "model_output": "15 December 2009",
+        "extracted_output": "15 December 2009",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who was the base where the 413th Flight Test Group is stationed named after?",
+        "right_answer": "Brig Gen Augustine Warner Robins",
+        "model_output": "Robins Air Force Base",
+        "extracted_output": "Robins Air Force Base",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which maker of Robatumumab is American?",
+        "right_answer": "Merck",
+        "model_output": "American",
+        "extracted_output": "American",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "The uncle of Paul Capellani died at a military operation during a battle was fought between who?",
+        "right_answer": "the Allies and Nazi Germany",
+        "model_output": "The Battle of Dunkirk",
+        "extracted_output": "The Battle of Dunkirk",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What university in India hosts a literary festival which has had as a previous invitee the former Union Minister of Panchayati Raj?",
+        "right_answer": "Central University of India",
+        "model_output": "Aligarh Muslim University",
+        "extracted_output": "Aligarh Muslim University",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What band is a tribute to a band originally known as the Grizzly River Boys?",
+        "right_answer": "Nashville Tribute Band",
+        "model_output": "Diamond Rio",
+        "extracted_output": "Diamond Rio",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What album did R.Kelly release the same year as producing \"These Are Special Times\" for Celine Dion. ",
+        "right_answer": "\"I Believe I Can Fly\"",
+        "model_output": "R.",
+        "extracted_output": "R.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Lady Elizabeth Delmé and Her Children (1779) is a portrait given to the National Gallery of Art in 1937, which is located in which state?",
+        "right_answer": "Washington, D.C.",
+        "model_output": "District of Columbia",
+        "extracted_output": "District of Columbia",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which British-Mauritian model starred alongside Raj Babbar and Mahesh Manjrekar in a 2011 Indian romantic comedy film?",
+        "right_answer": "Bodyguard",
+        "model_output": "Hazel Keech",
+        "extracted_output": "Hazel Keech",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What did  the man who  led Sweden to military supremacy during the Thirty Years' War found in 1623?",
+        "right_answer": "court in Åbo",
+        "model_output": "Sweden as a Great Power",
+        "extracted_output": "Sweden as a Great Power",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What is the familial relationship of the founder of the Gulf Cartel to Juan García Ábrego?",
+        "right_answer": "uncle",
+        "model_output": "The founder of the Gulf Cartel, Juan Nepomuceno Guerra, is the mentor or predecessor of Juan García Ábrego.",
+        "extracted_output": "The founder of the Gulf Cartel, Juan Nepomuceno Guerra, is the mentor or predecessor of Juan García Ábrego.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "When did the first bank come into existence that is part of an organization that serves rural areas of India with basic banking and financial services?",
+        "right_answer": "on 20 July 2009",
+        "model_output": "Regional Rural Bank (RRB)",
+        "extracted_output": "Regional Rural Bank (RRB)",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Richard Münch portrayed the German general who served in what capacity during WWII in the 1970 movie Patton?",
+        "right_answer": "Oberkommando der Wehrmacht",
+        "model_output": "He served as a general and Chief of the Operations Staff of the Wehrmacht during WWII.",
+        "extracted_output": "He served as a general and Chief of the Operations Staff of the Wehrmacht during WWII.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "This कसबा पेठ विधानसभा मतदारसंघ is an example of a language that ranks what in the number of native speakers in India?",
+        "right_answer": "fourth",
+        "model_output": "4th",
+        "extracted_output": "4th",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Mooreville, Mississippi is located on which Interstate highway that follows US Route 78?",
+        "right_answer": "Interstate 22",
+        "model_output": "Mooreville is located on I-22, following US Route 78.",
+        "extracted_output": "Mooreville is located on I-22, following US Route 78.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What is the relationship of Yeshahework Yilma's mother to the man who was Ethiopia's emperor from 1930 to 1974? ",
+        "right_answer": "niece",
+        "model_output": "Yeshashework Yilma's mother is the niece of Emperor Haile Selassie.",
+        "extracted_output": "Yeshashework Yilma's mother is the niece of Emperor Haile Selassie.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are Euptelea and Muehlenbeckia both genuses?",
+        "right_answer": "yes",
+        "model_output": "Yes, both Euptelea and Muehlenbeckia are genera.",
+        "extracted_output": "Yes, both Euptelea and Muehlenbeckia are genera.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Where is Greensky Bluegrass band's home and location of where they created their first album?",
+        "right_answer": "Bell's Brewery, Inc.",
+        "model_output": "Kalamazoo, Michigan",
+        "extracted_output": "Kalamazoo, Michigan",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What Danish sports club based in Copenhagen  did striker Søren Lindsted start his career at?",
+        "right_answer": "Søren Lindsted",
+        "model_output": "KB (Kjøbenhavns Boldklub)",
+        "extracted_output": "KB (Kjøbenhavns Boldklub)",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "How many people did the South Korean spree killer which NICS Improvement Amendments Act of 2007 enabaled to buy firearm killed in 2007",
+        "right_answer": "32 people",
+        "model_output": "0 people; no, the NICS Improvement Amendments Act of 2007 did not enable him to buy a firearm in 2007.",
+        "extracted_output": "0 people; no, the NICS Improvement Amendments Act of 2007 did not enable him to buy a firearm in 2007.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which genus has more species, Xanthoceras or Ehretia?",
+        "right_answer": "Ehretia",
+        "model_output": "Ehretia has more species than Xanthoceras.",
+        "extracted_output": "Ehretia has more species than Xanthoceras.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "University of Wisconsin–Madison and University of Notre Dame are both what?",
+        "right_answer": "research university",
+        "model_output": "They are both universities in the United States.",
+        "extracted_output": "They are both universities in the United States.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Insomniac Events is part of a partnership with a club founded by an investor of what heritage?",
+        "right_answer": "Iranian-American",
+        "model_output": "Iranian",
+        "extracted_output": "Iranian",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who has won more Grand Slam women's doubles titles, Lisa Raymond or Liezel Huber?",
+        "right_answer": "Liezel Huber",
+        "model_output": "Lisa Raymond has won more Grand Slam women's doubles titles than Liezel Huber.",
+        "extracted_output": "Lisa Raymond has won more Grand Slam women's doubles titles than Liezel Huber.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who holds the world record for jumping over 6 buses and appeared on the British television series \"The Jump\"?",
+        "right_answer": "Eddie \"The Eagle\" Edwards",
+        "model_output": "Vera Olenchenko",
+        "extracted_output": "Vera Olenchenko",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which band included more previously-known figures when it was formed, !!! or Puddle of Mudd?",
+        "right_answer": "!!!",
+        "model_output": "!!!",
+        "extracted_output": "!!!",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who won more awards, Brothers Quay or Jake Kasdan?",
+        "right_answer": "Brothers Quay",
+        "model_output": "The Brothers Quay have won more awards than Jake Kasdan according to the given data.",
+        "extracted_output": "The Brothers Quay have won more awards than Jake Kasdan according to the given data.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What is the nationality of the actor who costarred with Joe Chen and Jia Nailiang in \"Destined to Love You\"?",
+        "right_answer": "Hong Kong",
+        "model_output": "Chinese",
+        "extracted_output": "Chinese",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "J. Searle Dawley and Ken Annakin were both directors of what?",
+        "right_answer": "Kenneth Cooper \"Ken\" Annakin, OBE (10 August 1914 – 22 April 2009) was a prolific English film director.",
+        "model_output": "film director",
+        "extracted_output": "film director",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Whiich genus has more species, Dracula or Pistacia?",
+        "right_answer": "Dracula",
+        "model_output": "Dracula has more species than Pistacia.",
+        "extracted_output": "Dracula has more species than Pistacia.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who was the director of the 2007 American action film starring the actress, professionally known as Maggie Q.?",
+        "right_answer": "Len Wiseman",
+        "model_output": "Ben Garant",
+        "extracted_output": "Ben Garant",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who was born in August and was a professor?",
+        "right_answer": "Fred MacMurray",
+        "model_output": "Jean-Paul Fitoussi, C. Bradford Welles, Jan Drewes Achenbach, William Arthur Sewell, and Zhang Kangzhi.",
+        "extracted_output": "Jean-Paul Fitoussi, C. Bradford Welles, Jan Drewes Achenbach, William Arthur Sewell, and Zhang Kangzhi.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Where does the descendant of the Red Setter originate? ",
+        "right_answer": "Scotland",
+        "model_output": "Ireland",
+        "extracted_output": "Ireland",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who was the film which was Kim Dae-woo's directing debut about ?",
+        "right_answer": "a scholar",
+        "model_output": "The film's subject revolves around a scholar involved in writing erotic literature and his romantic involvement with a royal concubine during the Joseon era.",
+        "extracted_output": "The film's subject revolves around a scholar involved in writing erotic literature and his romantic involvement with a royal concubine during the Joseon era.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Tom Araya and Marcus Mumford were both what?",
+        "right_answer": "musician",
+        "model_output": "They are both musicians.",
+        "extracted_output": "They are both musicians.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What was the profession of the one who wrote a song on a 2005 album he collaborated on with Marc Predka?",
+        "right_answer": "professional wrestler, actor, and hip hop musician",
+        "model_output": "wrestler",
+        "extracted_output": "wrestler",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What video game character did the voice actress in the animated film Alpha and Omega voice?",
+        "right_answer": "Kairi in the video game series \"Kingdom Hearts\".",
+        "model_output": "Kate",
+        "extracted_output": "Kate",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "In what country was Cudjoe's leader born?",
+        "right_answer": "Ghana",
+        "model_output": "Jamaica",
+        "extracted_output": "Jamaica",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What major landform lended its name to both the Blue Ridge Music Center, and American's longest linear park?",
+        "right_answer": "469 mi",
+        "model_output": "Blue Ridge Mountains",
+        "extracted_output": "Blue Ridge Mountains",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are Portland International Airport and Gerald R. Ford International Airport both located in Oregon?",
+        "right_answer": "no",
+        "model_output": "Only Portland International Airport (PDX) is in Oregon; Gerald R. Ford International Airport (GRR) is in Michigan.",
+        "extracted_output": "Only Portland International Airport (PDX) is in Oregon; Gerald R. Ford International Airport (GRR) is in Michigan.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Ambrose Mendy has managed and/or advised a British professional boxer that as of July 2017 is ranked the world's seventh best super middleweight by who?",
+        "right_answer": "\"The Ring\" magazine",
+        "model_output": "Chris Eubank Jr.",
+        "extracted_output": "Chris Eubank Jr.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who replaced the manager of the Aston Villa that began at Leeds United?",
+        "right_answer": "Martin O'Neill",
+        "model_output": "David O'Leary",
+        "extracted_output": "David O'Leary",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "At what summer festival might you find music by Bakermat?",
+        "right_answer": "Tomorrowland",
+        "model_output": "Weekend Festival",
+        "extracted_output": "Weekend Festival",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What is the chemical formula of the organic material that clementines have less of than oranges?",
+        "right_answer": "CHO",
+        "model_output": "C10H16",
+        "extracted_output": "C10H16",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Heinrich Marschner was a composer who performed in the time frame after one of the first significant composers in what school of work?",
+        "right_answer": "Romantic",
+        "model_output": "Weber performed before Marschner.",
+        "extracted_output": "Weber performed before Marschner.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "In what year was the most famous statute at Po Lin Monastery built?",
+        "right_answer": "Tian Tan Buddha",
+        "model_output": "1993",
+        "extracted_output": "1993",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Between two bands, Mastodon and Hole, which one has more members?",
+        "right_answer": "Mastodon",
+        "model_output": "Hole has more members.",
+        "extracted_output": "Hole has more members.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which author wrote about a woman captured by the Symbionese Liberation Army?",
+        "right_answer": "Paul Avery",
+        "model_output": "Susan Choi",
+        "extracted_output": "Susan Choi",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "The Voyage is a wooden roller coaster located at a theme park divided into how many sections ?",
+        "right_answer": "four sections",
+        "model_output": "4",
+        "extracted_output": "4",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "The alcoholic drink that shares a name with Quintessentially Unreal's 1996 album is commonly reffered to in historical literature as what?",
+        "right_answer": "the green fairy",
+        "model_output": "Absinthe",
+        "extracted_output": "Absinthe",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What was the official religion of the lands of the husband of Dorothea of Denmark, Duchess of Prussia?",
+        "right_answer": "Protestantism",
+        "model_output": "Lutheranism",
+        "extracted_output": "Lutheranism",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are Gael and Fitness published in the same country?",
+        "right_answer": "no",
+        "model_output": "No, they are not published in the same country.",
+        "extracted_output": "No, they are not published in the same country.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "How many albums did the company who released Tift Merritt's debut album release for Tif Merritt?",
+        "right_answer": "two",
+        "model_output": "2",
+        "extracted_output": "2",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "When was the female character that on June 9, 2015 was promoted to a series regular first introduced on \"Once Upon a Time\"?",
+        "right_answer": "the second half of the third season",
+        "model_output": "Early 2014",
+        "extracted_output": "Early 2014",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What location under Charing Cross railway station did G-A-Y move to?",
+        "right_answer": "venue Heaven",
+        "model_output": "G-A-Y moved to Heaven beneath Charing Cross railway station.",
+        "extracted_output": "G-A-Y moved to Heaven beneath Charing Cross railway station.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are Prológica CP-400 and Atari ST both personal computers?",
+        "right_answer": "yes",
+        "model_output": "Yes, both the Prológica CP-400 and the Atari ST are personal computers.",
+        "extracted_output": "Yes, both the Prológica CP-400 and the Atari ST are personal computers.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What profession does Matt Thiessen and George Thorogood have in common?",
+        "right_answer": "musician",
+        "model_output": "Musicians and songwriters",
+        "extracted_output": "Musicians and songwriters",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What word or phrase is found in both the history of Belgium and cockfighting?",
+        "right_answer": "cockpit",
+        "model_output": "cock",
+        "extracted_output": "cock",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Chandgi Ram won a gold medal in 1970 in a continental multi-sport event held at which city ?",
+        "right_answer": "Bangkok",
+        "model_output": "Chandgi Ram won his gold medal at the 1970 Asian Games held in Bangkok, Thailand.",
+        "extracted_output": "Chandgi Ram won his gold medal at the 1970 Asian Games held in Bangkok, Thailand.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Rafe Hernandez is a fictional character who played with Chrishell Stause's charachter on Days of our live?",
+        "right_answer": "Jordan Ridgeway",
+        "model_output": "Yes",
+        "extracted_output": "Yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Jomar Brun contributed to an operation designed to prevent what country from producing nuclear weapons?",
+        "right_answer": "prevent the German nuclear weapon project",
+        "model_output": "Germany",
+        "extracted_output": "Germany",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What is the nationality of the man who finished second for ART Grand Pix in the 2016 Baku GP2 Series round?",
+        "right_answer": "Russia",
+        "model_output": "Russian",
+        "extracted_output": "Russian",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What do Wrigley Park and social networks have in common?",
+        "right_answer": "Neighbourhood",
+        "model_output": "Both Wrigley Park and social networks are related to social interactions within a community setting, with Wrigley Park being a physical community and social networks representing the social ties within or across such communities.",
+        "extracted_output": "Both Wrigley Park and social networks are related to social interactions within a community setting, with Wrigley Park being a physical community and social networks representing the social ties within or across such communities.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who did President Franklin Roosevelt appoint that was responsible to transmit votes of the Electoral College to Congress?",
+        "right_answer": "Robert Digges Wimberly Connor",
+        "model_output": "NARA (National Archives and Records Administration)",
+        "extracted_output": "NARA (National Archives and Records Administration)",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Where did Mark Pavelich win Gold in 1980?",
+        "right_answer": "Soviet Union",
+        "model_output": "Lake Placid, New York",
+        "extracted_output": "Lake Placid, New York",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What profession did Willi Forst and Elmer Clifton share?",
+        "right_answer": "actor",
+        "model_output": "Film directors and actors",
+        "extracted_output": "Film directors and actors",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which airport, Salt Lake City International Airport or Brainerd Lakes Regional Airport, serves as a commercial airline and is closest to it's respective downtown city?",
+        "right_answer": "Brainerd Lakes Regional Airport",
+        "model_output": "Salt Lake City International Airport",
+        "extracted_output": "Salt Lake City International Airport",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which technique did the director at Pzena Investment Management outline?",
+        "right_answer": "outlined by Joel Greenblatt",
+        "model_output": "Magic formula investing",
+        "extracted_output": "Magic formula investing",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "In what year did the Guild of Music Supervisors Awards recognize a British-American romantic drama film based on the 1952 romance novel \"The Price of Salt\" starring Cate Blanchett?",
+        "right_answer": "2016",
+        "model_output": "The Guild of Music Supervisors Awards recognized the film \"Carol\" in 2016.",
+        "extracted_output": "The Guild of Music Supervisors Awards recognized the film \"Carol\" in 2016.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What kind of musician does Robert Plant discography and John Bonham have in common?",
+        "right_answer": "drummer",
+        "model_output": "They are both rock band musicians.",
+        "extracted_output": "They are both rock band musicians.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Daniel Greene has created what for clients including sportscaster Bryant Gumbel, Eleanor Roosevelt, William Randolph Hearst and Dave Thomas, the founder of Wendy's?",
+        "right_answer": "portrait",
+        "model_output": "portraits",
+        "extracted_output": "portraits",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are both Dafeng District and Dazhou located in the same province?",
+        "right_answer": "no",
+        "model_output": "Yes, Dazhou and Dafeng are in different provinces.",
+        "extracted_output": "Yes, Dazhou and Dafeng are in different provinces.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "The Church of St Peter in Pertenhall, Bedfordshire, England was added to this register on 13 July 1964.",
+        "right_answer": "Statutory List of Buildings of Special Architectural or Historic Interest",
+        "model_output": "13 July 1964",
+        "extracted_output": "13 July 1964",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Do the drinks Gibson and Zurracapote both contain gin?",
+        "right_answer": "no",
+        "model_output": "The Gibson contains gin, but Zurracapote does not.",
+        "extracted_output": "The Gibson contains gin, but Zurracapote does not.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What foundation do scholars give for the likelihood of collaboration on a William Shakespeare Play written between 1588 and 1593?",
+        "right_answer": "linguistic analysis",
+        "model_output": "Yes, collaboration on Shakespeare's plays was likely common during that period.",
+        "extracted_output": "Yes, collaboration on Shakespeare's plays was likely common during that period.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "When is the American politician and attorney which Thomas J. Connolly an for Governor of Maine in 1998 against born ",
+        "right_answer": "March 31, 1944",
+        "model_output": "September 25, 1957",
+        "extracted_output": "September 25, 1957",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Where does the team coached by someone with the nickname \"Coach K\" play?",
+        "right_answer": "Cameron Indoor Stadium",
+        "model_output": "Durham, North Carolina",
+        "extracted_output": "Durham, North Carolina",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "In what city is the company that Fastjet Tanzania was originally founded as a part of prior to rebranding based?",
+        "right_answer": "Nairobi, Kenya",
+        "model_output": "Dar es Salaam",
+        "extracted_output": "Dar es Salaam",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who wrote the film, other than The Good Shepherd, in which Leonard Logsdail appeared as a tailor ?",
+        "right_answer": "Martin Scorsese",
+        "model_output": "Terence Winter",
+        "extracted_output": "Terence Winter",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which has more species, Clianthus or Callicoma?",
+        "right_answer": "Clianthus",
+        "model_output": "Clianthus has more species than Callicoma.",
+        "extracted_output": "Clianthus has more species than Callicoma.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "One of the actors in the film Dhruva Natchathiram was awarded an Honorary Doctorate by the People's University of Milan in what year?",
+        "right_answer": "2011",
+        "model_output": "Vikram",
+        "extracted_output": "Vikram",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What profeesion do Giacomo Benvenuti and Claudio Monteverdi share?",
+        "right_answer": "Italian composer",
+        "model_output": "Composers",
+        "extracted_output": "Composers",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What is the name of the process used by a company that is located in New Jersey and invented Hexachrome?",
+        "right_answer": "CMYKOG process",
+        "model_output": "Pantone Matching System (PMS)",
+        "extracted_output": "Pantone Matching System (PMS)",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What is the origin of the National Space Olympiad and Kalpana Chawla ?",
+        "right_answer": "Indian",
+        "model_output": "The origin of the Olympiad is Indian heritage, and Kalpana Chawla's origin is Indian as well.",
+        "extracted_output": "The origin of the Olympiad is Indian heritage, and Kalpana Chawla's origin is Indian as well.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which airport Pago Pago International Airport or Chattanooga Metropolitan Airport is closer to the central business district of their local community ?",
+        "right_answer": "Chattanooga Metropolitan Airport",
+        "model_output": "Chattanooga Metropolitan Airport is closer to its central business district than Pago Pago International Airport is to Pago Pago's central business district.",
+        "extracted_output": "Chattanooga Metropolitan Airport is closer to its central business district than Pago Pago International Airport is to Pago Pago's central business district.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What was Mary Edna González sexuality? ",
+        "right_answer": "omnisexuality",
+        "model_output": "Yes, her sexuality is pansexual.",
+        "extracted_output": "Yes, her sexuality is pansexual.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What is the other occupation of this Indian film actress who appeared in \"Hate Story 2\" (2014) and \"Saadi Love Story?\"",
+        "right_answer": "dancer",
+        "model_output": "Model",
+        "extracted_output": "Model",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "The actor who starred in \"The Hearse\" gained worldwide film by starring in whose series of 1940s films?",
+        "right_answer": "Orson Welles",
+        "model_output": "Orson Welles' film series, including \"Citizen Kane,\" \"The Magnificent Ambersons,\" and \"Journey into Fear.\"",
+        "extracted_output": "Orson Welles' film series, including \"Citizen Kane,\" \"The Magnificent Ambersons,\" and \"Journey into Fear.\"",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who produced the 2004 major release sequel of Shrek 2?",
+        "right_answer": "Andrew Adamson",
+        "model_output": "DreamWorks Animation",
+        "extracted_output": "DreamWorks Animation",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Eleventh Dream Day and The Shins are both rock bands from where?",
+        "right_answer": "United States",
+        "model_output": "Eleventh Dream Day is from Chicago, Illinois, and The Shins are from Albuquerque, New Mexico.",
+        "extracted_output": "Eleventh Dream Day is from Chicago, Illinois, and The Shins are from Albuquerque, New Mexico.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which partner of Jash was born in 1970?",
+        "right_answer": "Sarah Kate Silverman",
+        "model_output": "No, there is no Jash partner born in 1970 based on the provided information.",
+        "extracted_output": "No, there is no Jash partner born in 1970 based on the provided information.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are both Frank Lloyd and Olivier Assayas American film directors?",
+        "right_answer": "no",
+        "model_output": "No, only Frank Lloyd is an American film director; Olivier Assayas is French.",
+        "extracted_output": "No, only Frank Lloyd is an American film director; Olivier Assayas is French.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Richard Burton became involved in a mayoral campaign for a politician that previously served as the Mayor of Baltimore during what time period?",
+        "right_answer": "1999 to 2007",
+        "model_output": "1998–1999",
+        "extracted_output": "1998–1999",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "The Sanders-Brown Center on Aging was funded by a grant from a businessman known for what restaurant chain?",
+        "right_answer": "Kentucky Fried Chicken (KFC)",
+        "model_output": "John Y. Brown Jr.",
+        "extracted_output": "John Y. Brown Jr.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which number in the Final Fantasy series was created by Hiroyuki Ito and allows the player control of the artificial intelligence of the characters in battle?",
+        "right_answer": "Final Fantasy XII",
+        "model_output": "6",
+        "extracted_output": "6",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Dashboard Confessional have more members than World Party?",
+        "right_answer": "yes",
+        "model_output": "Yes, Dashboard Confessional has more members than World Party.",
+        "extracted_output": "Yes, Dashboard Confessional has more members than World Party.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Here's Little Richard is a debut album containing a song written by Little Richard, Enotris Johnson and who else?",
+        "right_answer": "Robert \"Bumps\" Blackwell",
+        "model_output": "There is no third person involved in writing the song \"Jenny, Jenny\" based on the provided information.",
+        "extracted_output": "There is no third person involved in writing the song \"Jenny, Jenny\" based on the provided information.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which of the two airlines that operate flights into Enrique Malek International Airport is the larger air carrier in Panama?",
+        "right_answer": "Copa Airlines",
+        "model_output": "Air Panama",
+        "extracted_output": "Air Panama",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are Catasetum and Origanum in the same family?",
+        "right_answer": "no",
+        "model_output": "No, Catasetum and Origanum are not in the same family.",
+        "extracted_output": "No, Catasetum and Origanum are not in the same family.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "In what year was the band, whose bassist joined Arvas in 1996, formed?",
+        "right_answer": "1992",
+        "model_output": "1993",
+        "extracted_output": "1993",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "The pseudonymous partner to \"Willis the Guard\" in the American musical duo of Jerry Buckner and Gary Garcia is noun which refers to which portion of a bet?",
+        "right_answer": "amount charged by a bookmaker",
+        "model_output": "vigorish",
+        "extracted_output": "vigorish",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who created the manga series originally serialized from 1994-1995with a superheroine?",
+        "right_answer": "Tonde Burin",
+        "model_output": "Taeko Ikeda",
+        "extracted_output": "Taeko Ikeda",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What characteristic meaning it's transferable between species, does monkeypox and cowpox virus both share?",
+        "right_answer": "zoonotic",
+        "model_output": "They are zoonotic (capable of crossing species barriers).",
+        "extracted_output": "They are zoonotic (capable of crossing species barriers).",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who was involved in observing the natural progression of untreated syphilis in rural African-American men in Alabama?",
+        "right_answer": "John Charles Cutler",
+        "model_output": "The U.S. Public Health Service",
+        "extracted_output": "The U.S. Public Health Service",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What country can the scopula nucleata be found in?",
+        "right_answer": "West Africa",
+        "model_output": "Ghana",
+        "extracted_output": "Ghana",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which civilization instigated a war with Rome and significantly influenced the Latin language?",
+        "right_answer": "the Etruscan civilization",
+        "model_output": "The Etruscans",
+        "extracted_output": "The Etruscans",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are PC Magazine and Sculptural Pursuit both technology publications?",
+        "right_answer": "no",
+        "model_output": "Only PC Magazine is a technology publication; Sculptural Pursuit is not.",
+        "extracted_output": "Only PC Magazine is a technology publication; Sculptural Pursuit is not.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What other jobs did the man that co-produced Gyara Hazar Ladkian have?",
+        "right_answer": "film lyricist",
+        "model_output": "Co-producer of the film Gyara Hazar Ladkian",
+        "extracted_output": "Co-producer of the film Gyara Hazar Ladkian",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What relationship does Fred Gehrke have to the 23rd overall pick in the 2010 Major League Baseball Draft?",
+        "right_answer": "great-grandfather",
+        "model_output": "Fred Gehrke is the great-grandfather of the player drafted 23rd overall in 2010.",
+        "extracted_output": "Fred Gehrke is the great-grandfather of the player drafted 23rd overall in 2010.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which band was formed first, Wire or Young the Giant?",
+        "right_answer": "Wire",
+        "model_output": "Wire was formed before Young the Giant.",
+        "extracted_output": "Wire was formed before Young the Giant.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What was need in order to diverge from the chinese ritual uniting spouses by pre-arrangement between families?",
+        "right_answer": "constant support from propaganda campaigns",
+        "model_output": "A different marriage practice not based on pre-arrangement",
+        "extracted_output": "A different marriage practice not based on pre-arrangement",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "In which film did Emilio Estevez star in in the same year as Nightmares",
+        "right_answer": "The Outsiders",
+        "model_output": "Nightmares",
+        "extracted_output": "Nightmares",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who co-starred in an episode of The ABC Comedy Hour with the man who played Duke Slater in \"Gomer Pyle, U.S.M.C.\"? ",
+        "right_answer": "Jack Cassidy",
+        "model_output": "Orson Welles",
+        "extracted_output": "Orson Welles",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "In addition to Jennifer Tilly, Brian Backer, Sally Kellerman, Nedra Volz, Clara Peller, Wendie Jo Sperber and the actor born on June 22 1958 in Wilmette, Illinois, who else starred in Moving Violations?",
+        "right_answer": "Fred Willard",
+        "model_output": "Don Cheadle",
+        "extracted_output": "Don Cheadle",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Worker: What professional title to both Christopher Nolan and Paul Schrader boast?",
+        "right_answer": "screenwriter",
+        "model_output": "filmmaker",
+        "extracted_output": "filmmaker",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Were was the Mexican state after which there is Villa Unión, Sinaloa located? ",
+        "right_answer": "tip of the Baja California",
+        "model_output": "Sinaloa",
+        "extracted_output": "Sinaloa",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What type of profession do Dave Pirner and Les McKeown both have?",
+        "right_answer": "singer",
+        "model_output": "Singers",
+        "extracted_output": "Singers",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "where was class of warships which ARA \"Sarandí\" is its fourth and last ship built ",
+        "right_answer": "Germany",
+        "model_output": "The \"Almirante Brown\" class",
+        "extracted_output": "The \"Almirante Brown\" class",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What type of profession does Chris Jericho and Gary Barlow have in common?",
+        "right_answer": "musician",
+        "model_output": "Musicians and singers",
+        "extracted_output": "Musicians and singers",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Nikolay Mitrofanovich Krylov and Anatoly Fomenko both held what academic title?",
+        "right_answer": "mathematician",
+        "model_output": "professor",
+        "extracted_output": "professor",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "When did Peter Capaldi play the role of Mr. Curry in Paddington 2?",
+        "right_answer": "2017",
+        "model_output": "2016-2017",
+        "extracted_output": "2016-2017",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Author David Chanoff has collaborated with a U.S. Navy admiral who served as the ambassador to the United Kingdom under which President?",
+        "right_answer": "Bill Clinton",
+        "model_output": "William J. Crowe Jr.",
+        "extracted_output": "William J. Crowe Jr.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "The author of the \"The Dagger and the Coin\" fantasy series was nominated for what award in 2017?",
+        "right_answer": "Hugo Award",
+        "model_output": "No, Daniel Abraham was not nominated for any award in 2017.",
+        "extracted_output": "No, Daniel Abraham was not nominated for any award in 2017.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "A puzzle-platform video game developed by the Valve Corporation is part of what 2012 action-adventure game?",
+        "right_answer": "Gateways",
+        "model_output": "Portal",
+        "extracted_output": "Portal",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What is a popular industry in the neighborhood of Willow Vale, New South Wales?",
+        "right_answer": "wineries",
+        "model_output": "Winemaking",
+        "extracted_output": "Winemaking",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who was the winner of the European Cup the year that 39 people were killed?",
+        "right_answer": "Juventus",
+        "model_output": "1985",
+        "extracted_output": "1985",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "The large subunit and small subunit that use two types of RNA are major components that make up what?",
+        "right_answer": "Ribosomes",
+        "model_output": "The ribosomal large and small subunits",
+        "extracted_output": "The ribosomal large and small subunits",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Gül Train is a project of which Eurasian political and economic intergovernmental organization?",
+        "right_answer": "Economic Cooperation Organisation",
+        "model_output": "ECO",
+        "extracted_output": "ECO",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What class of yamaha class sport bike motorcycle did Ryuji Yokoa use when he finished as champion in the MFJ All Japan Road Race GP250 Championship in 2006?",
+        "right_answer": "Yamaha 600 class",
+        "model_output": "GP250",
+        "extracted_output": "GP250",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "How many Golden Globe Awards did the artist who published the photo book \"In Mexico\" win?",
+        "right_answer": "five",
+        "model_output": "5",
+        "extracted_output": "5",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What was the the origin of the player that the Bull's traded with 76ers during the 1999-2000 midseason?",
+        "right_answer": "Croatian",
+        "model_output": "Croatia",
+        "extracted_output": "Croatia",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Where in the traditional West Riding of Lindsey is the Trolleybus Museum Located?",
+        "right_answer": "Isle of Axholme",
+        "model_output": "The Trolleybus Museum at Sandtoft is located within the traditional West Riding of Lindsey, on the Isle of Axholme in Lincolnshire.",
+        "extracted_output": "The Trolleybus Museum at Sandtoft is located within the traditional West Riding of Lindsey, on the Isle of Axholme in Lincolnshire.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Roger Stuart Woolhouse is a biographer of a philosopher commonly known as what ?",
+        "right_answer": "Father of Liberalism",
+        "model_output": "John Locke",
+        "extracted_output": "John Locke",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who is the controlling shareholder of the world's fourth-largest tyre manufacturer?",
+        "right_answer": "Jürgen M. Geissinger",
+        "model_output": "Schaeffler AG is the controlling shareholder of Continental AG.",
+        "extracted_output": "Schaeffler AG is the controlling shareholder of Continental AG.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What genre does Orkworld and John Wick have in common?",
+        "right_answer": "role-playing",
+        "model_output": "fantasy",
+        "extracted_output": "fantasy",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are Harry Everett Smith and Vladimir Danilevich both from Russia?",
+        "right_answer": "no",
+        "model_output": "Harry Everett Smith is from the United States, and Vladimir Danilevich is from Russia; they are not both from Russia.",
+        "extracted_output": "Harry Everett Smith is from the United States, and Vladimir Danilevich is from Russia; they are not both from Russia.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Dunstan is an electoral district that includes which suburb of Adelaide in the City of Norwood Payneham St Peters?",
+        "right_answer": "College Park",
+        "model_output": "St Peters",
+        "extracted_output": "St Peters",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who composed the theme music in 1989 of an animated television series which has the current arrangement by a person who  has scored or orchestrated music for more than 30 films and television shows?",
+        "right_answer": "Danny Elfman",
+        "model_output": "Alf Clausen",
+        "extracted_output": "Alf Clausen",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Linhai and Gongqingcheng are both what kinds of cities that are located in China?",
+        "right_answer": "county-level city",
+        "model_output": "They are both county-level cities in China.",
+        "extracted_output": "They are both county-level cities in China.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are Yoo-hoo and Faygo both carbonated drinks?",
+        "right_answer": "no",
+        "model_output": "Yoo-hoo and Faygo are not both carbonated drinks.",
+        "extracted_output": "Yoo-hoo and Faygo are not both carbonated drinks.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": " The 2011–12 Houston Rockets season began with the drafting of the player who now plays for what team?",
+        "right_answer": "Boston Celtics",
+        "model_output": "The player drafted by the Houston Rockets in the 2011–12 season is Marcus Morris, and he currently plays for the Boston Celtics.",
+        "extracted_output": "The player drafted by the Houston Rockets in the 2011–12 season is Marcus Morris, and he currently plays for the Boston Celtics.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which case was decided first, Selle v. Gibb or Reynolds v. Sims?",
+        "right_answer": "1964",
+        "model_output": "Reynolds v. Sims",
+        "extracted_output": "Reynolds v. Sims",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Double Jeopardy is a 1999 film starring an American political activist best known for an ongoing acting career spanning how long?",
+        "right_answer": "more than two decades",
+        "model_output": "Over 20 years",
+        "extracted_output": "Over 20 years",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What film did the sound editor for a 2013 Hong Kong-Chinese martial arts drama film based on the life story of the Wing Chun grandmaster Ip Man win two Academy Awards for?",
+        "right_answer": "\"Hacksaw Ridge\"",
+        "model_output": "The Grandmaster",
+        "extracted_output": "The Grandmaster",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who does the current PFA Young Player of the Year currently play for?",
+        "right_answer": "Premier League club",
+        "model_output": "Tottenham Hotspur",
+        "extracted_output": "Tottenham Hotspur",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which species is the most numerous, Podocarpus or Osmunda? ",
+        "right_answer": "Podocarpus",
+        "model_output": "Podocarpus is more numerous than Osmunda.",
+        "extracted_output": "Podocarpus is more numerous than Osmunda.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What is special about the wristwatches that Favre-Leuba manufactures?",
+        "right_answer": "Swiss made",
+        "model_output": "Their watches are special because of their long heritage, craftsmanship, and pioneering role in Swiss watchmaking history.",
+        "extracted_output": "Their watches are special because of their long heritage, craftsmanship, and pioneering role in Swiss watchmaking history.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "When did the the Antonine who was known as the third of the five good emperors live?",
+        "right_answer": "24 January 76 – 10 July 138",
+        "model_output": "86 to 161 AD",
+        "extracted_output": "86 to 161 AD",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Were Dee Dee Ramone and Ben Weasel ever in the same band?",
+        "right_answer": "no",
+        "model_output": "No, they were not in the same band.",
+        "extracted_output": "No, they were not in the same band.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which mountain is higher, Tongshanjiabu or Himalchuli?",
+        "right_answer": "Himalchuli has three main peaks: East (7893 m), West (7540 m) and North (7371 m)",
+        "model_output": "Himalchuli is taller than Tongshanjiabu.",
+        "extracted_output": "Himalchuli is taller than Tongshanjiabu.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Anthony Avent played basketball fo a High School that is located in a city approcimately 8 mi west of where?",
+        "right_answer": "lower Manhattan",
+        "model_output": "New York City",
+        "extracted_output": "New York City",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are both Grapico and Izze artificially flavored soft drinks?",
+        "right_answer": "no",
+        "model_output": "Grapico is artificially flavored, but Izze is not.",
+        "extracted_output": "Grapico is artificially flavored, but Izze is not.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are Southwest Florida International Airport and Henry E. Rohlsen Airport both in Florida?",
+        "right_answer": "no",
+        "model_output": "Only Southwest Florida International Airport is in Florida; Henry E. Rohlsen Airport is outside Florida in the U.S. Virgin Islands.",
+        "extracted_output": "Only Southwest Florida International Airport is in Florida; Henry E. Rohlsen Airport is outside Florida in the U.S. Virgin Islands.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Ordos City more west than Yangzhong?",
+        "right_answer": "yes",
+        "model_output": "Ordos City is more west than Yangzhong.",
+        "extracted_output": "Ordos City is more west than Yangzhong.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "In what directional area of Argentia would one find the Rio Hondo Department?",
+        "right_answer": "north",
+        "model_output": "The Rio Hondo Department is in the northern part of Argentina.",
+        "extracted_output": "The Rio Hondo Department is in the northern part of Argentina.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are both Schweizerischer Niederlaufhund and Portuguese Podengo dog breeds from Portugal?",
+        "right_answer": "no",
+        "model_output": "No, only the Portuguese Podengo is from Portugal.",
+        "extracted_output": "No, only the Portuguese Podengo is from Portugal.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What technique does Cam Clarke and Akira have in common?",
+        "right_answer": "animation",
+        "model_output": "voice acting",
+        "extracted_output": "voice acting",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What season was the character introduced that becomes the main antagonist in the  following season, from the animated television series created by Bryan Konietzko and Michael Dante DiMartino as a sequel to \"\", which aired from 2005 to 2008? ",
+        "right_answer": "third",
+        "model_output": "Season 3",
+        "extracted_output": "Season 3",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What was the Volvo S70 essentially modeled after and was the first all wheel drive Volvo?",
+        "right_answer": "Volvo 850",
+        "model_output": "The Volvo S70 was modeled after the Volvo 850, which was the first all-wheel drive Volvo.",
+        "extracted_output": "The Volvo S70 was modeled after the Volvo 850, which was the first all-wheel drive Volvo.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What is the population of the city at which the transmitter of WLLZ-LP was placed? ",
+        "right_answer": "143,372",
+        "model_output": "14,674",
+        "extracted_output": "14,674",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Swiss music duo Double released their best known single \"The Captain of Her Heart\" in what year?",
+        "right_answer": "1986",
+        "model_output": "1985",
+        "extracted_output": "1985",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which is a post-punk band, Boy Hits Car or The The?",
+        "right_answer": "The The",
+        "model_output": "The The",
+        "extracted_output": "The The",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Lex Antonia nullified the dictatorial laws set up by which Roman general?",
+        "right_answer": "Sulla",
+        "model_output": "Julius Caesar",
+        "extracted_output": "Julius Caesar",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "The Party Machine with Nia Peeples was executive produced by the talk show host whose show originally ran during what time period?",
+        "right_answer": "from 1989 until 1994",
+        "model_output": "1991",
+        "extracted_output": "1991",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Meomi Design works include The Octonauts book series, how did the adaptations of the series continue? ",
+        "right_answer": "a British children's television series",
+        "model_output": "The original \"The Octonauts\" books by Meomi Design Inc were adapted into an animated TV series by Brown Bag Films, broadcast on CBeebies with Irish animation and British voice actors, and then expanded internationally, increasing its popularity.",
+        "extracted_output": "The original \"The Octonauts\" books by Meomi Design Inc were adapted into an animated TV series by Brown Bag Films, broadcast on CBeebies with Irish animation and British voice actors, and then expanded internationally, increasing its popularity.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Where are Teide National Park and Garajonay National Park located?",
+        "right_answer": "Canary Islands, Spain",
+        "model_output": "Teide National Park is located on Tenerife, Spain, and Garajonay National Park is located on La Gomera, Spain.",
+        "extracted_output": "Teide National Park is located on Tenerife, Spain, and Garajonay National Park is located on La Gomera, Spain.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Where was the movie filmed starring Choi Yoon-young in 2012?",
+        "right_answer": "Korea",
+        "model_output": "Japan",
+        "extracted_output": "Japan",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Johnny Edwards and Ian Anderson are singers, who had joined the greater number of bands?",
+        "right_answer": "John Douglas \"Johnny\" Edwards",
+        "model_output": "Johnny Edwards has joined a greater number of bands than Ian Anderson.",
+        "extracted_output": "Johnny Edwards has joined a greater number of bands than Ian Anderson.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Minersville School District v. Gobitis and Gravel v. United States occur in the same decade?",
+        "right_answer": "no",
+        "model_output": "No, they did not occur in the same decade.",
+        "extracted_output": "No, they did not occur in the same decade.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What role did Veda Hlubinka-Cook have in the making of this 1997 video game that takes place on the Orient Express, days before the start of World War I?",
+        "right_answer": "technical director",
+        "model_output": "She was the game's designer and creative force.",
+        "extracted_output": "She was the game's designer and creative force.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Rynella is an unincorporated community named after the daughters of a conservationist who presided of the maker of a brand of hot sauce made from vinegar, salt and what kind of peppers? ",
+        "right_answer": "tabasco peppers",
+        "model_output": "puya chilis",
+        "extracted_output": "puya chilis",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "The Distribution of Industry act was passed by a man who was prime minister when? ",
+        "right_answer": "1945 to 1951",
+        "model_output": "1947",
+        "extracted_output": "1947",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Two positions were filled in The Voice of Ireland b which British-Irish girl group based in London, England?",
+        "right_answer": "The Saturdays",
+        "model_output": "Una Healy from The Saturdays and Rachel Stevens from S Club 7",
+        "extracted_output": "Una Healy from The Saturdays and Rachel Stevens from S Club 7",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": " Ruffin Horne McNeill Jr. an American football coach was named interim head coach after the suspension of a head coach that lead the team to winning seasons in every year of his what?",
+        "right_answer": "tenure",
+        "model_output": "Mike Leach",
+        "extracted_output": "Mike Leach",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What mixed martial arts promotion that was purchased by the Ultimate Fighting Championship in 2001 used to feature Nate Diaz as a competitor?",
+        "right_answer": "World Extreme Cagefighting",
+        "model_output": "WEC",
+        "extracted_output": "WEC",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who is the mother of Mary Robinson in Shakespeare's \"The Winter's Tale\"",
+        "right_answer": "Leontes",
+        "model_output": "Hermione",
+        "extracted_output": "Hermione",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Falling Stars is a role-playing game published by the company based out of what country?",
+        "right_answer": "Lithuania",
+        "model_output": "The company is based out of Lithuania.",
+        "extracted_output": "The company is based out of Lithuania.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are  Chrysalis and Look both women's magazines?",
+        "right_answer": "yes",
+        "model_output": "Yes, both \"Chrysalis\" and \"Look\" are women's magazines.",
+        "extracted_output": "Yes, both \"Chrysalis\" and \"Look\" are women's magazines.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What is the international football competition for women that Liu Ailing played in the 1991,1995, 1999 editions?",
+        "right_answer": "international football competition",
+        "model_output": "The FIFA Women's World Cup",
+        "extracted_output": "The FIFA Women's World Cup",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Erik Marcisak was named one of Top Ten \"Comedy Best Bets\" by a brand with special focus on what ?",
+        "right_answer": "casting, job opportunities, and career advice",
+        "model_output": "The brand's special focus is on the entertainment industry, specifically film and performing arts.",
+        "extracted_output": "The brand's special focus is on the entertainment industry, specifically film and performing arts.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Maximilian Büsser was the CEO of a company that produced timepieces from which country?",
+        "right_answer": "Swiss",
+        "model_output": "Switzerland",
+        "extracted_output": "Switzerland",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": " Which American rock band, Sugar Ray or Against the Current gained mainstream fame in the 1990's?",
+        "right_answer": "rock",
+        "model_output": "Sugar Ray",
+        "extracted_output": "Sugar Ray",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Where does the city situated where Kellyville Ridge is located?",
+        "right_answer": "on the Cumberland Plain",
+        "model_output": "Sydney",
+        "extracted_output": "Sydney",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What airline was a monopoly with a hub at Sheremetyevo International Airport?",
+        "right_answer": "AeroflotRussian Airlines",
+        "model_output": "Aeroflot",
+        "extracted_output": "Aeroflot",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Reima Karppinen won a silver medal in the double sculls at the Rowing Championships held in what German city?",
+        "right_answer": "Oberschleißheim",
+        "model_output": "Munich",
+        "extracted_output": "Munich",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which host of Straight to the Heart is an American actress and producer?",
+        "right_answer": "Barbara Niven",
+        "model_output": "None",
+        "extracted_output": "None",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who is younger, Martin Luther King III or his brother Dexter?",
+        "right_answer": "Dexter",
+        "model_output": "Dexter Scott King is younger than Martin Luther King III.",
+        "extracted_output": "Dexter Scott King is younger than Martin Luther King III.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could you read both Bicycling and National Review",
+        "right_answer": "yes",
+        "model_output": "Yes, I can read both Bicycling and National Review.",
+        "extracted_output": "Yes, I can read both Bicycling and National Review.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What title did the author of Det norske Theater's first production hold ? ",
+        "right_answer": "Baron of Holberg",
+        "model_output": "playwright",
+        "extracted_output": "playwright",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who preceded the man who had the Nassak Diamond cut and placed into the handle of his sword?",
+        "right_answer": "1st Earl Grosvenor",
+        "model_output": "The British East India Company",
+        "extracted_output": "The British East India Company",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "The attraction at universal studios that was based on \"The Tonight Show\" replaced an attraction that replaced an attraction based on what movie?",
+        "right_answer": "Ghostbusters Spooktacular",
+        "model_output": "Hanna-Barbera cartoons",
+        "extracted_output": "Hanna-Barbera cartoons",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Where is Anticimex's parent company headquartered?",
+        "right_answer": "EQT Plaza in Pittsburgh, Pennsylvania",
+        "model_output": "Sweden",
+        "extracted_output": "Sweden",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Butautas tried to depose his uncle who between which years ?",
+        "right_answer": "from 1345 to 1377",
+        "model_output": "1377–1380",
+        "extracted_output": "1377–1380",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was the film Splash released before the film Tangled? ",
+        "right_answer": "yes",
+        "model_output": "Yes, Splash was released before Tangled.",
+        "extracted_output": "Yes, Splash was released before Tangled.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "The American Sweetgum is the hostplant of what kind of bug?",
+        "right_answer": "moth",
+        "model_output": "Phyllocnistis liquidambarisella",
+        "extracted_output": "Phyllocnistis liquidambarisella",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "The third emperor in the Year of the Four Emperors had how many wives? ",
+        "right_answer": "second",
+        "model_output": "Not specified",
+        "extracted_output": "Not specified",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Who directed the film which starred Steve Cochran and the actor who played Sheriff Roy Coffee in \"Bonanza\"?",
+        "right_answer": "Louis King",
+        "model_output": "Vincent Sherman, Ray Teal",
+        "extracted_output": "Vincent Sherman, Ray Teal",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Brandy was handpicked by a producer that herself had been recognized by the \"Guinness World Records\" for what?",
+        "right_answer": "most awarded female act of all-time",
+        "model_output": "Whitney Houston",
+        "extracted_output": "Whitney Houston",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "How are Ceephax Acid Crew  and Squarepusher's music similar?",
+        "right_answer": "drum and bass electronic musician",
+        "model_output": "Their music is similar in style, both being rooted in electronic, acid, and bass-driven genres.",
+        "extracted_output": "Their music is similar in style, both being rooted in electronic, acid, and bass-driven genres.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What form of play does Yameen and Activision have in common?",
+        "right_answer": "video game",
+        "model_output": "Music and rhythm-based gaming",
+        "extracted_output": "Music and rhythm-based gaming",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are David Schwimmer and James Wan in the same industry?",
+        "right_answer": "yes",
+        "model_output": "The entertainment industry, specifically film and television production",
+        "extracted_output": "The entertainment industry, specifically film and television production",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Celebrity Fifteen to One has had more than one appearance by an English writer and former Conservative Member of what?",
+        "right_answer": "Parliament",
+        "model_output": "Gyles Brandreth",
+        "extracted_output": "Gyles Brandreth",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What year was the album featuring the trio made up of Posdnuos, Dave, and Maseo, alongside Lebanese-Syrian rapper Eslam Jawaad release?",
+        "right_answer": "2009",
+        "model_output": "1989",
+        "extracted_output": "1989",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Tony Leung Ka-fai is a four time winner of the award that has been on offer since what month?",
+        "right_answer": "December 1993",
+        "model_output": "The award has been on offer since January.",
+        "extracted_output": "The award has been on offer since January.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which town has a greater population as of the 2010 census, Minden, Nevada or Gardnerville, Nevada?",
+        "right_answer": "Gardnerville",
+        "model_output": "Gardnerville has a larger population than Minden in 2010.",
+        "extracted_output": "Gardnerville has a larger population than Minden in 2010.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What are the letters of the radio station serves the area comprising all of Belknap County, among others?",
+        "right_answer": "WANH",
+        "model_output": "WVNH",
+        "extracted_output": "WVNH",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are Giuseppe Verdi and Ambroise Thomas both Opera composers ?",
+        "right_answer": "yes",
+        "model_output": "Yes, Giuseppe Verdi and Ambroise Thomas are both opera composers.",
+        "extracted_output": "Yes, Giuseppe Verdi and Ambroise Thomas are both opera composers.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "How many albums had been recorded by Talking Heads by November, 1980?",
+        "right_answer": "four",
+        "model_output": "4",
+        "extracted_output": "4",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What city has a football team and had a player from Pago Pago, American Samoa play for it?",
+        "right_answer": "He is from Pago Pago, American Samoa and played college football at Oregon.",
+        "model_output": "Chicago",
+        "extracted_output": "Chicago",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "When did  former Yugoslav which  Patricia Hy-Boulais eventually lost to in  1992 US Open became US citizen",
+        "right_answer": "in 1994",
+        "model_output": "Monica Seles",
+        "extracted_output": "Monica Seles",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "How many times did the man who coached the 1986-87 UNLV Runnin' Rebels fail to win 20 games in a season?",
+        "right_answer": "twice",
+        "model_output": "0",
+        "extracted_output": "0",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Where operation Operation Dragoon and Battle of Cold Harbor fought during to different wars?",
+        "right_answer": "yes",
+        "model_output": "World War II and the American Civil War",
+        "extracted_output": "World War II and the American Civil War",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What casino in Las Vegas which is now operated by MGM Resorts International was developed by William G. Bennett?",
+        "right_answer": "Excalibur Hotel and Casino",
+        "model_output": "Circus Circus",
+        "extracted_output": "Circus Circus",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "On what part of U.S Route 56 can you listen to the KCTV?",
+        "right_answer": "The highway's eastern terminus",
+        "model_output": "The segment of U.S. Route 56 in or near Kansas City, Missouri",
+        "extracted_output": "The segment of U.S. Route 56 in or near Kansas City, Missouri",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "What does the goddess associated with the goddess frigg  consists of what tales?",
+        "right_answer": "various deities, beings, and heroes",
+        "model_output": "Fulla",
+        "extracted_output": "Fulla",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are Lance King and Han Seung-yeon both heavy metal vocalists?",
+        "right_answer": "no",
+        "model_output": "Lance King is a heavy metal vocalist; Han Seung-yeon is not.",
+        "extracted_output": "Lance King is a heavy metal vocalist; Han Seung-yeon is not.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Which case came first, Craig v. Boren or United States v. Paramount Pictures, Inc.?",
+        "right_answer": "Craig v. Boren",
+        "model_output": "United States v. Paramount Pictures, Inc. came first.",
+        "extracted_output": "United States v. Paramount Pictures, Inc. came first.",
+        "extract_answer_code": "None"
+    }
+]
