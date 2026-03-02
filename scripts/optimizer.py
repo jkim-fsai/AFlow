@@ -45,7 +45,9 @@ class Optimizer:
         validation_rounds: int = 5,
     ) -> None:
         self.optimize_llm_config = opt_llm_config
-        self.optimize_llm = create_llm_instance(self.optimize_llm_config)
+        self.optimize_llm = (
+            create_llm_instance(opt_llm_config) if opt_llm_config else None
+        )
         self.execute_llm_config = exec_llm_config
 
         self.dataset = dataset
@@ -68,13 +70,13 @@ class Optimizer:
         self.evaluation_utils = EvaluationUtils(self.root_path)
         self.convergence_utils = ConvergenceUtils(self.root_path)
 
-    def optimize(self, mode: OptimizerType = "Graph"):
+    def optimize(self, mode: OptimizerType = "Graph", test_rounds=None):
         if mode == "Test":
             test_n = 1  # validation datasets's execution number
             for i in range(test_n):
                 loop = asyncio.new_event_loop()
                 asyncio.set_event_loop(loop)
-                score = loop.run_until_complete(self.test())
+                score = loop.run_until_complete(self.test(rounds=test_rounds))
             return None
 
         for opt_round in range(self.max_rounds):
@@ -281,18 +283,21 @@ class Optimizer:
             logger.error(f"Error extracting fields from response: {str(e)}")
             return None
 
-    async def test(self):
-        rounds = [1]  # You can choose the rounds you want to test here.
+    async def test(self, rounds=None):
+        if rounds is None:
+            rounds = [1]
         data = []
 
-        graph_path = f"{self.root_path}/workflows_test"
-        json_file_path = self.data_utils.get_results_file_path(graph_path)
+        # Load graphs from the optimization workflows path, save results to workflows_test
+        source_graph_path = f"{self.root_path}/workflows"
+        output_path = f"{self.root_path}/workflows_test"
+        json_file_path = self.data_utils.get_results_file_path(output_path)
 
-        data = self.data_utils.load_results(graph_path)
+        data = self.data_utils.load_results(output_path)
 
         for round in rounds:
-            directory = self.graph_utils.create_round_directory(graph_path, round)
-            self.graph = self.graph_utils.load_graph(round, graph_path)
+            directory = self.graph_utils.create_round_directory(output_path, round)
+            self.graph = self.graph_utils.load_graph(round, source_graph_path)
 
             score, avg_cost, total_cost = (
                 await self.evaluation_utils.evaluate_graph_test(
