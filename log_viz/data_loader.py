@@ -30,7 +30,8 @@ class AFlowDataLoader:
         if not _self.workspace_root.exists():
             return datasets
         for d in sorted(_self.workspace_root.iterdir()):
-            if d.is_dir() and (d / "workflows" / "results.json").exists():
+            results_path = d / "workflows" / "results.json"
+            if d.is_dir() and results_path.exists() and results_path.stat().st_size > 0:
                 datasets.append(d.name)
         return datasets
 
@@ -38,7 +39,7 @@ class AFlowDataLoader:
     def load_validation_results(_self, dataset: str) -> pd.DataFrame:
         """Load workflows/results.json as DataFrame."""
         path = _self._workflows_path(dataset) / "results.json"
-        if not path.exists():
+        if not path.exists() or path.stat().st_size == 0:
             return pd.DataFrame()
         with open(path) as f:
             data = json.load(f)
@@ -51,7 +52,7 @@ class AFlowDataLoader:
     def load_test_results(_self, dataset: str) -> Optional[pd.DataFrame]:
         """Load workflows_test/results.json if it exists."""
         path = _self._workflows_test_path(dataset) / "results.json"
-        if not path.exists():
+        if not path.exists() or path.stat().st_size == 0:
             return None
         with open(path) as f:
             data = json.load(f)
