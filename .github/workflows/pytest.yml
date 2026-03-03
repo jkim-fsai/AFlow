@@ -11,6 +11,9 @@ permissions:
 jobs:
   pytest:
     runs-on: ubuntu-latest
+    env:
+      # Override JFrog index (requires auth) with public PyPI for CI
+      UV_DEFAULT_INDEX: https://pypi.org/simple/
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
