@@ -9,6 +9,7 @@ from components.metrics_cards import display_metrics_cards
 from components.predictions_table import display_predictions
 from components.prompt_viewer import display_prompt_evolution
 from components.sidebar import render_sidebar
+from components.workflow_diagram import display_workflow_diagrams
 from components.workflow_viewer import display_workflow_evolution
 from data_loader import AFlowDataLoader
 from plots import create_running_max_plot, create_score_progression_plot
@@ -82,8 +83,14 @@ display_mcts_tree(tree_data, experiences)
 
 st.divider()
 
-# --- Workflow Evolution ---
-st.subheader("Workflow Code Evolution")
+# --- Workflow Diagrams ---
+st.subheader("Workflow Structure Evolution")
+display_workflow_diagrams(loader, dataset, selected_rounds)
+
+st.divider()
+
+# --- Workflow Code ---
+st.subheader("Workflow Code")
 display_workflow_evolution(loader, dataset, selected_rounds)
 
 st.divider()
