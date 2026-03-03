@@ -19,6 +19,7 @@ Here is a graph and the corresponding prompt (prompt only related to the custom 
 <sample>
     <experience>{experience}</experience>
     <modification>(such as:add /delete /modify/ ...)</modification>
+    <short_label>(3-4 word Terraform-style summary using + for add, - for remove, ~ for change. Examples: "+ Self-review step", "~ Ensemble logic", "- Redundant loop")</short_label>
     <score>{score}</score>
     <graph>{graph}</graph>
     <prompt>{prompt}</prompt>(only prompt_custom)

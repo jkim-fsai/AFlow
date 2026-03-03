@@ -35,16 +35,21 @@ class ExperienceUtils:
                         if experience_data[father_node]["score"] is None:
                             experience_data[father_node]["score"] = data["before"]
 
+                        entry = {
+                            "modification": data["modification"],
+                            "score": data["after"],
+                        }
+                        if data.get("short_label"):
+                            entry["short_label"] = data["short_label"]
+
                         if data["succeed"]:
-                            experience_data[father_node]["success"][round_number] = {
-                                "modification": data["modification"],
-                                "score": data["after"],
-                            }
+                            experience_data[father_node]["success"][
+                                round_number
+                            ] = entry
                         else:
-                            experience_data[father_node]["failure"][round_number] = {
-                                "modification": data["modification"],
-                                "score": data["after"],
-                            }
+                            experience_data[father_node]["failure"][
+                                round_number
+                            ] = entry
                 except Exception as e:
                     logger.info(f"Error processing {round_dir}: {str(e)}")
 
@@ -84,14 +89,17 @@ class ExperienceUtils:
         else:
             return True  # 如果 experience_data 为空，也返回 True
 
-    def create_experience_data(self, sample, modification):
-        return {
+    def create_experience_data(self, sample, modification, short_label=""):
+        data = {
             "father node": sample["round"],
             "modification": modification,
             "before": sample["score"],
             "after": None,
             "succeed": None,
         }
+        if short_label:
+            data["short_label"] = short_label
+        return data
 
     def update_experience(self, directory, experience, avg_score):
         experience["after"] = avg_score
