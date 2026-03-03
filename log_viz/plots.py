@@ -1,6 +1,6 @@
 """Plotly visualization functions for AFlow optimization results."""
 
-from typing import Dict, List, Optional
+from typing import Optional
 
 import pandas as pd
 import plotly.graph_objects as go
@@ -95,6 +95,32 @@ def create_running_max_plot(val_df: pd.DataFrame) -> go.Figure:
     return fig
 
 
+def create_cost_progression_plot(val_df: pd.DataFrame) -> go.Figure:
+    """Bar chart of total cost per round."""
+    fig = go.Figure()
+
+    if not val_df.empty and "total_cost" in val_df.columns:
+        fig.add_trace(
+            go.Bar(
+                x=val_df["round"],
+                y=val_df["total_cost"],
+                name="Round Cost",
+                marker_color=COLORS["secondary"],
+                hovertemplate="<b>Round %{x}</b><br>Cost: $%{y:.4f}<extra></extra>",
+            )
+        )
+
+    fig.update_layout(
+        title="Cost per Round",
+        xaxis_title="MCTS Round",
+        yaxis_title="Cost (USD)",
+        template="plotly_white",
+        height=PLOT_HEIGHT,
+        xaxis=dict(dtick=1),
+    )
+    return fig
+
+
 def create_val_vs_test_comparison(
     val_df: pd.DataFrame,
     test_df: pd.DataFrame,
@@ -138,82 +164,5 @@ def create_val_vs_test_comparison(
         height=PLOT_HEIGHT,
         barmode="group",
         legend=dict(yanchor="top", y=0.99, xanchor="left", x=0.01),
-    )
-    return fig
-
-
-def create_mcts_tree_figure(
-    nodes: List[Dict],
-    edges: List[Dict],
-) -> go.Figure:
-    """Render MCTS tree as a Plotly scatter + line figure.
-
-    Args:
-        nodes: [{id, x, y, score, is_best, label}]
-        edges: [{x0, y0, x1, y1, success, modification}]
-    """
-    fig = go.Figure()
-
-    # Draw edges
-    for edge in edges:
-        color = COLORS["mcts_success"] if edge["success"] else COLORS["mcts_failure"]
-        fig.add_trace(
-            go.Scatter(
-                x=[edge["x0"], edge["x1"], None],
-                y=[edge["y0"], edge["y1"], None],
-                mode="lines",
-                line=dict(color=color, width=2),
-                hoverinfo="skip",
-                showlegend=False,
-            )
-        )
-        # Edge label (modification) at midpoint
-        mid_x = (edge["x0"] + edge["x1"]) / 2
-        mid_y = (edge["y0"] + edge["y1"]) / 2
-        label = "Improved" if edge["success"] else "Regressed"
-        mod_text = edge.get("modification", "")
-        if len(mod_text) > 80:
-            mod_text = mod_text[:80] + "..."
-        fig.add_trace(
-            go.Scatter(
-                x=[mid_x],
-                y=[mid_y],
-                mode="markers",
-                marker=dict(size=1, color="rgba(0,0,0,0)"),
-                hovertemplate=(f"<b>{label}</b><br>{mod_text}<extra></extra>"),
-                showlegend=False,
-            )
-        )
-
-    # Draw nodes
-    for node in nodes:
-        color = COLORS["mcts_best"] if node["is_best"] else COLORS["mcts_node"]
-        size = 30 if node["is_best"] else 22
-        fig.add_trace(
-            go.Scatter(
-                x=[node["x"]],
-                y=[node["y"]],
-                mode="markers+text",
-                marker=dict(size=size, color=color, line=dict(width=2, color="white")),
-                text=[node["label"]],
-                textposition="bottom center",
-                textfont=dict(size=11),
-                hovertemplate=(
-                    f"<b>Round {node['id']}</b><br>"
-                    f"Score: {node['score'] * 100:.1f}%<extra></extra>"
-                ),
-                showlegend=False,
-            )
-        )
-
-    fig.update_layout(
-        title="MCTS Search Tree",
-        template="plotly_white",
-        height=500,
-        xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
-        yaxis=dict(
-            showgrid=False, zeroline=False, showticklabels=False, autorange="reversed"
-        ),
-        margin=dict(t=50, b=20, l=20, r=20),
     )
     return fig

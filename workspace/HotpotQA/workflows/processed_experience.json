@@ -1,34 +1,49 @@
 {
-    "3": {
-        "score": 0.6900533276048648,
+    "5": {
+        "score": 0.6481173390098893,
         "success": {},
         "failure": {
-            "4": {
-                "modification": "(add) Incorporate a self-review step after reasoning to verify the answer before final solution generation.",
-                "score": 0.6489336629859076
+            "7": {
+                "modification": "add a self-consistency check after initial reasoning to improve answer accuracy by generating multiple solutions and selecting the most consistent one",
+                "score": 0.647255383591297
+            },
+            "6": {
+                "modification": "(add) Introduce a self-consistency check after initial reasoning to improve answer accuracy by generating multiple solutions and selecting the most consistent one.",
+                "score": 0.6150662712760236
             }
         }
     },
-    "1": {
-        "score": 0.17773805074747706,
-        "success": {
-            "3": {
-                "modification": "add a step to generate detailed reasoning before final answer, and then use ScEnsemble to select the best response",
-                "score": 0.6900533276048648
-            },
-            "2": {
-                "modification": "(add) Incorporate an AnswerGenerate operator after the custom response to generate a detailed step-by-step reasoning and final answer, then use ScEnsemble to select the best response.",
-                "score": 0.6458280321706904
-            }
-        },
-        "failure": {}
-    },
-    "2": {
-        "score": 0.6458280321706904,
+    "3": {
+        "score": 0.5506584063074335,
         "success": {
             "5": {
-                "modification": "(add) Introduce a self-review step after the custom response to verify answer consistency before final ensemble.",
-                "score": 0.6479356378786332
+                "modification": "Replace the final self-review step with an iterative re-evaluation loop that continues until the answer is verified as correct, limiting the number of iterations to prevent infinite loops.",
+                "score": 0.6482990401411454
+            }
+        },
+        "failure": {
+            "4": {
+                "modification": "add a self-critique step after the final review to ensure answer correctness before returning",
+                "score": 0.0
+            }
+        }
+    },
+    "4": {
+        "score": 0.6489336629859076,
+        "success": {},
+        "failure": {
+            "3": {
+                "modification": "modify: Add a self-review step after the ensemble to verify the final answer's correctness and prompt the custom reviewer accordingly.",
+                "score": 0.41126348501000204
+            }
+        }
+    },
+    "7": {
+        "score": 0.647255383591297,
+        "success": {
+            "2": {
+                "modification": "(add) Introduced a self-review step after the final answer generation to ensure correctness before returning the answer.",
+                "score": 0.6504218836718837
             }
         },
         "failure": {}

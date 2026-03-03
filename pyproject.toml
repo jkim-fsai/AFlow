@@ -26,6 +26,9 @@ viz = [
     "streamlit==1.54.0",
     "plotly>=5.18.0",
 ]
+dev = [
+    "pytest>=8.0",
+]
 
 # JFrog only — pypi.org is blocked by IT. This index is the sole default.
 [[tool.uv.index]]

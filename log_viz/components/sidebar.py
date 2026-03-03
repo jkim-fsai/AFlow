@@ -8,7 +8,7 @@ from data_loader import AFlowDataLoader
 
 
 def render_sidebar(loader: AFlowDataLoader) -> Dict[str, Any]:
-    """Render sidebar with dataset selector, round filter, and refresh controls."""
+    """Render sidebar with dataset selector, run selector, and refresh controls."""
     with st.sidebar:
         st.header("AFlow Dashboard")
 
@@ -20,16 +20,26 @@ def render_sidebar(loader: AFlowDataLoader) -> Dict[str, Any]:
 
         dataset = st.selectbox("Dataset", datasets, index=0)
 
-        # Round filter
-        available_rounds = loader.get_available_rounds(dataset)
-        selected_rounds = st.multiselect(
-            "Filter Rounds",
-            available_rounds,
-            default=available_rounds,
-            help="Select which rounds to display",
-        )
+        # Detect runs
+        all_results = loader.load_all_results(dataset)
+        runs = loader.detect_runs(all_results)
 
-        st.divider()
+        selected_run_df = None
+        if runs:
+            run_labels = [label for _, label, _ in runs]
+            selected_label = st.selectbox("Run", run_labels, index=0)
+            selected_idx = run_labels.index(selected_label)
+            _, _, selected_run_df = runs[selected_idx]
+
+        # Dataset split sizes
+        split_sizes = loader.get_dataset_split_sizes(dataset)
+        if split_sizes:
+            cols = st.columns(len(split_sizes))
+            for col, (split, count) in zip(cols, split_sizes.items()):
+                col.metric(split.capitalize(), f"{count:,}")
+
+        # All rounds selected by default
+        selected_rounds = loader.get_available_rounds(dataset)
 
         # Operator definitions
         operators = loader.load_operator_definitions(dataset)
@@ -59,6 +69,7 @@ def render_sidebar(loader: AFlowDataLoader) -> Dict[str, Any]:
     return {
         "dataset": dataset,
         "selected_rounds": selected_rounds,
+        "selected_run_df": selected_run_df,
         "auto_refresh": auto_refresh,
         "refresh_interval": refresh_interval,
     }

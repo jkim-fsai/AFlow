@@ -4,6 +4,8 @@
 # @Desc    : optimizer for graph (updated with AsyncLLM integration)
 
 import asyncio
+import json
+import sys
 import time
 from typing import List, Literal, Dict
 
@@ -25,6 +27,11 @@ OptimizerType = Literal["Graph", "Test"]
 
 class GraphOptimize(BaseModel):
     modification: str = Field(default="", description="modification")
+    short_label: str = Field(
+        default="",
+        description="A 3-4 word Terraform-style summary of the modification, "
+        "e.g. '+ Self-review step', '~ Ensemble logic', '- Redundant loop'",
+    )
     graph: str = Field(default="", description="graph")
     prompt: str = Field(default="", description="prompt")
 
@@ -221,23 +228,34 @@ class Optimizer:
                 )
                 continue
 
+            # Write graph files and dry-run on a single sample to catch runtime errors
+            self.graph_utils.write_graph_files(
+                directory, response, self.round + 1, self.dataset
+            )
+
+            try:
+                self.graph = self._load_graph_fresh(self.round + 1, graph_path)
+                await self._dry_run_graph(self.graph)
+                logger.info(f"Dry-run passed for round {self.round + 1}")
+            except Exception as e:
+                logger.warning(
+                    f"Generated graph failed dry-run: {e}. "
+                    f"Retrying generation... (attempt {_retry + 1}/{max_generation_retries})"
+                )
+                continue
+
             break
         else:
             logger.error(
                 f"Exhausted {max_generation_retries} generation retries. "
-                f"Proceeding with last response (may contain prompt mismatches)."
+                f"Skipping round {self.round + 1}."
             )
+            return 0.0
 
-        # Save the graph and evaluate
-        self.graph_utils.write_graph_files(
-            directory, response, self.round + 1, self.dataset
-        )
-
+        # Full evaluation (only reached if dry-run passed)
         experience = self.experience_utils.create_experience_data(
-            sample, response["modification"]
+            sample, response["modification"], response.get("short_label", "")
         )
-
-        self.graph = self.graph_utils.load_graph(self.round + 1, graph_path)
 
         logger.info(directory)
 
@@ -248,6 +266,28 @@ class Optimizer:
         self.experience_utils.update_experience(directory, experience, avg_score)
 
         return avg_score
+
+    def _load_graph_fresh(self, round_number: int, graph_path: str):
+        """Load a graph module, invalidating any cached version first."""
+        module_path = graph_path.replace("\\", ".").replace("/", ".")
+        module_name = f"{module_path}.round_{round_number}.graph"
+        # Also invalidate the prompt module so it picks up new prompt.py
+        prompt_module_name = f"{module_path}.round_{round_number}.prompt"
+        sys.modules.pop(module_name, None)
+        sys.modules.pop(prompt_module_name, None)
+        return self.graph_utils.load_graph(round_number, graph_path)
+
+    async def _dry_run_graph(self, graph_class):
+        """Run the graph on one validation sample to catch runtime errors early."""
+        dataset_path = f"data/datasets/{self.dataset.lower()}_validate.jsonl"
+        with open(dataset_path) as f:
+            sample_data = json.loads(f.readline())
+        workflow = graph_class(
+            name=self.dataset,
+            llm_config=self.execute_llm_config,
+            dataset=self.dataset,
+        )
+        await workflow(sample_data["question"])
 
     def _extract_fields_from_response(self, response: str) -> Dict[str, str]:
         """

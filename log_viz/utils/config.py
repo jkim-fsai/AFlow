@@ -6,6 +6,11 @@ from pathlib import Path
 BASE_DIR = Path(__file__).parent.parent
 PROJECT_ROOT = BASE_DIR.parent
 WORKSPACE_DIR = PROJECT_ROOT / "workspace"
+WORKSPACE_DIRS = [
+    PROJECT_ROOT / d
+    for d in sorted(PROJECT_ROOT.iterdir())
+    if d.is_dir() and d.name.startswith("workspace")
+]
 
 # UI Configuration
 PLOT_HEIGHT = 400
@@ -22,10 +27,6 @@ COLORS = {
     "success": "#00C853",
     "warning": "#FFD600",
     "error": "#D50000",
-    "mcts_success": "#00C853",
-    "mcts_failure": "#D50000",
-    "mcts_node": "#0091EA",
-    "mcts_best": "#FF6F00",
     "validation": "#FF6F00",
     "test": "#0091EA",
 }
