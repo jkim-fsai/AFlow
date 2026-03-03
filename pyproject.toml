@@ -30,6 +30,9 @@ dev = [
     "pytest>=8.0",
 ]
 
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
 # JFrog only — pypi.org is blocked by IT. This index is the sole default.
 [[tool.uv.index]]
 name = "jfrog"
