@@ -54,6 +54,16 @@ EXPERIMENT_CONFIGS: Dict[str, ExperimentConfig] = {
         question_type="code",
         operators=["Custom", "CustomCodeGenerate", "ScEnsemble", "Test"],
     ),
+    "StrategyQA": ExperimentConfig(
+        dataset="StrategyQA",
+        question_type="qa",
+        operators=["Custom", "AnswerGenerate", "ScEnsemble"],
+    ),
+    "ARC": ExperimentConfig(
+        dataset="ARC",
+        question_type="qa",
+        operators=["Custom", "AnswerGenerate", "ScEnsemble"],
+    ),
 }
 
 
