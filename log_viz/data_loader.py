@@ -89,12 +89,46 @@ class AFlowDataLoader:
 
     @st.cache_data(ttl=CACHE_TTL_RESULTS)
     def load_mcts_tree(_self, dataset: str) -> Dict:
-        """Load processed_experience.json (MCTS tree)."""
-        path = _self._workflows_path(dataset) / "processed_experience.json"
-        if not path.exists():
-            return {}
-        with open(path) as f:
-            return json.load(f)
+        """Build MCTS tree from individual round experience.json files.
+
+        The optimizer writes processed_experience.json mid-run, so it can be
+        stale (missing the last round).  Building from per-round files is
+        always up-to-date.
+        """
+        from collections import defaultdict
+
+        wf = _self._workflows_path(dataset)
+        tree: Dict = defaultdict(lambda: {"score": None, "success": {}, "failure": {}})
+
+        for d in sorted(wf.iterdir()):
+            m = re.match(r"round_(\d+)", d.name)
+            if not m or not d.is_dir():
+                continue
+            exp_path = d / "experience.json"
+            if not exp_path.exists():
+                continue
+            with open(exp_path) as f:
+                data = json.load(f)
+
+            round_number = int(m.group(1))
+            father = data.get("father node", data.get("father_node"))
+            if father is None:
+                continue
+
+            if tree[father]["score"] is None:
+                tree[father]["score"] = data.get("before")
+
+            entry = {
+                "modification": data.get("modification", ""),
+                "score": data.get("after"),
+            }
+            if data.get("short_label"):
+                entry["short_label"] = data["short_label"]
+
+            bucket = "success" if data.get("succeed") else "failure"
+            tree[father][bucket][round_number] = entry
+
+        return dict(tree)
 
     def get_available_rounds(self, dataset: str) -> List[int]:
         """Discover round_N directories."""
