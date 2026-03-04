@@ -68,12 +68,13 @@ display_metrics_cards(display_df)
 st.divider()
 
 # --- Charts ---
+source = display_df["source"].iloc[0] if "source" in display_df.columns else "val"
 col1, col2, col3 = st.columns(3)
 with col1:
-    fig = create_score_progression_plot(display_df)
+    fig = create_score_progression_plot(display_df, source=source)
     st.plotly_chart(fig, use_container_width=True)
 with col2:
-    fig = create_running_max_plot(display_df)
+    fig = create_running_max_plot(display_df, source=source)
     st.plotly_chart(fig, use_container_width=True)
 with col3:
     fig = create_cost_progression_plot(display_df)

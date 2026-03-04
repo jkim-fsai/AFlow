@@ -11,8 +11,9 @@ from utils.config import COLORS, PLOT_HEIGHT
 def create_score_progression_plot(
     val_df: pd.DataFrame,
     test_df: Optional[pd.DataFrame] = None,
+    source: str = "val",
 ) -> go.Figure:
-    """Line chart of scores across MCTS rounds."""
+    """Line chart of scores across MCTS rounds with running maximum overlay."""
     fig = go.Figure()
 
     if not val_df.empty:
@@ -21,10 +22,25 @@ def create_score_progression_plot(
                 x=val_df["round"],
                 y=val_df["score"] * 100,
                 mode="lines+markers",
-                name="Validation",
+                name="Round Score",
                 line=dict(color=COLORS["validation"], width=2),
                 marker=dict(size=8),
                 hovertemplate=("<b>Round %{x}</b><br>Score: %{y:.1f}%<extra></extra>"),
+            )
+        )
+
+        # Running maximum overlay
+        running_max = val_df["score"].cummax() * 100
+        fig.add_trace(
+            go.Scatter(
+                x=val_df["round"],
+                y=running_max,
+                mode="lines",
+                name="Running Max",
+                line=dict(color=COLORS["success"], width=2, dash="dash"),
+                hovertemplate=(
+                    "<b>Round %{x}</b><br>Best so far: %{y:.1f}%<extra></extra>"
+                ),
             )
         )
 
@@ -41,10 +57,11 @@ def create_score_progression_plot(
             )
         )
 
+    split_label = source.upper()
     fig.update_layout(
         title="Score Progression",
         xaxis_title="MCTS Round",
-        yaxis_title="F1 Score (%)",
+        yaxis_title=f"Score — {split_label} (%)",
         template="plotly_white",
         height=PLOT_HEIGHT,
         legend=dict(yanchor="top", y=0.99, xanchor="left", x=0.01),
@@ -53,7 +70,7 @@ def create_score_progression_plot(
     return fig
 
 
-def create_running_max_plot(val_df: pd.DataFrame) -> go.Figure:
+def create_running_max_plot(val_df: pd.DataFrame, source: str = "val") -> go.Figure:
     """Running maximum score tracker."""
     fig = go.Figure()
 
@@ -83,10 +100,11 @@ def create_running_max_plot(val_df: pd.DataFrame) -> go.Figure:
             )
         )
 
+    split_label = source.upper()
     fig.update_layout(
         title="Running Maximum",
         xaxis_title="MCTS Round",
-        yaxis_title="F1 Score (%)",
+        yaxis_title=f"Score — {split_label} (%)",
         template="plotly_white",
         height=PLOT_HEIGHT,
         legend=dict(yanchor="top", y=0.99, xanchor="left", x=0.01),
