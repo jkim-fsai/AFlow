@@ -348,41 +348,61 @@ class Optimizer:
         Uses importlib.util.spec_from_file_location to load directly from the
         file path rather than __import__, which has deep internal caching that
         persists even after sys.modules eviction and importlib.invalidate_caches().
-        """
-        module_path = graph_path.replace("\\", ".").replace("/", ".")
-        graph_module_name = f"{module_path}.round_{round_number}.graph"
-        prompt_module_name = f"{module_path}.round_{round_number}.prompt"
-        round_module_name = f"{module_path}.round_{round_number}"
 
-        # Evict stale modules (including the round package which caches child refs)
-        for name in (graph_module_name, prompt_module_name, round_module_name):
-            sys.modules.pop(name, None)
+        Key subtlety: WORKFLOW_TEMPLATE hardcodes the import path as
+        ``workspace.{dataset}.workflows.round_N.prompt``, regardless of the
+        actual workspace directory (e.g. workspace_pilot2/).  We must register
+        the freshly-loaded prompt module under that template import name so
+        that graph.py's import statement finds it.
+        """
+        round_dir = Path(graph_path) / f"round_{round_number}"
 
         # Delete __pycache__ to prevent bytecode reuse
-        pycache_dir = Path(graph_path) / f"round_{round_number}" / "__pycache__"
+        pycache_dir = round_dir / "__pycache__"
         if pycache_dir.exists():
             shutil.rmtree(pycache_dir)
         importlib.invalidate_caches()
 
-        round_dir = Path(graph_path) / f"round_{round_number}"
+        # The graph.py template always imports:
+        #   import workspace.{dataset}.workflows.round_N.prompt as prompt_custom
+        # We must register the prompt module under this exact name.
+        template_base = f"workspace.{self.dataset}.workflows"
+        template_prompt_name = f"{template_base}.round_{round_number}.prompt"
+        template_round_name = f"{template_base}.round_{round_number}"
 
-        # Load prompt module first — graph.py imports it via
-        # "import <path>.round_N.prompt as prompt_custom"
+        # Also compute the actual module path for graph (used for loading)
+        actual_base = graph_path.replace("\\", ".").replace("/", ".")
+        actual_graph_name = f"{actual_base}.round_{round_number}.graph"
+        actual_prompt_name = f"{actual_base}.round_{round_number}.prompt"
+        actual_round_name = f"{actual_base}.round_{round_number}"
+
+        # Evict stale modules under both actual and template paths
+        for name in (
+            actual_graph_name,
+            actual_prompt_name,
+            actual_round_name,
+            template_prompt_name,
+            template_round_name,
+        ):
+            sys.modules.pop(name, None)
+
+        # Load prompt from actual file, register under the template import name
+        # so that graph.py's "import workspace.{dataset}..." finds our fresh copy
         prompt_file = round_dir / "prompt.py"
         prompt_spec = importlib.util.spec_from_file_location(
-            prompt_module_name, str(prompt_file)
+            template_prompt_name, str(prompt_file)
         )
         prompt_module = importlib.util.module_from_spec(prompt_spec)
-        sys.modules[prompt_module_name] = prompt_module
+        sys.modules[template_prompt_name] = prompt_module
         prompt_spec.loader.exec_module(prompt_module)
 
-        # Load graph module — its internal import of prompt will find our fresh copy
+        # Load graph module from actual file path
         graph_file = round_dir / "graph.py"
         graph_spec = importlib.util.spec_from_file_location(
-            graph_module_name, str(graph_file)
+            actual_graph_name, str(graph_file)
         )
         graph_module = importlib.util.module_from_spec(graph_spec)
-        sys.modules[graph_module_name] = graph_module
+        sys.modules[actual_graph_name] = graph_module
         graph_spec.loader.exec_module(graph_module)
 
         return getattr(graph_module, "Workflow")
