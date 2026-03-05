@@ -27,7 +27,13 @@ def render_sidebar(loader: AFlowDataLoader) -> Dict[str, Any]:
         selected_run_df = None
         if runs:
             run_labels = [label for _, label, _ in runs]
-            selected_label = st.selectbox("Run", run_labels, index=0)
+            # Default to the first test run if one exists
+            default_idx = 0
+            for i, (_, _, rdf) in enumerate(runs):
+                if "source" in rdf.columns and rdf["source"].iloc[0] == "test":
+                    default_idx = i
+                    break
+            selected_label = st.selectbox("Run", run_labels, index=default_idx)
             selected_idx = run_labels.index(selected_label)
             _, _, selected_run_df = runs[selected_idx]
 

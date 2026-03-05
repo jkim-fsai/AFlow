@@ -1,0 +1,2935 @@
+[
+    {
+        "question": "Is Steve Martin someone who would refuse a dish of shrimp pasta?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Has a baby ever had a moustache?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can ham make a cut seal up quicker?",
+        "right_answer": "yes",
+        "model_output": "No, ham cannot make a cut seal up quicker.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can rowing competitions take place indoors?",
+        "right_answer": "no",
+        "model_output": "Yes, rowing competitions can take place indoors, typically using indoor rowing machines or specialized indoor tanks.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would students at Marist have to petition to get a rowing team?",
+        "right_answer": "no",
+        "model_output": "Yes, students at Marist would have to petition to get a rowing team.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Michael Phelps be good at pearl hunting?",
+        "right_answer": "yes",
+        "model_output": "No, Michael Phelps would not necessarily be good at pearl hunting, as it requires specialized skills and knowledge beyond his swimming expertise.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is there a warthog on Broadway?",
+        "right_answer": "yes",
+        "model_output": "No, there is no warthog on Broadway.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is an inappropriate lullaby Love Song from November 11, 2000?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can you only see hippopotamus in Africa?",
+        "right_answer": "no",
+        "model_output": "Yes, hippopotamuses are only naturally found in Africa.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is it bad to have lactic acid in your body?",
+        "right_answer": "no",
+        "model_output": "Having lactic acid (lactate) in your body during and after exercise is normal and not bad; issues only occur if levels become abnormally high due to health problems.",
+        "extracted_output": "having lactic acid (lactate) in your body during and after exercise is normal and not bad; issues only occur if levels become abnormally high due to health problems.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would a responsible bartender make a drink for Millie Bobby Brown?",
+        "right_answer": "no",
+        "model_output": "Yes, a responsible bartender would make a drink for Millie Bobby Brown if she is of legal drinking age and requests one responsibly.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could Moulin Rouge have been hypothetically used as Spain's Spanish American War triage center?",
+        "right_answer": "yes",
+        "model_output": "No, Moulin Rouge could not have been used as Spain's Spanish-American War triage center due to its location in Paris, its primary function as an entertainment venue, and the logistical impracticality of using it for medical purposes during the war.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Do Muslims have a different idea of Seraphim than Christians?",
+        "right_answer": "no",
+        "model_output": "Yes, Muslims have a different idea of Seraphim than Christians, as Islam does not include a concept equivalent to the Christian Seraphim.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can oysters be used in guitar manufacturing?",
+        "right_answer": "yes",
+        "model_output": "No, oysters cannot be used as a primary material in guitar manufacturing; however, their shells can be used decoratively, such as inlays.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can the United Nations Framework Convention on Climate Change be held at the Javits Center?",
+        "right_answer": "no",
+        "model_output": "Yes, the United Nations Framework Convention on Climate Change (specifically, its COP meetings) can be held at the Javits Center, provided the organizers choose it and logistical requirements are met.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is the bull shark more bull than shark?",
+        "right_answer": "no",
+        "model_output": "The bull shark is not more bull than shark; the \"bull\" in its name is just a descriptor, not an indication of it being more \"bull\" than \"shark.\"",
+        "extracted_output": "the bull shark is not more bull than shark; the \"bull\" in its name is just a descriptor, not an indication of it being more \"bull\" than \"shark.\"",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did the Pearl Harbor attack occur during autumn?",
+        "right_answer": "yes",
+        "model_output": "No, the Pearl Harbor attack did not occur during autumn; it occurred in early winter.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can an asteroid be linked with virginity?",
+        "right_answer": "yes",
+        "model_output": "No, an asteroid cannot be directly linked with virginity in a literal or scientific sense.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Olympia Washington share name with Hephaestus's workshop location?",
+        "right_answer": "yes",
+        "model_output": "No, Olympia, Washington does not share its name with Hephaestus's workshop location.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would a physician be unlikely to recommend Reiki?",
+        "right_answer": "yes",
+        "model_output": "No, a physician would be unlikely to recommend Reiki.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Do Squidward Tentacles and Alan Greenspan have different musical passions?",
+        "right_answer": "no",
+        "model_output": "Yes, they have different musical passions.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Has Aretha Franklin ever collaborated with a suicidal person?",
+        "right_answer": "yes",
+        "model_output": "No, there is no publicly known record of Aretha Franklin collaborating with a suicidal person.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are red legs a sign of failing health in those with Anorexia Nervosa?",
+        "right_answer": "yes",
+        "model_output": "No, red legs are not a specific sign of failing health in those with Anorexia Nervosa.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could a wandering albatross fly from Bucharest to New York City without a rest?",
+        "right_answer": "yes",
+        "model_output": "No, a wandering albatross could not fly from Bucharest to New York City without a rest.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Has Drew Carey outshined Doug Davidson's tenure?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Has mummification in the Andes been prevented by rainfall?",
+        "right_answer": "no",
+        "model_output": "Yes, rainfall in the Andes has prevented mummification in the wetter regions, while arid areas have favored natural mummification.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can black swan's formation type help spell longest word in Dictionary?",
+        "right_answer": "yes",
+        "model_output": "No, the formation type of \"Black Swan\" does not help spell the longest word in the dictionary.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would a house full of aloe vera hypothetically be ideal for Unsinkable Sam?",
+        "right_answer": "no",
+        "model_output": "Yes, a house full of aloe vera would hypothetically be ideal for Unsinkable Sam, as it would create a safe, soothing environment that complements his resilient nature.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would the 10th doctor enjoy a dish of stuffed pears?",
+        "right_answer": "no",
+        "model_output": "Yes, the 10th Doctor would enjoy a dish of stuffed pears.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Capricorn the hypothetical zodiac sign of Satanism?",
+        "right_answer": "yes",
+        "model_output": "No, Capricorn is not the hypothetical zodiac sign of Satanism.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are the knights in the Medieval Times show not authentic knights?",
+        "right_answer": "yes",
+        "model_output": "No, the knights in the Medieval Times show are not authentic knights.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Arnold Schwarzenegger have a hard time picking up a red fox in 1967?",
+        "right_answer": "no",
+        "model_output": "Yes, Arnold Schwarzenegger would likely have a hard time picking up a red fox in 1967 due to the fox's natural wariness and his lack of experience with wild animals.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would you be likely to see storks at a baby shower?",
+        "right_answer": "yes",
+        "model_output": "No, you would not be likely to see real storks at a baby shower.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is it dark is Basel during the day in Los Angeles?",
+        "right_answer": "yes",
+        "model_output": "No, it is not dark in Basel during the day in Los Angeles; it is nighttime in Basel at that time.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is a spice grinder ueseless for the cheapest cinnamon sticks?",
+        "right_answer": "yes",
+        "model_output": "No, a spice grinder is not useless for the cheapest cinnamon sticks; it can be effective if the sticks are broken into smaller pieces first.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Has Burger King  contributed to a decrease in need for snowshoes?",
+        "right_answer": "yes",
+        "model_output": "No, Burger King has not contributed to a decrease in the need for snowshoes.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Jimmy Vee be eligible to compete in the Paralympic Games?",
+        "right_answer": "yes",
+        "model_output": "No, Jimmy Vee would not be eligible to compete in the Paralympic Games unless he trained and qualified as an athlete in a Paralympic sport, which he has not done.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would a model be appropriate to star in a LA Femme Nikita remake?",
+        "right_answer": "yes",
+        "model_output": "No, a fashion model would generally not be appropriate to star in a serious action remake of \"LA Femme Nikita\" due to the demanding nature of the role and typical casting requirements.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Central Park Zoo located on an island?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Karachi was a part of Alexander the Great's success?",
+        "right_answer": "yes",
+        "model_output": "No, Karachi was not part of Alexander the Great's success.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would you find a tibia beside parsley on a holiday plate?",
+        "right_answer": "yes",
+        "model_output": "No, you would not typically find a tibia beside parsley on a holiday plate.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was the Second Amendment to the United States Constitution written without consideration for black Americans?",
+        "right_answer": "yes",
+        "model_output": "No, the Second Amendment was written without consideration for Black Americans.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could someone in the Canary Islands fish for largemouth bass?",
+        "right_answer": "no",
+        "model_output": "Yes, they can fish for largemouth bass in the Canary Islands if the species has been introduced and established there.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Julio Gonzalez like acetylene?",
+        "right_answer": "yes",
+        "model_output": "No, there is no evidence to suggest that Julio Gonzalez liked acetylene.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can Curiosity (rover) kill a cat?",
+        "right_answer": "yes",
+        "model_output": "No, Curiosity (rover) cannot kill a cat.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can Vice President of the United States kill with impunity?",
+        "right_answer": "yes",
+        "model_output": "No, the Vice President of the United States cannot kill with impunity.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can a copy of The Daily Mirror sustain a campfire?",
+        "right_answer": "yes",
+        "model_output": "No, a single copy of The Daily Mirror cannot sustain a campfire.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Disney's second film rip off a prophet story?",
+        "right_answer": "yes",
+        "model_output": "No, Disney's second film \"Pinocchio\" did not rip off a prophet story.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would a triples tandem bike support Apollo 15 crew?",
+        "right_answer": "yes",
+        "model_output": "No, a triples tandem bike would not support Apollo 15 crew.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Will twenty pea pods contents cover entire chess board?",
+        "right_answer": "yes",
+        "model_output": "No, twenty pea pods' contents cannot cover the entire chessboard.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was Saudi Aramco started due to an assassination?",
+        "right_answer": "yes",
+        "model_output": "No, Saudi Aramco was not started due to an assassination.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would a broadcast from Spirit make the news in 2020?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Terry Pratchett write about quantum mechanics?",
+        "right_answer": "yes",
+        "model_output": "No, Terry Pratchett did not write about quantum mechanics.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does the texture of leaves remain the same independent of their coloring changing?",
+        "right_answer": "no",
+        "model_output": "Yes, the texture of leaves generally remains the same regardless of their coloring changing.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would it be unusual to find a yellow perch in the Red Sea?",
+        "right_answer": "yes",
+        "model_output": "No, it would be unusual to find a yellow perch in the Red Sea.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Bobby Jindal's high school mascot eat kibble?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Will Dustin Hoffman likely vote for Trump in 2020?",
+        "right_answer": "no",
+        "model_output": "Based on publicly available information, it is unlikely to determine whether Dustin Hoffman voted for Trump in 2020.",
+        "extracted_output": "based on publicly available information, it is unlikely to determine whether dustin hoffman voted for trump in 2020.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would a Germaphobia be able to participate in Judo?",
+        "right_answer": "no",
+        "model_output": "Yes, a person with germaphobia can participate in Judo, but they may need to take specific precautions and manage their fears to do so comfortably.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was Morris County named after a chief justice?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would a honey badger fit inside an oven?",
+        "right_answer": "yes",
+        "model_output": "No, a honey badger would not fit inside an oven.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would it be impossible to get to Burning Man on the Mayflower?",
+        "right_answer": "yes",
+        "model_output": "No, it would be impossible to get to Burning Man on the Mayflower.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could common warthog be useful for scrimshaw?",
+        "right_answer": "yes",
+        "model_output": "No, common warthog tusks are not typically useful for scrimshaw due to their small size and traditional material preferences.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Were Walkman's used in the Kingdom of Hungary?",
+        "right_answer": "no",
+        "model_output": "Yes, Walkmans were used in the modern state of Hungary during the late 20th century.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Mercury help detect coronavirus?",
+        "right_answer": "yes",
+        "model_output": "No, Mercury does not help detect coronavirus.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Cholera alive?",
+        "right_answer": "yes",
+        "model_output": "No, Cholera (the disease) is not alive; it is caused by the living bacterium *Vibrio cholerae*.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Gandalf hypothetically defeats Rincewind in a wizard battle?",
+        "right_answer": "yes",
+        "model_output": "Gandalf would likely defeat Rincewind in a wizard battle.",
+        "extracted_output": "gandalf would likely defeat rincewind in a wizard battle.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was story of Jesus inspired by Egyptian myth?",
+        "right_answer": "yes",
+        "model_output": "No, the story of Jesus was not directly inspired by Egyptian myth; while there are thematic similarities, it primarily originates from Jewish tradition and biblical sources.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was a person sold a Creative Commons License for Boticelli's The Birth of Venus ripped off?",
+        "right_answer": "yes",
+        "model_output": "No, the person was likely ripped off because they cannot legitimately buy a Creative Commons license for a public domain artwork like Botticelli's *The Birth of Venus*.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would the tunnels at CERN fit onto the High Speed 1 rails?",
+        "right_answer": "yes",
+        "model_output": "No, the CERN tunnels would not fit onto the High Speed 1 rails.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is a paraplegic suitable for conducting an orchestra?",
+        "right_answer": "yes",
+        "model_output": "No, being paraplegic does not inherently disqualify someone from conducting an orchestra, as long as they have the necessary upper body mobility and coordination.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is it difficult to conduct astrophotography in the summer in Sweden?",
+        "right_answer": "yes",
+        "model_output": "No, it is generally difficult to conduct astrophotography in the summer in Sweden because of the long daylight hours and the Midnight Sun phenomenon, which limit the availability of dark skies.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are ropes required to operate a frigate?",
+        "right_answer": "yes",
+        "model_output": "No, ropes are not required to operate a frigate's main systems, but they are still used for auxiliary functions such as mooring and handling equipment.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would a binge watch of entire Young and the Restless take longer than a leap year?",
+        "right_answer": "yes",
+        "model_output": "No, a binge watch of the entire *Young and the Restless* would not take longer than a leap year.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does butter industry survive cow extinction?",
+        "right_answer": "yes",
+        "model_output": "No, the traditional butter industry would not survive cow extinction unless it adapts to alternative milk sources or synthetic substitutes.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Christopher Hitchens be very unlikely to engage in tonsure?",
+        "right_answer": "yes",
+        "model_output": "No, Christopher Hitchens would be very unlikely to engage in tonsure.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can a lifeboat rescue people in the Hooke Sea?",
+        "right_answer": "no",
+        "model_output": "Yes, a lifeboat can rescue people in the Hooke Sea.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is it safe to share silverware with an HIV positive person?",
+        "right_answer": "yes",
+        "model_output": "No, it is safe to share silverware with an HIV-positive person.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Dr. Seuss make himself famous?",
+        "right_answer": "no",
+        "model_output": "Yes, Dr. Seuss made himself famous.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Dave Chappelle pray over a Quran?",
+        "right_answer": "yes",
+        "model_output": "No, there is no publicly known information suggesting that Dave Chappelle would pray over a Quran.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Southwest Airlines use bulk carriers?",
+        "right_answer": "yes",
+        "model_output": "No, Southwest Airlines does not use bulk carriers.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can an anchovy born in 2020 survive 25th US census?",
+        "right_answer": "no",
+        "model_output": "Yes, an anchovy born in 2020 can survive the 25th US census in 2020.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "NATO doesn't recognize double triangle flag countries?",
+        "right_answer": "yes",
+        "model_output": "No, NATO's recognition of countries is not based on their flag design, including whether they have a double triangle flag.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would LeBron James hypothetically glance upwards at Yuri Gagarin?",
+        "right_answer": "no",
+        "model_output": "Yes, hypothetically, LeBron James would glance upwards at Yuri Gagarin if he saw him represented above him.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are pirate lieutenants like navy lieutenants?",
+        "right_answer": "yes",
+        "model_output": "No, pirate lieutenants are not exactly like navy lieutenants; navy lieutenants are formal, rank-based officers within a structured hierarchy, whereas pirate lieutenants were less formal leaders whose authority depended more on personal reputation and loyalty.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did the lead singer of Led Zepplin ever perform with Ernest Chataway?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Kenny G hold the qualifications to be a tax collector?",
+        "right_answer": "yes",
+        "model_output": "No, Kenny G does not hold the qualifications to be a tax collector.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could a firewall be destroyed by a hammer?",
+        "right_answer": "no",
+        "model_output": "Yes, a physical firewall could be destroyed by a hammer.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could Barron Trump have lived through the Mexican Revolution?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could a delicious recipe be made with The Onion?",
+        "right_answer": "no",
+        "model_output": "Yes, a delicious recipe can be made with The Onion.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can you see live harbor seals in Washington DC?",
+        "right_answer": "yes",
+        "model_output": "No, you cannot see live harbor seals in Washington, D.C., as they are not typically found in that region.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was Lord Voldemort taught by Professor Dumbledore?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could a dichromat probably easily distinguish chlorine gas from neon gas?",
+        "right_answer": "no",
+        "model_output": "Yes, a dichromat could probably easily distinguish chlorine gas from neon gas.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is the Fibonacci number sequence longer than every number discovered in Pi?",
+        "right_answer": "yes",
+        "model_output": "No, the Fibonacci number sequence is not longer than every number discovered in Pi, because both are infinite in length.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would an Evander Holyfield 2020 boxing return set age record?",
+        "right_answer": "no",
+        "model_output": "Yes, if Evander Holyfield had returned to professional boxing in 2020, it would have set an age record for the oldest professional boxer.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Julia Roberts lose the prolific acting contest in her family?",
+        "right_answer": "yes",
+        "model_output": "No, Julia Roberts does not lose the prolific acting contest in her family.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Melania Trump have same profession as Olga Kurylenko?",
+        "right_answer": "yes",
+        "model_output": "No, Melania Trump and Olga Kurylenko did not have the same profession; Melania Trump is primarily known as a model and former First Lady, while Olga Kurylenko is primarily known as an actress.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Should wool be hand washed only?",
+        "right_answer": "yes",
+        "model_output": "No, wool does not have to be hand washed only; it depends on the garment's care label.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can children become lieutenants?",
+        "right_answer": "yes",
+        "model_output": "No, children cannot become lieutenants.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would it be difficult to host Stanley Cup Finals at Rock in Rio?",
+        "right_answer": "yes",
+        "model_output": "No, it would be difficult to host the Stanley Cup Finals at Rock in Rio.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Rand Paul guilty of catch-phrase used to attack John Kerry in 2004?",
+        "right_answer": "yes",
+        "model_output": "No, Rand Paul is not guilty of using the catch-phrase used to attack John Kerry in 2004.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could a white cockatoo have lived through the entire Thirty Years' War?",
+        "right_answer": "yes",
+        "model_output": "No, it is highly unlikely that a white cockatoo could have lived through the entire Thirty Years' War, primarily because such birds are native to Australia and would not have been present in Europe during that period.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is the QWERTY keyboard layout meant to be slow?",
+        "right_answer": "yes",
+        "model_output": "No, the QWERTY keyboard layout was not meant to be slow; it was originally designed to prevent mechanical jams in typewriters, not to optimize for speed.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Eighth Amendment to the United States Constitution popular in court?",
+        "right_answer": "no",
+        "model_output": "Yes, the Eighth Amendment is popular in court because courts frequently interpret and uphold its protections against cruel and unusual punishments.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Were deaths from Apollo 13 mission eclipsed by other space missions?",
+        "right_answer": "yes",
+        "model_output": "No, deaths from Apollo 13 were not eclipsed by other space missions; in fact, there were no fatalities during Apollo 13.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Do Flat Earthers doubt the existence of Earth's magnetic field?",
+        "right_answer": "yes",
+        "model_output": "No, Flat Earthers generally do not doubt the existence of Earth's magnetic field; they accept that magnetic phenomena occur but may dispute scientific explanations about it.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Clark Gable marry more women once than Richard Burton?",
+        "right_answer": "yes",
+        "model_output": "No, Clark Gable did not marry more women once than Richard Burton.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was Dioskourides a lapidary?",
+        "right_answer": "yes",
+        "model_output": "No, Dioskourides was not a lapidary.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Adam Sandler get a reference to Cole Spouse and a scuba man doll?",
+        "right_answer": "yes",
+        "model_output": "No, Adam Sandler would not get a reference to Cole Sprouse and a scuba man doll.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was Anthony Quinn more prolific at making children than J.D. Salinger?",
+        "right_answer": "yes",
+        "model_output": "Anthony Quinn was more prolific at making children than J.D. Salinger.",
+        "extracted_output": "anthony quinn was more prolific at making children than j.d. salinger.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can Roman numerals fill the normal number of Sudoku box options?",
+        "right_answer": "no",
+        "model_output": "Yes, Roman numerals can fill the normal number of Sudoku box options, as there are exactly nine Roman numerals corresponding to the digits 1 through 9.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is sound barrier too much for Audi R8 V-10 Plus to break?",
+        "right_answer": "yes",
+        "model_output": "No, the sound barrier is far too much for the Audi R8 V-10 Plus to break.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Pikachu like Charles Darwin?",
+        "right_answer": "yes",
+        "model_output": "No, Pikachu does not like Charles Darwin.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would the Titanic be well preserved at the bottom of the Gulf of Finland?",
+        "right_answer": "yes",
+        "model_output": "No, the Titanic would not be well preserved at the bottom of the Gulf of Finland.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Isaac's father almost commit similar crime as Marvin Gay Sr.?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is week old chlorine water safe to drink?",
+        "right_answer": "yes",
+        "model_output": "No, week-old chlorine water is generally not safe to drink because the chlorine likely dissipated, and the water may have become contaminated with bacteria or other microorganisms.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Paul the Apostle's cause of death violate the tenets of Ahimsa?",
+        "right_answer": "yes",
+        "model_output": "No, Paul the Apostle's cause of death did not violate the tenets of Ahimsa, as he was executed by others and did not cause harm himself.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does the name C-SPAN refer to a form of telecommunications that utilizes outer space?",
+        "right_answer": "yes",
+        "model_output": "No, the name C-SPAN does not refer to a form of telecommunications that utilizes outer space.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could the Pope be on an episode of Pimp My Ride?",
+        "right_answer": "yes",
+        "model_output": "No, the Pope could not be on an episode of Pimp My Ride.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would a student of the class of 2017 have amnesia about 9/11?",
+        "right_answer": "yes",
+        "model_output": "No, they would not have amnesia about 9/11.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can someone with dermatitis be a hand model?",
+        "right_answer": "no",
+        "model_output": "Yes, someone with dermatitis can be a hand model if their skin condition is mild, well-managed, and does not affect the appearance required for the job.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can Poland Spring make money in the Sahara?",
+        "right_answer": "yes",
+        "model_output": "No, Poland Spring cannot make money in the Sahara.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did brother of Goofy creator's employer commit an excommunicable offense?",
+        "right_answer": "yes",
+        "model_output": "No, the brother of Goofy creator's employer (Roy O. Disney) did not commit an excommunicable offense.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "At midnight in Times Square on New Years Eve, are you likely to meet people in diapers?",
+        "right_answer": "yes",
+        "model_output": "No, you are not likely to meet people in diapers.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are any letters directly before and after H missing from Roman numerals?",
+        "right_answer": "yes",
+        "model_output": "G is missing; I is present.",
+        "extracted_output": "g is missing; i is present.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Christianity better for global warming than Satanism?",
+        "right_answer": "yes",
+        "model_output": "Christianity is generally better for addressing global warming than Satanism due to its larger influence and capacity to promote environmental stewardship.",
+        "extracted_output": "christianity is generally better for addressing global warming than satanism due to its larger influence and capacity to promote environmental stewardship.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Alfred Nobel write a banned book?",
+        "right_answer": "yes",
+        "model_output": "No, Alfred Nobel did not write a banned book.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can you substitute the pins in a bowling alley lane with Dustin Hoffman's Oscars?",
+        "right_answer": "no",
+        "model_output": "Yes, you can physically replace the pins with Dustin Hoffman's Oscars, but it would be impractical and damage the game, as Oscars are fragile and not designed for bowling.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does the Prime Minister of the United Kingdom have poor job security?",
+        "right_answer": "yes",
+        "model_output": "The Prime Minister of the United Kingdom generally has poor job security due to dependence on party support, parliamentary confidence, and electoral outcomes.",
+        "extracted_output": "the prime minister of the united kingdom generally has poor job security due to dependence on party support, parliamentary confidence, and electoral outcomes.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Irish mythology inspire Washington Irving?",
+        "right_answer": "yes",
+        "model_output": "No, Irish mythology did not significantly inspire Washington Irving.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was The Canterbury Tales written before One Thousand and One Nights?",
+        "right_answer": "no",
+        "model_output": "The Canterbury Tales was written after One Thousand and One Nights.",
+        "extracted_output": "the canterbury tales was written after one thousand and one nights.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are looks the easiest way to tell rosemary from lavender? ",
+        "right_answer": "no",
+        "model_output": "Yes, looks—especially the flowers—are the easiest way to tell rosemary from lavender.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does The Hague border multiple bodies of water?",
+        "right_answer": "no",
+        "model_output": "Yes, The Hague borders multiple bodies of water.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Disney get most of Rudyard Kipling's The Jungle Book profits?",
+        "right_answer": "yes",
+        "model_output": "No, Disney did not get most of Kipling's The Jungle Book profits because the stories are in the public domain, and Disney's profits came from their adaptation, not from royalties owed to Kipling.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Janet Jackson avoid a dish with ham?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was Dorothea Wendling from same place Porsche originated?",
+        "right_answer": "yes",
+        "model_output": "No, Dorothea Wendling is not from the same place Porsche originated.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Pink Floyd have a song about the French Riviera?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would it be uncommon for a high schooler to use the yellow pages?",
+        "right_answer": "yes",
+        "model_output": "It would be **uncommon** for a high schooler to use the yellow pages.",
+        "extracted_output": "it would be **uncommon** for a high schooler to use the yellow pages.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does James Webb Space Telescope fail astronomer in locating planet Krypton?",
+        "right_answer": "yes",
+        "model_output": "No, the JWST does not fail astronomers in locating planet Krypton because Krypton is not a known or confirmed planet.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Hammurabi's Code violate Christians Golden Rule?",
+        "right_answer": "yes",
+        "model_output": "No, Hammurabi's Code does not necessarily violate the Golden Rule; however, its strict retributive justice approach may conflict with the Golden Rule's emphasis on empathy and reciprocal kindness.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could ten gallons of seawater crush a six year old?",
+        "right_answer": "yes",
+        "model_output": "No, ten gallons of seawater cannot crush a six-year-old.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Do Leafhoppers compete with Log Cabin syrup producers for resources?",
+        "right_answer": "yes",
+        "model_output": "No, leafhoppers do not directly compete with Log Cabin syrup producers for resources.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would it be unusual to see frost in September in Texas?",
+        "right_answer": "yes",
+        "model_output": "No, it would not be highly unusual to see frost in September in northern or higher elevation areas of Texas, though it is less common in the southern parts.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could Cosmic Girls play League of Legends alone?",
+        "right_answer": "yes",
+        "model_output": "No, Cosmic Girls as a group cannot play League of Legends alone.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does the JPEG acronym stand for a joint committee?",
+        "right_answer": "yes",
+        "model_output": "No, the JPEG acronym does not stand for a joint committee.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was Black fly upstaged by another insect in Jeff Goldblum's 1986 film?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Final Fantasy VI require electricity to play?",
+        "right_answer": "yes",
+        "model_output": "No, Final Fantasy VI itself does not require electricity, but the device used to play it does.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is anyone at the Last Supper celebrated in Islam?",
+        "right_answer": "yes",
+        "model_output": "No, no one associated with the Last Supper is celebrated in Islam.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Will Chick Fil A be open on Halloween 2021?",
+        "right_answer": "no",
+        "model_output": "Yes, most Chick-fil-A locations will be open on Halloween 2021.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Has Freemasonry been represented on the Moon?",
+        "right_answer": "yes",
+        "model_output": "No, Freemasonry has not been represented on the Moon.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is the cuisine of Hawaii suitable for a vegan?",
+        "right_answer": "no",
+        "model_output": "Yes, Hawaiian cuisine can be suitable for a vegan, as it features many plant-based ingredients and increasingly offers vegan options.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did King of Portuguese people in 1515 have familial ties to the Tudors?",
+        "right_answer": "yes",
+        "model_output": "No, the King of Portugal in 1515 (Manuel I) did not have familial ties to the Tudors.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Nicole Kidman know any Scientologists?",
+        "right_answer": "yes",
+        "model_output": "No, Nicole Kidman does not know any Scientologists.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "When the shuttle Columbia 11 landed, was it the season for Christmas carols?",
+        "right_answer": "yes",
+        "model_output": "No, when Columbia 11 landed, it was not the season for Christmas carols.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would a pacifist be opposed to hunting?",
+        "right_answer": "no",
+        "model_output": "Yes, a pacifist would likely be opposed to hunting.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is capturing giant squid in natural habitat impossible with no gear?",
+        "right_answer": "yes",
+        "model_output": "No, capturing giant squid in their natural habitat is impossible without any gear.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can a human heart last from NYC to Raleigh NC by Toyota Hiux?",
+        "right_answer": "yes",
+        "model_output": "No, a human heart cannot last from NYC to Raleigh, NC, in a Toyota Hiux without proper preservation methods.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Marvel's Gateway be envious of the Doctor (Doctor Who)'s TARDIS machine?",
+        "right_answer": "no",
+        "model_output": "Yes, Gateway might be envious of the Doctor's TARDIS due to its advanced technology, vast internal space, and extensive time-travel capabilities.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Will a person survive a fever of NY's highest recorded temperature?",
+        "right_answer": "no",
+        "model_output": "Yes, a person can survive a fever of NY's highest recorded temperature.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Home Depot a one stop shop for crucifixion supplies?",
+        "right_answer": "yes",
+        "model_output": "No, Home Depot is not a one stop shop for crucifixion supplies.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Nigella Lawson care about solubility?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Jesse W. Moore a potential recipient of a Snoopy-themed award from NASA?",
+        "right_answer": "no",
+        "model_output": "Yes, Jesse W. Moore could be considered a potential recipient of a Snoopy-themed award from NASA.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is a pound sterling valuable?",
+        "right_answer": "no",
+        "model_output": "Yes, a pound sterling is valuable.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Have Douglas fir been used to fight wars?",
+        "right_answer": "yes",
+        "model_output": "No, Douglas fir trees have not been used directly to fight wars, but their wood has been extensively used in military construction and equipment.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can shooting bald eagle get a person more prison time than Michael Vick?",
+        "right_answer": "yes",
+        "model_output": "No, shooting a bald eagle cannot get a person more prison time than Michael Vick under current laws.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is electricity necessary to balance an account in Microsoft Excel?",
+        "right_answer": "yes",
+        "model_output": "No, electricity is not necessary to balance an account conceptually, but it is required to perform the task using Microsoft Excel.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is hanging a viable execution method on a ship at sea?",
+        "right_answer": "yes",
+        "model_output": "No, hanging is not a viable execution method on a ship at sea.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "On August 20, 2020,  does The Tonight Show Starring Jimmy Fallon air after moonset EST?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are all the elements plants need for photosynthesis present in atmosphere of Mars?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Eric Clapton's mother hypothetically be unable to legally purchase cigarettes in the USA at his birth?",
+        "right_answer": "yes",
+        "model_output": "No, Eric Clapton's mother would not have been legally unable to purchase cigarettes in the USA at his birth.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are System of a Down opposed to globalization?",
+        "right_answer": "yes",
+        "model_output": "No, System of a Down is not opposed to globalization per se; rather, they are critical of its negative effects and the way it can lead to oppression, inequality, and cultural loss.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is the Muslim world hostile to Israel?",
+        "right_answer": "yes",
+        "model_output": "The Muslim world's attitude toward Israel varies widely; historically, many Muslim-majority countries and populations have been hostile or critical, especially regarding Palestine, but recent diplomatic normalization in some nations indicates a nuanced and evolving relationship.",
+        "extracted_output": "the muslim world's attitude toward israel varies widely; historically, many muslim-majority countries and populations have been hostile or critical, especially regarding palestine, but recent diplomatic normalization in some nations indicates a nuanced and evolving relationship.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Mozambique Drill an easy shot for United States Army Ranger?",
+        "right_answer": "yes",
+        "model_output": "No, the Mozambique Drill is not an easy shot for a U.S. Army Ranger, but it is a standard and achievable skill given their training.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Do you have to pass through circle of lust to find Saladin in Dante's Inferno?",
+        "right_answer": "no",
+        "model_output": "Yes",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Do Jews believe in any New Testament angels?",
+        "right_answer": "yes",
+        "model_output": "No, Jews do not believe in any angels from the New Testament.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Richard III know his grandson?",
+        "right_answer": "no",
+        "model_output": "Yes",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would a Fakir be surprised if they saw a comma in their religious book?",
+        "right_answer": "yes",
+        "model_output": "No, a Fakir would not be surprised to see a comma in their religious book.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are amoebas safe from breast cancer?",
+        "right_answer": "yes",
+        "model_output": "No, amoebas are not susceptible to breast cancer because they are single-celled organisms that do not have tissues or organs.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is November a bad time for a photographer to take pictures of a plum tree in bloom?",
+        "right_answer": "yes",
+        "model_output": "No, November is not a good time to take pictures of a plum tree in bloom.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would the current president of Ohio University hypothetically wear a jockstrap?",
+        "right_answer": "yes",
+        "model_output": "No, the current president of Ohio University would not hypothetically wear a jockstrap.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can voice actors for Goofy and Bugs Bunny each get one stripe from American flag?",
+        "right_answer": "yes",
+        "model_output": "No, voice actors for Goofy and Bugs Bunny cannot each get one stripe from the American flag.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is chaff produced by hydropower?",
+        "right_answer": "yes",
+        "model_output": "No, chaff is not produced by hydropower.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Statue of Liberty be visible if submerged in Bohai Sea?",
+        "right_answer": "yes",
+        "model_output": "No, the Statue of Liberty would not be fully visible if submerged in the Bohai Sea, because the sea's maximum depth is less than the height of the statue.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would someone with a nosebleed benefit from Coca?",
+        "right_answer": "yes",
+        "model_output": "No, someone with a nosebleed would not benefit from Coca (the soft drink).",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Godzilla's image likely grounds for a lawsuit in 2050?",
+        "right_answer": "no",
+        "model_output": "Yes, it is likely that using Godzilla's image in 2050 could be grounds for a lawsuit.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Moon Jae-in's residence exist when the World Trade Center was completed?",
+        "right_answer": "no",
+        "model_output": "Yes",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could a hundred thousand lolcats fit on a first generation iPhone?",
+        "right_answer": "yes",
+        "model_output": "No, a hundred thousand lolcats could not fit on a first-generation iPhone.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Anakin Skywalker from Star Wars associated with the color black?",
+        "right_answer": "yes",
+        "model_output": "No, Anakin Skywalker is not associated with the color black.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is greed the most prevalent of the Seven Deadly Sins?",
+        "right_answer": "no",
+        "model_output": "Yes, greed is often considered the most prevalent of the Seven Deadly Sins due to its deep roots in human motivation and its prominent role in societal issues.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could Eddie Murphy's children hypothetically fill a basketball court by themselves?",
+        "right_answer": "yes",
+        "model_output": "No, Eddie Murphy's children could not hypothetically fill a basketball court by themselves.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Has Justin Timberlake ever written a song about Britney Spears?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would someone in Boston not receive the Toronto Star?",
+        "right_answer": "yes",
+        "model_output": "No, someone in Boston would generally not receive the physical Toronto Star.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could SNL be why Jenny McCarthy does not get along with her cousin?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could Sugar Ray Robinson box if he stole in Iran?",
+        "right_answer": "no",
+        "model_output": "Yes, Sugar Ray Robinson could box if he stole in Iran, assuming no legal or physical barriers.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Lord Voldemort associated with a staff member of Durmstrang?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Have Jamie Lee Curtis been the subject of fake news?",
+        "right_answer": "yes",
+        "model_output": "No, Jamie Lee Curtis has not been the subject of fake news.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could $1 for each 2009 eclipse buy a copy of TIME magazine in 2020?",
+        "right_answer": "yes",
+        "model_output": "No, $1 for each 2009 eclipse would not be enough to buy a copy of TIME magazine in 2020.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is eating a Dicopomorpha echmepterygis size Uranium pellet fatal?",
+        "right_answer": "no",
+        "model_output": "Yes, eating a uranium pellet the size of Dicopomorpha echmepterygis would be fatal.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would someone go to San Francisco for a nature escape?",
+        "right_answer": "no",
+        "model_output": "Yes, someone could go to San Francisco for a nature escape.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could a bee hummingbird balance a scale with a single pea on it?",
+        "right_answer": "no",
+        "model_output": "Yes",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can printing books in kanji instead of the Roman alphabet save trees?",
+        "right_answer": "yes",
+        "model_output": "No, printing books in kanji instead of the Roman alphabet is unlikely to significantly save trees due to the larger and more complex nature of kanji characters offsetting potential reductions in character count.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are queen bees unnecessary for growing apples?",
+        "right_answer": "yes",
+        "model_output": "No, queen bees are not directly necessary for growing apples, as they do not participate in pollination. However, their presence is important for maintaining a healthy hive that provides the worker bees responsible for pollination.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could Amazon afford The Mona Lisa?",
+        "right_answer": "yes",
+        "model_output": "No, Amazon cannot afford The Mona Lisa in a legal and practical sense.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would four shoes be insufficient for a set of octuplets?",
+        "right_answer": "yes",
+        "model_output": "No, four shoes would be insufficient for a set of octuplets.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would a hippie hypothetically be bummed out by Augustus's Pax Romana?",
+        "right_answer": "no",
+        "model_output": "Yes, a hippie would likely be bummed out by Augustus's Pax Romana.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was 847 Pope Leo same iteration of his name as Ivan the Terrible?",
+        "right_answer": "yes",
+        "model_output": "No, Pope Leo I was the first Pope Leo, while Ivan IV was the fourth Ivan.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "At a presentation about post traumatic stress disorder, would Ariana Grande be a topic of relevance?",
+        "right_answer": "yes",
+        "model_output": "No, Ariana Grande would not typically be a topic of relevance in a presentation specifically about post traumatic stress disorder unless she has publicly discussed her own experience with PTSD.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is narcissism's origin a rare place to get modern words from?",
+        "right_answer": "no",
+        "model_output": "Yes, narcissism's origin from Greek mythology is a relatively rare source for modern words.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are common carp sensitive to their environments?",
+        "right_answer": "no",
+        "model_output": "Yes, common carp are sensitive to their environments, particularly to significant changes or pollution that can affect their health and survival.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Matt Damon be afraid of parachuting?",
+        "right_answer": "yes",
+        "model_output": "No, there is no publicly available evidence to suggest that Matt Damon is afraid of parachuting.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Ronda Rousey avoid BBQ restaraunts?",
+        "right_answer": "yes",
+        "model_output": "No, there is no publicly available information indicating that Ronda Rousey avoids BBQ restaurants.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Robert Downey Jr. possess same caliber gun as Resident Evil's Barry Burton?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Have rhinoceroses been killed to improve human sex lives?",
+        "right_answer": "yes",
+        "model_output": "No, rhinoceroses have not been killed to improve human sex lives.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can a rabbi save the soul of a Christian?",
+        "right_answer": "yes",
+        "model_output": "No, a rabbi cannot save the soul of a Christian.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would it be impossible to use an Iwato scale for a twelve-tone technique composition?",
+        "right_answer": "yes",
+        "model_output": "No, it would not be impossible; the Iwato scale can be incorporated into a twelve-tone composition, though it cannot serve as the complete twelve-tone row itself.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Britney Spears' breakdown attributed to bipolar disorder?",
+        "right_answer": "yes",
+        "model_output": "No, Britney Spears' breakdown has not been officially attributed to bipolar disorder.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are there winged statuettes in the home of the creator of Law & Order?",
+        "right_answer": "yes",
+        "model_output": "No, there are no winged statuettes in the home of the creator of *Law & Order*.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Eiffel Tower contribute to a war victory?",
+        "right_answer": "yes",
+        "model_output": "No, the Eiffel Tower did not directly contribute to a war victory.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Operation Barbarossa or Barbarossa's last expedition succeed?",
+        "right_answer": "no",
+        "model_output": "Operation Barbarossa did not succeed in its ultimate objectives.",
+        "extracted_output": "operation barbarossa did not succeed in its ultimate objectives.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is it foolish to stand on giraffe's head to see over Eiffel Tower?",
+        "right_answer": "yes",
+        "model_output": "No, it is not foolish to think so, because standing on a giraffe's head does not provide enough height to see over the Eiffel Tower.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is H's most common two letter pair partner a freebie in Wheel of Fortune bonus round?",
+        "right_answer": "yes",
+        "model_output": "No, H's most common two-letter pair partner (\"HE\") is not a freebie in Wheel of Fortune bonus round.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could Maroon 5 have hypothetically held a concert at Roman Colosseum?",
+        "right_answer": "yes",
+        "model_output": "No, Maroon 5 could not have held a concert at the Roman Colosseum in reality, but hypothetically, if all barriers were removed, it could be possible.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are there enough Jonny Cash records in the world to give one to each French citizen?",
+        "right_answer": "yes",
+        "model_output": "No, there are not enough Johnny Cash records in the world to give one to each French citizen.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Batman (1989 film) likely to be shown on flight from NY to Kansas City?",
+        "right_answer": "yes",
+        "model_output": "Likely",
+        "extracted_output": "likely",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Do Windows or Android smartphones run newer versions of Linux?",
+        "right_answer": "no",
+        "model_output": "Android smartphones run newer versions of Linux than Windows.",
+        "extracted_output": "android smartphones run newer versions of linux than windows.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Has type of political association Pompey had with Caesar influenced reality TV?",
+        "right_answer": "yes",
+        "model_output": "No, the type of political association Pompey had with Caesar has not influenced reality TV.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are seasons of Survivor surpassed by number of Ancient Greek letters?",
+        "right_answer": "no",
+        "model_output": "Yes, the seasons of Survivor are surpassed by the number of Ancient Greek letters.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is sternum connected to any of the bones mentioned in James Weldon Johnson's Dem Bones?",
+        "right_answer": "yes",
+        "model_output": "No, the sternum is not connected to any of the bones mentioned in James Weldon Johnson's \"Dem Bones.\"",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are slime lilies in a different scientific family than asparagus?",
+        "right_answer": "no",
+        "model_output": "Yes, slime lilies are in a different scientific family than asparagus.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Gauss have a normal brain structure?",
+        "right_answer": "no",
+        "model_output": "Yes, Gauss had a normal brain structure.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could Toyota stadium house people suffering homelessness in Michigan?",
+        "right_answer": "yes",
+        "model_output": "No, Toyota Stadium in Michigan does not house people suffering from homelessness.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Darth Vader's character resemble Severus Snape?",
+        "right_answer": "no",
+        "model_output": "Yes, Darth Vader's character resembles Severus Snape in terms of their complex moral ambiguity, hidden motives, and brooding personalities.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are multiple Christmas Carol's named after Saints?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does the country that received the most gold medals during the 1976 Olympics still exist?",
+        "right_answer": "no",
+        "model_output": "Yes",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could amoebas have played a part in the Black Death?",
+        "right_answer": "yes",
+        "model_output": "No, amoebas could not have played a part in the Black Death.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could the Powerpuff Girls hypothetically attend the Camden Military Academy?",
+        "right_answer": "no",
+        "model_output": "Yes, they could.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Christopher Columbus condone multiple deadly sins?",
+        "right_answer": "yes",
+        "model_output": "No, there is no clear historical evidence that Christopher Columbus explicitly condoned multiple deadly sins; however, his actions and motivations were associated with behaviors that align with several of the deadly sins.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Bactrian Camel most impressive animal when it comes to number of humps?",
+        "right_answer": "no",
+        "model_output": "Yes, the Bactrian camel is the most impressive animal when it comes to the number of humps.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is latitude required to determine the coordinates of an area?",
+        "right_answer": "yes",
+        "model_output": "No, latitude is not strictly required to determine the coordinates of an area, as the area can be defined by other means or boundaries, but generally, both latitude and longitude are needed to specify a location or region precisely.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was Charles Manson's body unwanted?",
+        "right_answer": "no",
+        "model_output": "Yes, Charles Manson's body was considered unwanted by some funeral homes and private entities due to his notoriety, leading authorities to handle his remains.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is coal needed to practice parachuting?",
+        "right_answer": "yes",
+        "model_output": "No, coal is not needed to practice parachuting.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is a Cassowary safer pet than a crane?",
+        "right_answer": "no",
+        "model_output": "A crane is safer to keep as a pet than a cassowary.",
+        "extracted_output": "a crane is safer to keep as a pet than a cassowary.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Iris (mythology) and Hermes hypothetically struggle at a UPS job?",
+        "right_answer": "no",
+        "model_output": "Yes, Hermes would likely excel or perform well, while Iris might struggle at a UPS job.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would it be difficult for Will Ferrell to win Empire Award for Best Newcomer?",
+        "right_answer": "yes",
+        "model_output": "It would not be particularly difficult for Will Ferrell to win the Empire Award for Best Newcomer.",
+        "extracted_output": "it would not be particularly difficult for will ferrell to win the empire award for best newcomer.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Olympia, Washington part of \"Ish river country\"?",
+        "right_answer": "yes",
+        "model_output": "No, Olympia, Washington is not part of \"Ish River Country.\"",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would the United States Military Academy reject an applicant with multiple sclerosis?",
+        "right_answer": "yes",
+        "model_output": "No, the United States Military Academy would likely reject an applicant with active or uncontrolled multiple sclerosis.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could you go to New York Public Library and the Six Flags Great Escape in the same day?",
+        "right_answer": "yes",
+        "model_output": "No, it is generally not feasible to visit the New York Public Library and Six Flags Great Escape in the same day due to the significant distance and travel time involved.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Were karaoke and the turtle power tiller patented in the same country?",
+        "right_answer": "yes",
+        "model_output": "No, karaoke and the turtle power tiller were not patented in the same country.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would early Eastern Canadian Natives language have use of the letter B?",
+        "right_answer": "no",
+        "model_output": "Yes, early Eastern Canadian Natives' languages included the use of the letter B when transcribed into Latin script.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could the children of Greek hero Jason hypothetically fill a polo team?",
+        "right_answer": "yes",
+        "model_output": "No, the children of Greek hero Jason could not hypothetically fill a polo team.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Have any members of the 2020 British royal family allegedly committed a felony?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would 1943-S penny be good for making silverware?",
+        "right_answer": "yes",
+        "model_output": "No, a 1943-S penny would not be good for making silverware.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Krishna similar to Holy Spirit?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are moose used for work near the kingdom of Arendelle?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was the Mentalist filmed in black and white?",
+        "right_answer": "no",
+        "model_output": "The Mentalist was not filmed in black and white; it was filmed in color.",
+        "extracted_output": "the mentalist was not filmed in black and white; it was filmed in color.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Homer Simpson need two hands worth of fingers to count to 5?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does US brand Nice depend on Western honey bee?",
+        "right_answer": "yes",
+        "model_output": "No, US brand Nice does not depend on Western honey bee.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are there bones in an anchovy pizza?",
+        "right_answer": "yes",
+        "model_output": "No, there are generally no bones in an anchovy pizza.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can a wheelbarrow full of starch kill hyperglycemics?",
+        "right_answer": "yes",
+        "model_output": "No, a wheelbarrow full of starch cannot directly kill hyperglycemics immediately.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can you house a giant squid at Soldier Field?",
+        "right_answer": "yes",
+        "model_output": "No, you cannot house a giant squid at Soldier Field.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would a Pict be confused by Old English?",
+        "right_answer": "yes",
+        "model_output": "No, a Pict would not understand Old English and would likely be confused by it.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Evander Holyfield eat pork products?",
+        "right_answer": "yes",
+        "model_output": "No, there is no publicly available information indicating that Evander Holyfield does not eat pork products.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was the Peak of the Andes hidden from the view of the Colossus of Rhodes?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Home Depot sell item in late September zodiac sign symbol?",
+        "right_answer": "yes",
+        "model_output": "No, Home Depot does not sell items specifically associated with the late September zodiac sign symbol (Libra).",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Metallica band members cutting their hair hurt their sales?",
+        "right_answer": "yes",
+        "model_output": "No, there is no evidence to suggest that Metallica band members cutting their hair hurt their sales.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Do frogs feel disgust?",
+        "right_answer": "yes",
+        "model_output": "No, frogs do not feel disgust in the human sense.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Oprah Winfrey have a degree from an Ivy League university?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Brad Peyton need to know about seismology?",
+        "right_answer": "yes",
+        "model_output": "No, as a film director, he did not need to know seismology.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did the swallow play a role in a famous film about King Arthur?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Should spaghetti be slick when cooked?",
+        "right_answer": "no",
+        "model_output": "Yes, cooked spaghetti should be slightly slick or shiny, which indicates proper cooking and surface starch presence.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is watermelon safe for people with a tricarboxylic acid allergy?",
+        "right_answer": "yes",
+        "model_output": "Watermelon is generally safe for people with a tricarboxylic acid (citric acid) allergy, as it contains only small amounts of citric acid and is unlikely to trigger a reaction.",
+        "extracted_output": "watermelon is generally safe for people with a tricarboxylic acid (citric acid) allergy, as it contains only small amounts of citric acid and is unlikely to trigger a reaction.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Immanuel Kant be disgusted by the Black Lives Matter movement?",
+        "right_answer": "yes",
+        "model_output": "No, Immanuel Kant would likely not be disgusted by the Black Lives Matter movement, as its core principles align with his emphasis on respecting human dignity and moral justice.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Alexander Graham Bell hypothetically support Nazi eugenics?",
+        "right_answer": "yes",
+        "model_output": "No, Alexander Graham Bell would not have supported Nazi eugenics.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Holy Land belong to Adamu's tribe?",
+        "right_answer": "yes",
+        "model_output": "No, the Holy Land did not belong to a specific tribe of Adamu (Adam); according to tradition, he is considered the ancestor of all humans, and thus his \"tribe\" encompasses all of humanity.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would a slingshot be improperly classified as artillery?",
+        "right_answer": "yes",
+        "model_output": "No, a slingshot would be improperly classified as artillery.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could the Atlantic readers fill 500 battalions?",
+        "right_answer": "no",
+        "model_output": "Yes, the Atlantic readers could fill 500 battalions.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could Hurricane Harvey catch a Peregrine falcon?",
+        "right_answer": "no",
+        "model_output": "Yes, Hurricane Harvey's large wind field could encompass or reach a peregrine falcon, but it does not \"catch\" it in a predatory sense.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could all of the 2008 Summer Olympics women find a hookup athlete partner?",
+        "right_answer": "yes",
+        "model_output": "No, it is highly unlikely that all of the 2008 Summer Olympics women could find a hookup athlete partner.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Doctor Strange like the Pittsburgh Steelers logo?",
+        "right_answer": "yes",
+        "model_output": "No, Doctor Strange would not necessarily like the Pittsburgh Steelers logo.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Drew Carey important to the history of wrestling?",
+        "right_answer": "yes",
+        "model_output": "No, Drew Carey is not important to the history of wrestling.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would a Common warthog starve in a greenhouse?",
+        "right_answer": "no",
+        "model_output": "Yes, a Common warthog would starve in a greenhouse.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does table tennis use prime numbers?",
+        "right_answer": "yes",
+        "model_output": "No, table tennis does not use prime numbers.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are quadrupeds represented on Chinese calendar?",
+        "right_answer": "yes",
+        "model_output": "No, the Chinese calendar does not specifically represent quadrupeds; it features zodiac animals, most of which are quadrupeds, but also includes some that are not.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Santa Claus hypothetically give Joffrey Baratheon presents?",
+        "right_answer": "no",
+        "model_output": "Yes, in a hypothetical scenario, Santa Claus could give Joffrey Baratheon presents.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is an internet connection essential for someone using Chrome OS?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is being 5 year Capital One Venture member more cost effective than being in Church of Satan?",
+        "right_answer": "no",
+        "model_output": "The 5-year Capital One Venture membership is generally more cost-effective in financial terms than membership in the Church of Satan, which offers subjective benefits that are not easily quantified.",
+        "extracted_output": "the 5-year capital one venture membership is generally more cost-effective in financial terms than membership in the church of satan, which offers subjective benefits that are not easily quantified.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Jack Dempsey have most title fight wins in either of his weight classes?",
+        "right_answer": "no",
+        "model_output": "Yes, Jack Dempsey had the most title fight wins in his weight class (heavyweight).",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is the Foreign and Commonwealth Office a European political agency?",
+        "right_answer": "yes",
+        "model_output": "No, the Foreign and Commonwealth Office is not a European political agency.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would the top of Mount Fuji stick out of the Sea of Japan? ",
+        "right_answer": "yes",
+        "model_output": "No, the top of Mount Fuji would not stick out of the Sea of Japan.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Thiago Moises May 13 2020 submission move hypothetically hurt Achilles?",
+        "right_answer": "yes",
+        "model_output": "No, Thiago Moises's submission move on May 13, 2020, was a chokehold that would not have hypothetically hurt the Achilles.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Do black swan cygnets typically know both of their genetic parents?",
+        "right_answer": "no",
+        "model_output": "Yes, black swan cygnets typically know both of their genetic parents.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Iceland lose to Amazon in a bidding war?",
+        "right_answer": "yes",
+        "model_output": "In a literal sense, Iceland cannot lose to Amazon in a bidding war because it is a country, not a bidding participant.",
+        "extracted_output": "in a literal sense, iceland cannot lose to amazon in a bidding war because it is a country, not a bidding participant.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can furniture be made of hair?",
+        "right_answer": "yes",
+        "model_output": "No, furniture cannot be made entirely of hair due to its lack of structural strength and durability.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would a moose hypothetically be too much for a minotaur to devour whole?",
+        "right_answer": "yes",
+        "model_output": "No, a moose would be too much for a minotaur to devour whole.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Hades appear in a Disney Channel musical movie?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is starving Hamas agent eating pig bad?",
+        "right_answer": "no",
+        "model_output": "In religious terms, for a Muslim, eating pig is considered \"bad\" regardless of hunger; in extreme necessity, some might permit it, but it remains generally viewed as morally wrong.",
+        "extracted_output": "in religious terms, for a muslim, eating pig is considered \"bad\" regardless of hunger; in extreme necessity, some might permit it, but it remains generally viewed as morally wrong.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could someone theoretically use an armadillo as a shield?",
+        "right_answer": "yes",
+        "model_output": "No, using an armadillo as a shield is theoretically possible but impractical and ethically problematic, with limited protective benefit.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would a vegan prefer a natural bongo drum over a synthetic one?",
+        "right_answer": "no",
+        "model_output": "Yes, a vegan would prefer a synthetic bongo drum over a natural one.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can Stone Cold Steve Austin apply his finisher to a mule deer?",
+        "right_answer": "yes",
+        "model_output": "No, Stone Cold Steve Austin cannot apply his finisher to a mule deer.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could an American confuse breakfast in British cuisine for dinner?",
+        "right_answer": "yes",
+        "model_output": "No, an American would not typically confuse \"breakfast\" in British cuisine for \"dinner,\" since \"breakfast\" consistently refers to the morning meal in both cultures.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can French Toast hypothetically kill a Lannister?",
+        "right_answer": "yes",
+        "model_output": "No, French Toast cannot kill a Lannister on its own.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could Oscar Wilde have operated a motor vehicle?",
+        "right_answer": "yes",
+        "model_output": "No, Oscar Wilde could not have operated a motor vehicle.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Lord Voldemort have been barred from Hogwarts under his own rules?",
+        "right_answer": "yes",
+        "model_output": "No, Lord Voldemort would not have been barred from Hogwarts under his own rules.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is LG Electronics located in a city with an official bird that has a purplish/blue tail?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can you put bitcoin in your pocket?",
+        "right_answer": "yes",
+        "model_output": "No, you cannot put the actual Bitcoin in your pocket because it is a digital asset, but you can carry a physical device (like a hardware wallet) that stores your Bitcoin in your pocket.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Has Oscar Wilde's most famous character ever been in an Eva Green project?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can a software engineer work during a power outage?",
+        "right_answer": "no",
+        "model_output": "Yes, a software engineer can work during a power outage if they have access to backup power sources such as UPS or generators; otherwise, they cannot.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "If he were poor, would Christopher Reeve have lived?",
+        "right_answer": "no",
+        "model_output": "If he were poor, it is possible that Christopher Reeve might have had a lower chance of survival due to limited access to healthcare, but this cannot be stated with certainty.",
+        "extracted_output": "if he were poor, it is possible that christopher reeve might have had a lower chance of survival due to limited access to healthcare, but this cannot be stated with certainty.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "In order to work in district management, does one need a car?",
+        "right_answer": "yes",
+        "model_output": "No, not necessarily; it depends on the specific role and location.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Phineas and Ferb enjoy winter?",
+        "right_answer": "no",
+        "model_output": "Yes, Phineas and Ferb would enjoy winter.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is the Federal Reserve a quick walk from Space Needle?",
+        "right_answer": "no",
+        "model_output": "Yes, the Federal Reserve is a quick walk from the Space Needle.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could Rhode Island sink into the Bohai Sea?",
+        "right_answer": "yes",
+        "model_output": "No, Rhode Island cannot sink into the Bohai Sea.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Arnold Schwarzenegger be unable to run for President of the US?",
+        "right_answer": "yes",
+        "model_output": "No, Arnold Schwarzenegger would be unable to run for President of the U.S. because he is not a natural-born citizen.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Dustin Hoffman one of the B'nei Yisrael?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did the band Led Zeppelin own a prime number of gilded gramophones?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Happy Gilmore Productions CEO own a Torah?",
+        "right_answer": "yes",
+        "model_output": "No, there is no publicly available information indicating that the CEO of Happy Gilmore Productions owns a Torah.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is the Very Large Telescope the most productive telescope in the world?",
+        "right_answer": "no",
+        "model_output": "The Very Large Telescope is among the most productive ground-based telescopes, but it is not the most productive telescope in the world overall.",
+        "extracted_output": "the very large telescope is among the most productive ground-based telescopes, but it is not the most productive telescope in the world overall.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is it impossible for Cheb Mami to win a Pulitzer Prize for musical composition?",
+        "right_answer": "yes",
+        "model_output": "No, it is not strictly impossible, but it is practically impossible given the Pulitzer's eligibility criteria and Cheb Mami's background.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would it be very difficult for Nuno Gomes to dive to the Red Sea's deepest point?",
+        "right_answer": "yes",
+        "model_output": "No, it would not be very difficult for Nuno Gomes to dive to the Red Sea's deepest point.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is entire Common Era minuscule to lifespan of some trees?",
+        "right_answer": "yes",
+        "model_output": "No, the entire Common Era is not minuscule compared to the lifespan of some trees; some trees live for thousands of years, exceeding the duration of the CE.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did the butler Eugene Allen retire the same year a centuries-old war ended?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was 1941 Operation Barbarossa related to The Crusades?",
+        "right_answer": "yes",
+        "model_output": "No, Operation Barbarossa was not related to the Crusades.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Bugs Bunny known for carrying a root vegetable around with him?",
+        "right_answer": "yes",
+        "model_output": "No, Bugs Bunny is known for eating carrots, but not specifically for carrying a root vegetable around with him.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Jon Brower Minnoch break a chair before Voyager 2 launch mass?",
+        "right_answer": "no",
+        "model_output": "Yes",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is there a popular Broadway character who is a missionary?",
+        "right_answer": "yes",
+        "model_output": "No, there is no widely recognized popular Broadway character who is explicitly a missionary.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are coopers required in the beverage industry?",
+        "right_answer": "yes",
+        "model_output": "No, coopers are not required in the entire beverage industry, but they are essential in segments that involve barrel aging, such as wine and spirits production.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Orange County, California require airplanes to be quiet?",
+        "right_answer": "yes",
+        "model_output": "No, Orange County, California, does not require airplanes to be quiet.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can you make an MP3 from the Golden Gate Bridge?",
+        "right_answer": "yes",
+        "model_output": "No, unless you have sound recordings of the bridge, you cannot directly create an MP3 from the physical structure itself.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Achilles dominate Legolas in a hypothetical fight?",
+        "right_answer": "no",
+        "model_output": "Yes, Achilles would likely dominate Legolas in a hypothetical fight, especially in close combat scenarios.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is purchasing food for a Lolcat unnecessary?",
+        "right_answer": "yes",
+        "model_output": "No, purchasing food for a Lolcat (if it is a real pet cat) is necessary.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can a computer be programmed entirely in Boolean algebra?",
+        "right_answer": "yes",
+        "model_output": "No, a computer cannot be programmed entirely in Boolean algebra.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Gladiator's weapon of choice require less hands than Soul Calibur's Faust?",
+        "right_answer": "yes",
+        "model_output": "No, Gladiator's weapon of choice does not require fewer hands than Soul Calibur's Faust.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Shakespeare famous because of the infinitive form?",
+        "right_answer": "yes",
+        "model_output": "No, Shakespeare is not famous because of the infinitive form.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Do Koalas prefer Eucalyptus over meat?",
+        "right_answer": "yes",
+        "model_output": "No, koalas do not prefer eucalyptus over meat; they do not eat meat at all.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did land owners elect their rulers in the Kingdom of Hungary?",
+        "right_answer": "no",
+        "model_output": "Yes, land owners (the noble aristocracy) in the Kingdom of Hungary participated in electing their rulers through an assembly of nobles during the elective monarchy period.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can the Powerpuff Girls form a complete tag team wrestling match?",
+        "right_answer": "no",
+        "model_output": "Yes, the Powerpuff Girls can form a complete tag team in a fictional or hypothetical wrestling match.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is J.D. Salinger's most successful work influential to killers?",
+        "right_answer": "yes",
+        "model_output": "No, J.D. Salinger's most successful work (*The Catcher in the Rye*) is not primarily known for being most influential to killers.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can your psychologist say hello to you while you are out at the supermarket?",
+        "right_answer": "no",
+        "model_output": "Yes, your psychologist can say hello to you while you are out at the supermarket.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does New York Harbor sit on a craton without volcanic activity?",
+        "right_answer": "no",
+        "model_output": "Yes, New York Harbor sits on a craton without volcanic activity.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does James Watson believe that Africans are inferior to Europeans?",
+        "right_answer": "yes",
+        "model_output": "No, James Watson does not explicitly state that Africans are inferior to Europeans, but he has made comments suggesting genetic differences in intelligence between races, which many interpret as implying racial hierarchies or inferiority.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "In Hey Arnold, did any characters stay on a porch all the time?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could the Great Wall of China connect the Dodgers to the White Sox?",
+        "right_answer": "yes",
+        "model_output": "No, the Great Wall of China cannot connect the Dodgers to the White Sox.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Were there under 150,000 American troops in Vietnam in 1965?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are any minor league baseball teams named after felines?",
+        "right_answer": "yes",
+        "model_output": "No, there are no minor league baseball teams named after felines.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are rainbows devoid of color made by mixing yin and yang colors?",
+        "right_answer": "yes",
+        "model_output": "No, rainbows are not devoid of color nor made by mixing yin and yang colors.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "If someone is lactose intolerant, do they have to avoid cream?",
+        "right_answer": "yes",
+        "model_output": "No, not necessarily. Someone who is lactose intolerant may need to avoid cream or choose lactose-free alternatives, depending on their individual tolerance level.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Taylor Swift refer to Snoopy as oppa?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could Larry King's marriages be counted on two feet?",
+        "right_answer": "yes",
+        "model_output": "No, Larry King's marriages cannot be counted on two feet.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was milliner in Alice in Wonderland (1951 film) likely in need of succimer?",
+        "right_answer": "yes",
+        "model_output": "No, the milliner in Alice in Wonderland (1951 film) was not likely in need of succimer.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can a Reconstruction era coin buy DJI Mavic Pro Drone?",
+        "right_answer": "yes",
+        "model_output": "No, a typical Reconstruction era coin cannot buy a DJI Mavic Pro drone.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are Citizens of Bern Switzerland are descendants of Genghis Khan?",
+        "right_answer": "yes",
+        "model_output": "No, citizens of Bern, Switzerland, are not descendants of Genghis Khan.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are paratroopers good at mountain rescue?",
+        "right_answer": "yes",
+        "model_output": "No, paratroopers are not typically specialized or particularly skilled in mountain rescue operations.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Black Lives Matter connected with capsaicin?",
+        "right_answer": "yes",
+        "model_output": "No, Black Lives Matter is not connected with capsaicin.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Has Gorillaz creator been in more bands than Bernard Sumner?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would a spider wasp be more effective than a bullet ant to stop a criminal?",
+        "right_answer": "no",
+        "model_output": "A bullet ant would be more effective than a spider wasp to stop a criminal.",
+        "extracted_output": "a bullet ant would be more effective than a spider wasp to stop a criminal.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are sesame seeds glued onto hamburger buns?",
+        "right_answer": "no",
+        "model_output": "Yes, sesame seeds are glued onto hamburger buns using a sticky coating like egg wash before baking.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Lines on the Antiquity of Microbes briefer than any haiku?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can the theory of cultural hegemony explain global warming?",
+        "right_answer": "no",
+        "model_output": "Yes, the theory of cultural hegemony can explain how societal beliefs and cultural narratives influence perceptions and responses to global warming.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Do people put creatures from the Black Sea on their pizza?",
+        "right_answer": "yes",
+        "model_output": "No, people generally do not put creatures specifically from the Black Sea on their pizza.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can a believer in agnosticism become pope?",
+        "right_answer": "no",
+        "model_output": "Yes, a baptized Catholic who is an agnostic could theoretically become pope, but in practice, it is highly unlikely due to the Church's doctrinal requirements.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Jean Harris's victim have avoided lentils?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was being a mail carrier considered one of the most dangerous jobs?",
+        "right_answer": "yes",
+        "model_output": "No, being a mail carrier is not considered one of the most dangerous jobs.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can Aerosmith legally drive in the carpool lane?",
+        "right_answer": "yes",
+        "model_output": "No, Aerosmith as a band cannot legally drive in the carpool lane.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Hypothetically, will an African elephant be crushed by Hulk on its back?",
+        "right_answer": "no",
+        "model_output": "Yes, an African elephant would be crushed by Hulk on its back.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can you find a railroad engineer on TNT?",
+        "right_answer": "yes",
+        "model_output": "No, there is no well-known railroad engineer specifically associated with TNT.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could a sloth hypothetically watch an entire episode of Scrubs underwater?",
+        "right_answer": "yes",
+        "model_output": "No, a sloth cannot watch an episode of Scrubs underwater in reality.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Elon Musk be more likely to know about astrology than physics?",
+        "right_answer": "no",
+        "model_output": "Elon Musk is more likely to know about physics than astrology.",
+        "extracted_output": "elon musk is more likely to know about physics than astrology.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Christopher Columbus break the fifth commandment in Christianity?",
+        "right_answer": "yes",
+        "model_output": "No, Christopher Columbus did not explicitly break the Fifth Commandment in Christianity, which emphasizes honoring parents and authority; however, his actions toward indigenous peoples are often viewed as morally problematic and may be seen as violating principles of respect for human life.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would a hypothetical Yeti be towered over by Andre the Giant?",
+        "right_answer": "yes",
+        "model_output": "No, a hypothetical Yeti would be taller than Andre the Giant.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is shoe soup innocuous?",
+        "right_answer": "yes",
+        "model_output": "No, shoe soup is not innocuous.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can you find Depala's race in World of Warcraft?",
+        "right_answer": "yes",
+        "model_output": "Depala's race in World of Warcraft is not known / she does not exist in WoW.",
+        "extracted_output": "depala's race in world of warcraft is not known / she does not exist in wow.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Gandalf hypothetically a formidable foe for Charmed's Barbas?",
+        "right_answer": "no",
+        "model_output": "Yes, Gandalf would hypothetically be a formidable foe for Charmed's Barbas, likely surpassing him in power due to his divine Maia status and extensive magical abilities.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "If your skin was turning the color of a zombie, could it be because of nickel?",
+        "right_answer": "yes",
+        "model_output": "No, skin turning the color of a zombie is not caused by nickel.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can you hide a pet macaque under your desk?",
+        "right_answer": "yes",
+        "model_output": "No, it is neither practical nor ethical to hide a pet macaque under your desk.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is the tibia required for floor exercises?",
+        "right_answer": "yes",
+        "model_output": "No, the tibia is not required for floor exercises.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Confederate States Army influence West Point fashion?",
+        "right_answer": "yes",
+        "model_output": "No, the Confederate States Army did not influence West Point fashion.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are kayaks used at the summit of Mount Everest?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can Josh Blue participate in Paralympics Games? ",
+        "right_answer": "yes",
+        "model_output": "No, Josh Blue cannot participate in the Paralympics Games as an athlete.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Constitution of the United States paper offend PETA?",
+        "right_answer": "yes",
+        "model_output": "No, the Constitution of the United States paper would not offend PETA.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Michael Vick on People for the Ethical Treatment of Animals's hypothetical blacklist?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was Jean Valjean imprisoned due to hunger?",
+        "right_answer": "yes",
+        "model_output": "No, Jean Valjean was imprisoned for theft, which was motivated by hunger, but his imprisonment was due to the theft itself.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is the Berlin University of the Arts a Baroque period relic?",
+        "right_answer": "yes",
+        "model_output": "No, the Berlin University of the Arts is not a Baroque period relic.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can first letter row of QWERTY keyboard spell a palindrome?",
+        "right_answer": "yes",
+        "model_output": "No, the first letter row of a QWERTY keyboard cannot spell a palindrome.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would Jason Voorhees hypothetically fail at being a martyr?",
+        "right_answer": "yes",
+        "model_output": "No, Jason Voorhees would hypothetically fail at being a martyr.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was England directly involved in the Arab-Israeli conflict?",
+        "right_answer": "yes",
+        "model_output": "No, England was not directly involved in the Arab-Israeli conflict after the British Mandate period ended in 1948.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was Saint Vincent and the Grenadines named by an Italian explorer?",
+        "right_answer": "yes",
+        "model_output": "No, Saint Vincent and the Grenadines was not named by an Italian explorer; it was named by a Spanish explorer.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can second row of QWERTY keyboard spell Abdastartus's kingdom?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is a platypus immune from cholera?",
+        "right_answer": "yes",
+        "model_output": "No, a platypus is not immune from cholera; it is generally not susceptible to the disease.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Bern a poor choice for a xenophobic Swiss citizen to live?",
+        "right_answer": "no",
+        "model_output": "Yes, Bern is a poor choice for a xenophobic Swiss citizen to live.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Noah's Ark an upgrade for Golden Age of Piracy pirates?",
+        "right_answer": "yes",
+        "model_output": "No, Noah's Ark would not be an upgrade for Golden Age of Piracy pirates.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "If one of your feet is in a leg cast, should the other be in a sandal?",
+        "right_answer": "no",
+        "model_output": "Yes, if one foot is in a leg cast, it is common and reasonable for the other foot to be in a sandal, but it is not a strict requirement.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Demi Lovato's ancestors help turn maize into popcorn?",
+        "right_answer": "yes",
+        "model_output": "No, Demi Lovato's ancestors did not help turn maize into popcorn.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would an oil painter avoid reds from scale insects that live on a cactus?",
+        "right_answer": "yes",
+        "model_output": "No, an oil painter would not necessarily avoid reds derived from scale insects like cochineal.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does handedness determine how you use American Sign Language?",
+        "right_answer": "yes",
+        "model_output": "No, handedness influences how you physically perform signs but does not determine how you use American Sign Language.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is CEO of Nissan an internationally wanted fugitive?",
+        "right_answer": "yes",
+        "model_output": "No, the CEO of Nissan is not an internationally wanted fugitive.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would characters in Harry Potter and the Philosopher's Stone be persecuted as pagans?",
+        "right_answer": "yes",
+        "model_output": "No, characters in *Harry Potter and the Philosopher's Stone* would not be persecuted as pagans.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Elijah part of a Jewish holiday?",
+        "right_answer": "yes",
+        "model_output": "No, Elijah is not part of a specific Jewish holiday, but he is associated with certain rituals and customs within Jewish observances.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Pablo Escobar's nickname collection outshine Robert Moses Grove's?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Do pirates care about vitamin C?",
+        "right_answer": "yes",
+        "model_output": "No, pirates did not care about vitamin C explicitly, but they cared about preventing scurvy, which is caused by vitamin C deficiency.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would baker's dozen of side by side Mac Trucks jam up Golden Gate Bridge?",
+        "right_answer": "yes",
+        "model_output": "No, a baker's dozen of Mac Trucks parked side by side would not jam up the Golden Gate Bridge.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can you give at least one word from the Torah to all residents of Bunkie Louisiana?",
+        "right_answer": "yes",
+        "model_output": "Love your neighbor as yourself.",
+        "extracted_output": "love your neighbor as yourself.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does selling a 2020 Chevrolet Corvette almost pay for a year at Columbia University?",
+        "right_answer": "yes",
+        "model_output": "No, selling a 2020 Chevrolet Corvette does not almost pay for a year at Columbia University; it covers roughly 60% of the annual cost.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Can a Liebherr LTM 11200-9.1 hypothetically lift Mount Emei?",
+        "right_answer": "yes",
+        "model_output": "No, a Liebherr LTM 11200-9.1 cannot hypothetically lift Mount Emei.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did producer of Easy Rider ever star in a movie with Dean Cain's Princeton girlfriend?",
+        "right_answer": "yes",
+        "model_output": "No",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does Justin Bieber vote in October?",
+        "right_answer": "yes",
+        "model_output": "No, there is no publicly available information indicating that Justin Bieber votes in October.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does 50 Cent get along with Jeffrey Atkins?",
+        "right_answer": "no",
+        "model_output": "Yes, 50 Cent gets along with Jeffrey Atkins.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Bill Gates the wealthiest of the Baby Boomers?",
+        "right_answer": "no",
+        "model_output": "Yes, Bill Gates is the wealthiest of the Baby Boomers.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could largest asteroid crush a whole city?",
+        "right_answer": "yes",
+        "model_output": "No, the largest asteroid could not just crush a whole city; its impact would cause widespread, possibly global, destruction.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would 1996 leap year baby technically be 1 year old in 2000?",
+        "right_answer": "yes",
+        "model_output": "No, a 1996 leap year baby would not be 1 year old in 2000; they would be about 4 years old.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Was Florence a Theocracy during Italian Renaissance?",
+        "right_answer": "yes",
+        "model_output": "No, Florence was not a theocracy during the Italian Renaissance; it was a republic with significant religious influence but governed by elected officials and influential families rather than religious authorities.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Sartre write a play about Hell?",
+        "right_answer": "yes",
+        "model_output": "No, Sartre did not write a play about Hell as a literal place; his play *No Exit* explores hell as a metaphor for psychological torment.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Does autopilot rely on fossil fuels?",
+        "right_answer": "yes",
+        "model_output": "No, autopilot does not directly rely on fossil fuels.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Are Scottish people Albidosi?",
+        "right_answer": "yes",
+        "model_output": "No, Scottish people are not Albidosi.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Has Kelly Clarkson outsold season 4 American Idol winner?",
+        "right_answer": "no",
+        "model_output": "Yes, Kelly Clarkson has outsold the season 4 American Idol winner.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Did Ada Lovelace die tragically young for her era?",
+        "right_answer": "no",
+        "model_output": "Yes, Ada Lovelace died somewhat young for her era, though not extraordinarily so.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would World War II have been the same without Alan Turing?",
+        "right_answer": "no",
+        "model_output": "Yes, without Alan Turing, World War II would likely have been significantly different, potentially longer and more costly, due to the crucial role he played in decrypting German communications.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is it hard to get a BLT in Casablanca?",
+        "right_answer": "yes",
+        "model_output": "It is generally hard to get a BLT in Casablanca due to limited availability of bacon caused by local dietary norms.",
+        "extracted_output": "it is generally hard to get a blt in casablanca due to limited availability of bacon caused by local dietary norms.",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Would an astrologer focus on the densest terrestrial planet for a Friday horoscope?",
+        "right_answer": "yes",
+        "model_output": "No, an astrologer would not focus on the densest terrestrial planet (Mars) for a Friday horoscope, as Friday is associated with Venus.",
+        "extracted_output": "no",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Could a llama birth twice during War in Vietnam (1945-46)?",
+        "right_answer": "no",
+        "model_output": "Yes, a llama could have given birth twice during the period of 1945-46.",
+        "extracted_output": "yes",
+        "extract_answer_code": "None"
+    },
+    {
+        "question": "Is Isaac Newton buried at the same church as the author of Great Expectations?",
+        "right_answer": "yes",
+        "model_output": "Westminster Abbey, London",
+        "extracted_output": "westminster abbey, london",
+        "extract_answer_code": "None"
+    }
+]
