@@ -43,7 +43,7 @@ class RunConfig(BaseModel):
 
     # Retry limits
     max_retries: int = 1
-    max_generation_retries: int = 10
+    max_generation_retries: int = 20
 
     # Evaluation
     max_concurrent_tasks: int = 50

@@ -4,10 +4,13 @@
 # @Desc    : optimizer for graph (updated with AsyncLLM integration)
 
 import asyncio
+import importlib
 import json
+import shutil
 import sys
 import time
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import List, Literal, Dict
 
 from pydantic import BaseModel, Field
@@ -215,7 +218,7 @@ class Optimizer:
             )
 
         # Create a loop until the generated graph meets the check conditions
-        max_generation_retries = 10
+        max_generation_retries = 20
         for _retry in range(max_generation_retries):
             directory = self.graph_utils.create_round_directory(
                 graph_path, self.round + 1
@@ -346,6 +349,13 @@ class Optimizer:
         prompt_module_name = f"{module_path}.round_{round_number}.prompt"
         sys.modules.pop(module_name, None)
         sys.modules.pop(prompt_module_name, None)
+
+        # Delete __pycache__ to force bytecode recompilation
+        pycache_dir = Path(graph_path) / f"round_{round_number}" / "__pycache__"
+        if pycache_dir.exists():
+            shutil.rmtree(pycache_dir)
+        importlib.invalidate_caches()
+
         return self.graph_utils.load_graph(round_number, graph_path)
 
     async def _dry_run_graph(self, graph_class):

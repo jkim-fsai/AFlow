@@ -48,6 +48,27 @@ solution = await self.generate(problem=f"question:{problem}, xxx:{response['resp
 Note: In custom, the input and instruction are directly concatenated(instruction+input), and placeholders are not supported. Please ensure to add comments and handle the concatenation externally.\n
 IMPORTANT: If you reference `prompt_custom.XXX_PROMPT` or any other attribute in the graph, you MUST define those exact variable names in your <prompt> output. Verify that every `prompt_custom.NAME` used in <graph> has a matching `NAME = \"""...\"""` in <prompt>.
 
+Here is a COMPLETE VALID example of matching <graph> and <prompt> sections:
+<graph>
+class Workflow:
+    ...
+    async def __call__(self, problem: str):
+        solution = await self.custom(input=problem, instruction=prompt_custom.SOLVE_PROMPT)
+        review = await self.custom(input=solution["response"], instruction=prompt_custom.REVIEW_PROMPT)
+        return review["response"], self.llm.get_usage_summary()["total_cost"]
+</graph>
+<prompt>
+SOLVE_PROMPT = \"""
+Solve the following problem step by step.
+\"""
+
+REVIEW_PROMPT = \"""
+Review the solution for correctness and output only the final answer.
+\"""
+</prompt>
+
+SELF-CHECK before outputting: (1) Every `prompt_custom.X` in <graph> has a matching `X = \"""...\"""` in <prompt>. (2) <prompt> contains ONLY Python variable assignments — no comments, no markdown, no explanation text.
+
 **Introducing multiple operators at appropriate points can enhance performance. If you find that some provided operators are not yet used in the graph, try incorporating them.**
 """
 
