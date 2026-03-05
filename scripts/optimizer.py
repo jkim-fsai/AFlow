@@ -5,6 +5,7 @@
 
 import asyncio
 import importlib
+import importlib.util
 import json
 import shutil
 import sys
@@ -342,21 +343,49 @@ class Optimizer:
         return avg_score
 
     def _load_graph_fresh(self, round_number: int, graph_path: str):
-        """Load a graph module, invalidating any cached version first."""
-        module_path = graph_path.replace("\\", ".").replace("/", ".")
-        module_name = f"{module_path}.round_{round_number}.graph"
-        # Also invalidate the prompt module so it picks up new prompt.py
-        prompt_module_name = f"{module_path}.round_{round_number}.prompt"
-        sys.modules.pop(module_name, None)
-        sys.modules.pop(prompt_module_name, None)
+        """Load a graph module from disk, bypassing Python's import cache entirely.
 
-        # Delete __pycache__ to force bytecode recompilation
+        Uses importlib.util.spec_from_file_location to load directly from the
+        file path rather than __import__, which has deep internal caching that
+        persists even after sys.modules eviction and importlib.invalidate_caches().
+        """
+        module_path = graph_path.replace("\\", ".").replace("/", ".")
+        graph_module_name = f"{module_path}.round_{round_number}.graph"
+        prompt_module_name = f"{module_path}.round_{round_number}.prompt"
+        round_module_name = f"{module_path}.round_{round_number}"
+
+        # Evict stale modules (including the round package which caches child refs)
+        for name in (graph_module_name, prompt_module_name, round_module_name):
+            sys.modules.pop(name, None)
+
+        # Delete __pycache__ to prevent bytecode reuse
         pycache_dir = Path(graph_path) / f"round_{round_number}" / "__pycache__"
         if pycache_dir.exists():
             shutil.rmtree(pycache_dir)
         importlib.invalidate_caches()
 
-        return self.graph_utils.load_graph(round_number, graph_path)
+        round_dir = Path(graph_path) / f"round_{round_number}"
+
+        # Load prompt module first — graph.py imports it via
+        # "import <path>.round_N.prompt as prompt_custom"
+        prompt_file = round_dir / "prompt.py"
+        prompt_spec = importlib.util.spec_from_file_location(
+            prompt_module_name, str(prompt_file)
+        )
+        prompt_module = importlib.util.module_from_spec(prompt_spec)
+        sys.modules[prompt_module_name] = prompt_module
+        prompt_spec.loader.exec_module(prompt_module)
+
+        # Load graph module — its internal import of prompt will find our fresh copy
+        graph_file = round_dir / "graph.py"
+        graph_spec = importlib.util.spec_from_file_location(
+            graph_module_name, str(graph_file)
+        )
+        graph_module = importlib.util.module_from_spec(graph_spec)
+        sys.modules[graph_module_name] = graph_module
+        graph_spec.loader.exec_module(graph_module)
+
+        return getattr(graph_module, "Workflow")
 
     async def _dry_run_graph(self, graph_class):
         """Run the graph on one validation sample to catch runtime errors early."""
