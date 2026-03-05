@@ -47,6 +47,32 @@ def render_sidebar(loader: AFlowDataLoader) -> Dict[str, Any]:
         # All rounds selected by default
         selected_rounds = loader.get_available_rounds(dataset)
 
+        # Run configuration
+        source = "val"
+        if selected_run_df is not None and "source" in selected_run_df.columns:
+            source = selected_run_df["source"].iloc[0]
+        run_config = loader.load_run_config(dataset, split=source)
+        if run_config:
+            with st.expander("Run Configuration"):
+                st.markdown("**Models**")
+                cols = st.columns(2)
+                cols[0].metric("Optimizer", run_config.get("opt_model", "N/A"))
+                cols[1].metric("Executor", run_config.get("exec_model", "N/A"))
+
+                st.markdown("**Search**")
+                cols = st.columns(3)
+                cols[0].metric("Sample", run_config.get("sample"))
+                cols[1].metric("Max Rounds", run_config.get("max_rounds"))
+                cols[2].metric("Val Rounds", run_config.get("validation_rounds"))
+
+                st.markdown("**MCTS**")
+                cols = st.columns(2)
+                cols[0].metric("Alpha", run_config.get("mcts_alpha"))
+                cols[1].metric("Lambda", run_config.get("mcts_lambda"))
+
+                with st.expander("Raw JSON"):
+                    st.json(run_config)
+
         # Operator definitions
         operators = loader.load_operator_definitions(dataset)
         if operators:

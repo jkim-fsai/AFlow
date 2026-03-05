@@ -1,7 +1,7 @@
 """Summary metric cards for the AFlow dashboard."""
 
 from datetime import datetime
-from typing import Optional
+from typing import Dict, Optional
 
 import pandas as pd
 import streamlit as st
@@ -21,7 +21,27 @@ def _derive_run_id(df: pd.DataFrame) -> str:
         return "N/A"
 
 
-def display_metrics_cards(df: pd.DataFrame) -> None:
+def _compute_duration(run_config: Dict) -> str:
+    """Compute human-readable duration from run config timestamps."""
+    started = run_config.get("started_at")
+    completed = run_config.get("completed_at")
+    if not started or not completed:
+        return "N/A"
+    try:
+        start = datetime.fromisoformat(started)
+        end = datetime.fromisoformat(completed)
+        delta = end - start
+        total_seconds = int(delta.total_seconds())
+        hours, remainder = divmod(total_seconds, 3600)
+        minutes, seconds = divmod(remainder, 60)
+        if hours:
+            return f"{hours}h {minutes}m"
+        return f"{minutes}m {seconds}s"
+    except (ValueError, TypeError):
+        return "N/A"
+
+
+def display_metrics_cards(df: pd.DataFrame, run_config: Optional[Dict] = None) -> None:
     """Display summary metrics in card format."""
     if df.empty:
         st.warning("No results available.")
@@ -59,3 +79,15 @@ def display_metrics_cards(df: pd.DataFrame) -> None:
     c7.metric("Total Cost", f"${total_cost:.4f}")
 
     c8.metric("Split", source.upper())
+
+    # Row 3: Run config info (if available)
+    if run_config:
+        c9, c10, c11, c12 = st.columns(4)
+        c9.metric("Opt Model", run_config.get("opt_model") or "N/A")
+        c10.metric("Exec Model", run_config.get("exec_model", "N/A"))
+        converged = run_config.get("converged")
+        c11.metric(
+            "Converged",
+            "Yes" if converged else ("No" if converged is not None else "N/A"),
+        )
+        c12.metric("Duration", _compute_duration(run_config))

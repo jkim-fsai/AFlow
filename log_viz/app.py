@@ -61,14 +61,15 @@ if display_df.empty:
 
 # Load supplementary data
 tree_data = loader.load_mcts_tree(dataset)
+source = display_df["source"].iloc[0] if "source" in display_df.columns else "val"
+run_config = loader.load_run_config(dataset, split=source)
 
 # --- Metrics Cards ---
-display_metrics_cards(display_df)
+display_metrics_cards(display_df, run_config=run_config)
 
 st.divider()
 
 # --- Charts ---
-source = display_df["source"].iloc[0] if "source" in display_df.columns else "val"
 col1, col2, col3 = st.columns(3)
 with col1:
     fig = create_score_progression_plot(display_df, source=source)

@@ -7,6 +7,7 @@ import asyncio
 import json
 import sys
 import time
+from datetime import datetime, timezone
 from typing import List, Literal, Dict
 
 from pydantic import BaseModel, Field
@@ -17,6 +18,11 @@ from scripts.optimizer_utils.data_utils import DataUtils
 from scripts.optimizer_utils.evaluation_utils import EvaluationUtils
 from scripts.optimizer_utils.experience_utils import ExperienceUtils
 from scripts.optimizer_utils.graph_utils import GraphUtils
+from scripts.optimizer_utils.run_config import (
+    RunConfig,
+    write_run_config,
+    update_run_config,
+)
 from scripts.async_llm import create_llm_instance
 from scripts.formatter import XmlFormatter, FormatError
 from scripts.logs import logger
@@ -77,15 +83,77 @@ class Optimizer:
         self.evaluation_utils = EvaluationUtils(self.root_path)
         self.convergence_utils = ConvergenceUtils(self.root_path)
 
+    def _build_run_config(self, mode: str, test_rounds=None) -> RunConfig:
+        """Assemble all hyperparameters into a RunConfig snapshot."""
+        return RunConfig(
+            dataset=self.dataset,
+            mode=mode,
+            question_type=self.type,
+            opt_model=(
+                self.optimize_llm_config.model if self.optimize_llm_config else None
+            ),
+            exec_model=self.execute_llm_config.model,
+            opt_temperature=(
+                self.optimize_llm_config.temperature
+                if self.optimize_llm_config
+                else None
+            ),
+            opt_top_p=(
+                self.optimize_llm_config.top_p if self.optimize_llm_config else None
+            ),
+            exec_temperature=self.execute_llm_config.temperature,
+            exec_top_p=self.execute_llm_config.top_p,
+            sample=self.sample,
+            max_rounds=self.max_rounds,
+            validation_rounds=self.validation_rounds,
+            check_convergence=self.check_convergence,
+            initial_round=self.round,
+            mcts_alpha=DataUtils.DEFAULT_ALPHA,
+            mcts_lambda=DataUtils.DEFAULT_LAMBDA,
+            log_samples=DataUtils.DEFAULT_LOG_SAMPLES,
+            valset_size=DataUtils.get_dataset_size(self.dataset, "validate"),
+            testset_size=DataUtils.get_dataset_size(self.dataset, "test"),
+            started_at=datetime.now(timezone.utc).isoformat(),
+            test_rounds=test_rounds,
+        )
+
+    def _finalize_run_config(self, output_dir: str, converged: bool = False) -> None:
+        """Update run_config.json with runtime metadata after run completes."""
+        results = self.data_utils.load_results(output_dir)
+        best_score = (
+            max((r["score"] for r in results), default=None) if results else None
+        )
+        total_cost = sum(r.get("total_cost", 0) for r in results) if results else None
+        rounds_completed = len(set(r["round"] for r in results)) if results else 0
+        update_run_config(
+            output_dir,
+            {
+                "completed_at": datetime.now(timezone.utc).isoformat(),
+                "rounds_completed": rounds_completed,
+                "best_score": best_score,
+                "total_cost": total_cost,
+                "converged": converged,
+            },
+        )
+
     def optimize(self, mode: OptimizerType = "Graph", test_rounds=None):
+        config = self._build_run_config(mode, test_rounds)
+
         if mode == "Test":
+            output_dir = f"{self.root_path}/workflows_test"
+            write_run_config(config, output_dir)
             test_n = 1  # validation datasets's execution number
             for i in range(test_n):
                 loop = asyncio.new_event_loop()
                 asyncio.set_event_loop(loop)
                 score = loop.run_until_complete(self.test(rounds=test_rounds))
+            self._finalize_run_config(output_dir)
             return None
 
+        output_dir = f"{self.root_path}/workflows"
+        write_run_config(config, output_dir)
+
+        convergence_detected = False
         for opt_round in range(self.max_rounds):
             loop = asyncio.new_event_loop()
             asyncio.set_event_loop(loop)
@@ -126,9 +194,12 @@ class Optimizer:
                 )
                 # Print average scores and standard deviations for each round
                 self.convergence_utils.print_results()
+                convergence_detected = True
                 break
 
             time.sleep(5)
+
+        self._finalize_run_config(output_dir, converged=convergence_detected)
 
     async def _optimize_graph(self):
         validation_n = self.validation_rounds  # validation datasets's execution number

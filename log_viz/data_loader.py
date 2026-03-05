@@ -239,6 +239,18 @@ class AFlowDataLoader:
         result.reverse()
         return result
 
+    @st.cache_data(ttl=CACHE_TTL_RESULTS)
+    def load_run_config(_self, dataset: str, split: str = "val") -> Optional[Dict]:
+        """Load run_config.json for a dataset's val or test workflows."""
+        if split == "test":
+            path = _self._workflows_test_path(dataset) / "run_config.json"
+        else:
+            path = _self._workflows_path(dataset) / "run_config.json"
+        if not path.exists():
+            return None
+        with open(path) as f:
+            return json.load(f)
+
     def load_operator_source(self, dataset: str) -> Optional[str]:
         """Load template/operator.py as string."""
         path = self._workflows_path(dataset) / "template" / "operator.py"

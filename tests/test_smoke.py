@@ -96,3 +96,73 @@ def test_arc_format_choices():
     assert "A. 1" in formatted
     assert "B. 2" in formatted
     assert "C. 3" in formatted
+
+
+def test_run_config_model():
+    """Verify RunConfig model can be created with all required fields."""
+    from scripts.optimizer_utils.run_config import RunConfig
+
+    config = RunConfig(
+        dataset="HotpotQA",
+        mode="Graph",
+        question_type="qa",
+        exec_model="gpt-4o-mini",
+        exec_temperature=0,
+        exec_top_p=1,
+        sample=4,
+        max_rounds=20,
+        validation_rounds=1,
+        check_convergence=True,
+        initial_round=1,
+        mcts_alpha=0.2,
+        mcts_lambda=0.3,
+    )
+    assert config.dataset == "HotpotQA"
+    assert config.opt_model is None
+    assert config.mcts_alpha == 0.2
+    assert config.converged is None
+
+
+def test_run_config_serialization(tmp_path):
+    """Verify RunConfig write and load round-trip."""
+    from scripts.optimizer_utils.run_config import (
+        RunConfig,
+        load_run_config,
+        update_run_config,
+        write_run_config,
+    )
+
+    config = RunConfig(
+        dataset="GSM8K",
+        mode="Graph",
+        question_type="math",
+        exec_model="gpt-4o-mini",
+        exec_temperature=0,
+        exec_top_p=1,
+        sample=4,
+        max_rounds=5,
+        validation_rounds=1,
+        check_convergence=True,
+        initial_round=1,
+        mcts_alpha=0.2,
+        mcts_lambda=0.3,
+        started_at="2026-03-05T00:00:00+00:00",
+    )
+
+    write_run_config(config, str(tmp_path))
+    loaded = load_run_config(str(tmp_path))
+    assert loaded["dataset"] == "GSM8K"
+    assert loaded["started_at"] == "2026-03-05T00:00:00+00:00"
+    assert loaded["completed_at"] is None
+
+    update_run_config(
+        str(tmp_path),
+        {
+            "completed_at": "2026-03-05T01:00:00+00:00",
+            "best_score": 0.85,
+            "converged": True,
+        },
+    )
+    loaded = load_run_config(str(tmp_path))
+    assert loaded["best_score"] == 0.85
+    assert loaded["converged"] is True

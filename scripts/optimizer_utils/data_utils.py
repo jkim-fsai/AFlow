@@ -21,6 +21,14 @@ class DataUtils:
         self.root_path = Path(root_path)
         self.top_scores: List[Dict[str, Any]] = []
 
+    @staticmethod
+    def get_dataset_size(dataset_name: str, split: str) -> Optional[int]:
+        """Count samples in a dataset JSONL file."""
+        path = Path(f"data/datasets/{dataset_name.lower()}_{split}.jsonl")
+        if not path.exists():
+            return None
+        return sum(1 for _ in open(path))
+
     def load_results(self, path: str) -> list:
         result_path = Path(path) / "results.json"
 
