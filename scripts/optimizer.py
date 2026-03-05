@@ -10,6 +10,7 @@ import json
 import shutil
 import sys
 import time
+import types
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import List, Literal, Dict
@@ -386,6 +387,21 @@ class Optimizer:
         ):
             sys.modules.pop(name, None)
 
+        # Create the round_N package module so Python's import chain can
+        # resolve "workspace.{dataset}.workflows.round_N.prompt".
+        # Without this, Python fails to find round_N as a sub-package of
+        # workspace.{dataset}.workflows when the actual files live elsewhere.
+        round_pkg = types.ModuleType(template_round_name)
+        round_pkg.__path__ = [str(round_dir)]
+        round_pkg.__package__ = template_round_name
+        sys.modules[template_round_name] = round_pkg
+
+        # Also set round_N as an attribute on the parent workflows package
+        # so "import workspace.{dataset}.workflows.round_N" resolves
+        workflows_module = sys.modules.get(template_base)
+        if workflows_module is not None:
+            setattr(workflows_module, f"round_{round_number}", round_pkg)
+
         # Load prompt from actual file, register under the template import name
         # so that graph.py's "import workspace.{dataset}..." finds our fresh copy
         prompt_file = round_dir / "prompt.py"
@@ -395,6 +411,7 @@ class Optimizer:
         prompt_module = importlib.util.module_from_spec(prompt_spec)
         sys.modules[template_prompt_name] = prompt_module
         prompt_spec.loader.exec_module(prompt_module)
+        round_pkg.prompt = prompt_module
 
         # Load graph module from actual file path
         graph_file = round_dir / "graph.py"
