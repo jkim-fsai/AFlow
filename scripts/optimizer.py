@@ -484,7 +484,7 @@ class Optimizer:
 
         for round in rounds:
             directory = self.graph_utils.create_round_directory(output_path, round)
-            self.graph = self.graph_utils.load_graph(round, source_graph_path)
+            self.graph = self._load_graph_fresh(round, source_graph_path)
 
             score, avg_cost, total_cost = (
                 await self.evaluation_utils.evaluate_graph_test(
