@@ -1,4 +1,33 @@
+ANSWER_FORMAT_CONSTRAINTS = {
+    "ARC": """ANSWER FORMAT CONSTRAINT: The final output of the workflow must be a SINGLE LETTER (A, B, C, D, or E).
+The evaluation system extracts the first standalone letter A-E from the output. If no letter is found, the answer is marked wrong.
+- GOOD output: "A" or "The answer is B." or "B. kinetic energy"
+- BAD output: "kinetic energy" or "20 m/s" or "The hot water dissolved..."
+All prompts in the workflow must instruct the model to end with the answer letter.""",
+    "StrategyQA": """ANSWER FORMAT CONSTRAINT: The final output must contain "yes" or "no".
+The evaluation system extracts the first occurrence of "yes" or "no" (case-insensitive).
+- GOOD output: "Yes" or "No, because..." or "The answer is yes."
+- BAD output: "True" or "Correct" or "The statement is accurate"
+All prompts must instruct the model to answer with yes or no.""",
+    "HotpotQA": """ANSWER FORMAT CONSTRAINT: The final output should be a concise text answer (entity name, short phrase).
+Scoring uses F1 token overlap with the gold answer after removing articles and punctuation.
+- GOOD output: "Barack Obama" or "1945" or "the United Kingdom"
+- BAD output: Long paragraphs of reasoning (dilutes F1 score)
+Prompts should instruct the model to output ONLY the answer, not explanations.""",
+    "GSM8K": """ANSWER FORMAT CONSTRAINT: The final output must contain a number.
+The evaluation extracts the LAST number found in the output.
+- GOOD output: "The answer is 42." or "42"
+- BAD output: "forty-two" or text with no digits""",
+    "MATH": """ANSWER FORMAT CONSTRAINT: The final answer must be in LaTeX \\boxed{} format.
+The evaluation extracts the content of the last \\boxed{} in the output.
+- GOOD output: "Therefore \\boxed{\\frac{1}{2}}"
+- BAD output: "The answer is 1/2" (no boxed)""",
+    "DROP": """ANSWER FORMAT CONSTRAINT: The final output should be a concise text answer.
+Scoring uses F1 token overlap. Keep answers short and precise.""",
+}
+
 WORKFLOW_OPTIMIZE_PROMPT = """You are building a Graph and corresponding Prompt to jointly solve {type} problems.
+{answer_format}
 Referring to the given graph and prompt, which forms a basic example of a {type} solution approach,
 please reconstruct and optimize them. You can add, modify, or delete nodes, parameters, or prompts. Include your
 single modification in XML tags in your reply. Ensure they are complete and correct to avoid runtime failures. When

@@ -252,6 +252,7 @@ class Optimizer:
                 operator_description,
                 self.type,
                 log_data,
+                dataset=self.dataset,
             )
 
             # Replace ActionNode with AsyncLLM and XmlFormatter

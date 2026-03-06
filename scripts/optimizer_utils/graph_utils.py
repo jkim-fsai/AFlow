@@ -6,6 +6,7 @@ import traceback
 from typing import List, Set, Tuple
 
 from scripts.prompts.optimize_prompt import (
+    ANSWER_FORMAT_CONSTRAINTS,
     WORKFLOW_CUSTOM_USE,
     WORKFLOW_INPUT,
     WORKFLOW_OPTIMIZE_PROMPT,
@@ -90,6 +91,7 @@ class GraphUtils:
         operator_description: str,
         type: str,
         log_data: str,
+        dataset: str = "",
     ) -> str:
         graph_input = WORKFLOW_INPUT.format(
             experience=experience,
@@ -100,7 +102,10 @@ class GraphUtils:
             type=type,
             log=log_data,
         )
-        graph_system = WORKFLOW_OPTIMIZE_PROMPT.format(type=type)
+        answer_format = ANSWER_FORMAT_CONSTRAINTS.get(dataset, "")
+        graph_system = WORKFLOW_OPTIMIZE_PROMPT.format(
+            type=type, answer_format=answer_format
+        )
         return graph_input + WORKFLOW_CUSTOM_USE + graph_system
 
     async def get_graph_optimize_response(self, graph_optimize_node):
