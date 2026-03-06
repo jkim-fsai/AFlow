@@ -3,7 +3,8 @@ ANSWER_FORMAT_CONSTRAINTS = {
 The evaluation system extracts the first standalone letter A-E from the output. If no letter is found, the answer is marked wrong.
 - GOOD output: "A" or "The answer is B." or "B. kinetic energy"
 - BAD output: "kinetic energy" or "20 m/s" or "The hot water dissolved..."
-All prompts in the workflow must instruct the model to end with the answer letter.""",
+All prompts in the workflow must instruct the model to end with the answer letter.
+WARNING: The AnswerGenerate operator has a built-in prompt that asks for "the final answer concisely" WITHOUT specifying letter format. Using AnswerGenerate will produce prose answers like "20 m/s" instead of "D", destroying the letter format. For this task, prefer using Custom with explicit letter-format instructions instead of AnswerGenerate. If you use ScEnsemble, ensure each solution passed to it is already a letter (A-E), not prose.""",
     "StrategyQA": """ANSWER FORMAT CONSTRAINT: The final output must contain "yes" or "no".
 The evaluation system extracts the first occurrence of "yes" or "no" (case-insensitive).
 - GOOD output: "Yes" or "No, because..." or "The answer is yes."
