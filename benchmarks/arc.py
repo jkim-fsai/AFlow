@@ -21,15 +21,40 @@ class ARCBenchmark(BaseBenchmark):
         return "\n".join(lines)
 
     def extract_label(self, text: str) -> str:
-        """Extract answer label (A-E) from model output."""
-        text = text.strip().upper()
-        # Check if text starts with a valid label
-        if text and text[0] in "ABCDE":
-            return text[0]
-        # Search for standalone label pattern
-        match = re.search(r"\b([A-E])\b", text)
-        if match:
-            return match.group(1)
+        """Extract answer label (A-E) from model output.
+
+        Handles short answers ("B", "D. a year"), CoT reasoning that echoes
+        choice labels, and explicit answer markers ("Answer: D", "**C**").
+        """
+        text = text.strip()
+        upper = text.upper()
+
+        # 1. Single letter
+        if len(upper) == 1 and upper in "ABCDE":
+            return upper
+
+        # 2. Starts with a valid label followed by non-letter
+        if (
+            upper
+            and upper[0] in "ABCDE"
+            and (len(upper) == 1 or not upper[1].isalpha())
+        ):
+            return upper[0]
+
+        # 3. Explicit answer markers — take the last match
+        #    Covers: "answer: D", "answer is B", "**C. text**", "**D**"
+        marker = re.findall(
+            r"(?:answer\s*(?:is|:)\s*\**\s*([A-E])\b|\*\*([A-E])[.\s)])", upper
+        )
+        if marker:
+            last = marker[-1]
+            return last[0] or last[1]
+
+        # 4. Last standalone A-E letter (handles CoT that echoes choices)
+        matches = re.findall(r"\b([A-E])\b", upper)
+        if matches:
+            return matches[-1]
+
         return text
 
     def calculate_score(
