@@ -58,7 +58,9 @@ class RunConfig(BaseModel):
     completed_at: Optional[str] = None
     rounds_completed: Optional[int] = None
     best_score: Optional[float] = None
+    baseline_score: Optional[float] = None  # Round 1 score (unoptimized baseline)
     total_cost: Optional[float] = None
+    runtime_seconds: Optional[float] = None  # Wall-clock seconds from start to end
     converged: Optional[bool] = None
 
     # Test-mode specific

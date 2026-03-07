@@ -25,8 +25,9 @@ from scripts.optimizer_utils.experience_utils import ExperienceUtils
 from scripts.optimizer_utils.graph_utils import GraphUtils
 from scripts.optimizer_utils.run_config import (
     RunConfig,
-    write_run_config,
+    load_run_config,
     update_run_config,
+    write_run_config,
 )
 from scripts.async_llm import create_llm_instance
 from scripts.formatter import XmlFormatter, FormatError
@@ -128,15 +129,31 @@ class Optimizer:
         best_score = (
             max((r["score"] for r in results), default=None) if results else None
         )
+        baseline_score = (
+            next((r["score"] for r in results if r["round"] == 1), None)
+            if results
+            else None
+        )
         total_cost = sum(r.get("total_cost", 0) for r in results) if results else None
         rounds_completed = len(set(r["round"] for r in results)) if results else 0
+
+        completed_at = datetime.now(timezone.utc)
+        # Compute wall-clock runtime from started_at
+        runtime_seconds = None
+        run_config = load_run_config(output_dir)
+        if run_config and run_config.get("started_at"):
+            started = datetime.fromisoformat(run_config["started_at"])
+            runtime_seconds = (completed_at - started).total_seconds()
+
         update_run_config(
             output_dir,
             {
-                "completed_at": datetime.now(timezone.utc).isoformat(),
+                "completed_at": completed_at.isoformat(),
                 "rounds_completed": rounds_completed,
                 "best_score": best_score,
+                "baseline_score": baseline_score,
                 "total_cost": total_cost,
+                "runtime_seconds": runtime_seconds,
                 "converged": converged,
             },
         )
